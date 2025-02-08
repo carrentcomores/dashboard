@@ -18,7 +18,7 @@ from app import create_app
 config_name = os.environ.get('FLASK_ENV', 'production')
 
 # Create the Flask application
-application = create_app(config.config[config_name])
+app = create_app(config.config[config_name])
 
 if __name__ == "__main__":
-    application.run()
+    app.run()
