@@ -8,13 +8,11 @@ services:
       - key: FLASK_ENV
         value: production
       - key: SECRET_KEY
-        generateValue: true
+        value: 28469767a26613fa0aeb74011cd6f2e97f42ed1ce07c52df48003e14d2b16043
       - key: DATABASE_URL
-        fromDatabase:
-          name: car-rent-db
-          property: connectionString
+        value: postgresql://carrent_db_user:Qs9HCnfgZqXkOLVVOyAM5EljQHhtgIyJ@dpg-cujq8et6l47c5mk80-a.oregon-postgres.render.com/carrent_db
 
 databases:
-  - name: car-rent-db
+  - name: carrent_db
     plan: free
     ipAllowList: []  # Allows all IP addresses
