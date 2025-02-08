@@ -4627,3 +4627,126 @@ AttributeError: type object 'Booking' has no attribute 'agency_id'
 2025-02-08 22:43:08,109 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:43:08] "GET /dashboard HTTP/1.1" 200 -
 2025-02-08 22:43:08,118 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:43:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-02-08 22:43:08,118 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:43:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:46:13,074 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/__init__.py', reloading
+2025-02-08 22:46:13,173 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 22:46:13,630 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 22:46:13,639 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 22:46:19,767 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:19] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-02-08 22:46:19,795 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:19] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:46:19,795 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:19] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-08 22:46:19,813 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:19] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:46:19,842 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:19] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:46:23,275 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:23] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-02-08 22:46:23,300 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:23] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:46:26,017 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:26] "[35m[1mGET /book/1 HTTP/1.1[0m" 500 -
+2025-02-08 22:46:26,046 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:26] "[36mGET /book/1?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:46:48,611 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:48] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-02-08 22:46:48,625 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:48] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:46:48,626 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:48] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-08 22:46:48,631 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:48] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:46:48,634 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:46:48] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:47:17,481 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/Car Rent System/config.py', reloading
+2025-02-08 22:47:17,559 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 22:47:18,011 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 22:47:18,019 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 22:47:21,699 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:21] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-02-08 22:47:21,711 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:21] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:21,711 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:21] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:21,715 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:21] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:47:21,718 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:21] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-02-08 22:47:31,188 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/__init__.py', reloading
+2025-02-08 22:47:31,275 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 22:47:31,767 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 22:47:31,775 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 22:47:45,251 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:45] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-02-08 22:47:45,280 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:45] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-02-08 22:47:45,304 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:45] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:45,304 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:51,494 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:51] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-02-08 22:47:51,524 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:51] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 22:47:51,534 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:51,535 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,207 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "GET / HTTP/1.1" 200 -
+2025-02-08 22:47:53,268 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,268 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,270 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,272 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,273 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,274 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,276 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,276 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:53,277 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:53] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:56,818 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:56] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 22:47:56,833 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:56,834 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,362 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "GET /maintenance HTTP/1.1" 200 -
+2025-02-08 22:47:57,377 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,378 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,806 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-08 22:47:57,819 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,820 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,823 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,825 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,826 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,828 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,829 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,830 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:57,832 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:57] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:47:58,181 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:58] "GET /financial_summary HTTP/1.1" 200 -
+2025-02-08 22:47:58,194 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:58,195 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:47:58,536 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:58] "GET /financial_summary HTTP/1.1" 200 -
+2025-02-08 22:47:58,548 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:47:58,549 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:47:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,632 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-08 22:48:26,654 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,657 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,657 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,658 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,661 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,661 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,664 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,667 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:26,668 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:26] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,400 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "GET / HTTP/1.1" 200 -
+2025-02-08 22:48:27,416 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,417 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,420 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,421 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,425 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,425 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,426 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,428 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,428 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,852 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 22:48:27,866 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:27,868 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,309 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "GET /maintenance HTTP/1.1" 200 -
+2025-02-08 22:48:28,320 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,321 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,930 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "GET / HTTP/1.1" 200 -
+2025-02-08 22:48:28,947 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,949 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,951 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,954 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,954 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,957 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,958 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,958 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:28,960 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:28] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:29,777 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:29] "GET /income_management HTTP/1.1" 200 -
+2025-02-08 22:48:29,791 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:29,792 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,195 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "GET /add_employee HTTP/1.1" 200 -
+2025-02-08 22:48:30,207 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,209 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,780 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-08 22:48:30,793 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,795 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,797 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,797 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,801 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/3/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,801 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,802 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,806 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:48:30,807 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:48:30] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
