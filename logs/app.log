@@ -5144,3 +5144,34 @@ AttributeError: type object 'Booking' has no attribute 'agency_id'
 2025-02-08 23:24:02,219 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:24:02] "GET /dashboard HTTP/1.1" 200 -
 2025-02-08 23:24:02,228 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:24:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-02-08 23:24:02,228 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:24:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:28:58,015 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/check_user.py', reloading
+2025-02-08 23:28:58,294 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 23:28:58,788 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 23:28:58,800 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 23:29:41,266 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/check_user.py', reloading
+2025-02-08 23:29:41,549 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 23:29:42,465 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 23:29:42,476 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 23:31:36,550 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-08 23:31:36,569 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-08 23:31:36,587 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,588 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,588 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,588 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,588 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,588 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,593 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,593 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,593 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,594 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:36,594 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:36] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:31:50,360 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-08 23:31:50,365 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-08 23:31:50,365 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-08 23:31:50,447 - app - INFO - Password match result: False
+2025-02-08 23:31:50,447 - app - WARNING - Password mismatch for user: admin@carrent.com
+2025-02-08 23:31:50,447 - app - ERROR - auth.py:60 - Login failed for email: admin@carrent.com
+2025-02-08 23:31:50,447 - app - ERROR - Login failed for email: admin@carrent.com
+2025-02-08 23:31:50,448 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:50] "POST /login?next=/ HTTP/1.1" 200 -
+2025-02-08 23:31:50,461 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:31:50,463 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:31:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
