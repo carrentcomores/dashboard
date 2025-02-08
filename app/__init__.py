@@ -4,6 +4,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from os import path
 import os
+import secrets
 
 db = SQLAlchemy()
 migrate = Migrate()
@@ -16,9 +17,13 @@ def create_app(config_object=None):
     if config_object:
         app.config.from_object(config_object)
     
-    # Fallback to default configuration if not provided
-    if 'SECRET_KEY' not in app.config:
-        app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
+    # Ensure a valid SECRET_KEY
+    if not app.config.get('SECRET_KEY'):
+        # Generate a secure random secret key
+        app.config['SECRET_KEY'] = secrets.token_hex(32)
+    
+    # Ensure SECRET_KEY is a string
+    app.config['SECRET_KEY'] = str(app.config['SECRET_KEY'])
     
     # Use an absolute path for the database
     base_dir = path.abspath(path.dirname(__file__))

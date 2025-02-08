@@ -1,7 +1,14 @@
 import os
+import secrets
 
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'your-secret-key'
+    # Generate a secure random secret key if not set
+    SECRET_KEY = os.environ.get('SECRET_KEY') or secrets.token_hex(32)
+    
+    # Ensure the secret key is always a string
+    if not isinstance(SECRET_KEY, str):
+        SECRET_KEY = str(SECRET_KEY)
+    
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     # Database configuration
