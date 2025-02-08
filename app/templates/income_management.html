@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+
+{% block title %}Income Management{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0"><i class="fas fa-chart-line"></i> Income Management</h3>
+                    <div class="d-flex align-items-center">
+                        <form id="monthFilterForm" class="d-flex me-3" method="get" action="{{ url_for('main.view_income_management') }}">
+                            <select name="month" class="form-select form-select-sm me-2" style="width: auto;">
+                                {% for month_num, month_name in months %}
+                                <option value="{{ month_num }}" {% if month_num == selected_month %}selected{% endif %}>
+                                    {{ month_name }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <select name="year" class="form-select form-select-sm me-2" style="width: auto;">
+                                {% for year in years %}
+                                <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>
+                                    {{ year }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <button type="submit" class="btn btn-light btn-sm">
+                                <i class="fas fa-filter"></i>
+                            </button>
+                        </form>
+                        <button class="btn btn-light" onclick="openAddIncomeModal()">
+                            <i class="fas fa-plus"></i> Add Income
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <h4 class="mb-4 text-center">
+                        Income for 
+                        {% for month_num, month_name in months %}
+                            {% if month_num == selected_month %}
+                                {{ month_name }} {{ selected_year }}
+                            {% endif %}
+                        {% endfor %}
+                    </h4>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <h5>Total Income</h5>
+                                    <p class="display-6">KMF {{ "%.0f"|format(total_income) }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-info text-white">
+                                <div class="card-body">
+                                    <h5>Income by Category</h5>
+                                    <ul class="list-unstyled">
+                                        {% for category, amount in category_totals.items() %}
+                                        <li>
+                                            <strong>{{ category }}:</strong> 
+                                            KMF {{ "%.0f"|format(amount) }}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Category</th>
+                                    <th>Subcategory</th>
+                                    <th>Description</th>
+                                    <th>Amount (KMF)</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for income in incomes %}
+                                <tr>
+                                    <td>{{ income.date.strftime('%Y-%m-%d') }}</td>
+                                    <td>{{ income.category }}</td>
+                                    <td>{{ income.subcategory }}</td>
+                                    <td>{{ income.description }}</td>
+                                    <td>{{ "{:,.2f}".format(income.amount) }}</td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-sm btn-primary" 
+                                                    onclick="editIncome({{ income.id }})">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" 
+                                                    onclick="deleteIncome({{ income.id }})">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add/Edit Income Modal -->
+<div class="modal fade" id="incomeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Add Income</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="incomeForm">
+                    <input type="hidden" id="income_id" name="income_id">
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Category</label>
+                        <select class="form-select" id="category" name="category" required>
+                            <option value="Airport Transport">Airport Transport</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Car Sell">Car Sell</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subcategory" class="form-label">Subcategory</label>
+                        <select class="form-select" id="subcategory" name="subcategory" required>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount (KMF)</label>
+                        <input type="number" class="form-control" id="amount" name="amount" min="0" step="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveIncome">Save Income</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const incomeModal = new bootstrap.Modal(document.getElementById('incomeModal'));
+    const incomeForm = document.getElementById('incomeForm');
+    const saveIncomeBtn = document.getElementById('saveIncome');
+
+    // Open Add Income Modal
+    window.openAddIncomeModal = function() {
+        document.getElementById('modalTitle').textContent = 'Add Income';
+        document.getElementById('incomeForm').reset();
+        document.getElementById('income_id').value = '';
+        
+        // Trigger change event to populate subcategories
+        const categorySelect = document.getElementById('category');
+        categorySelect.dispatchEvent(new Event('change'));
+        
+        incomeModal.show();
+    };
+
+    // Edit Income
+    window.editIncome = function(incomeId) {
+        fetch(`/get_income/${incomeId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('modalTitle').textContent = 'Edit Income';
+                document.getElementById('income_id').value = data.id;
+                document.getElementById('category').value = data.category;
+                document.getElementById('subcategory').value = data.subcategory;
+                document.getElementById('amount').value = Math.round(data.amount);
+                document.getElementById('description').value = data.description;
+                incomeModal.show();
+            });
+    };
+
+    // Save Income
+    saveIncomeBtn.addEventListener('click', function() {
+        const formData = new FormData(incomeForm);
+        const incomeId = formData.get('income_id');
+        
+        // Ensure subcategory is added to formData
+        const subcategorySelect = document.getElementById('subcategory');
+        if (subcategorySelect && subcategorySelect.value) {
+            formData.set('subcategory', subcategorySelect.value);
+        }
+        
+        const url = incomeId 
+            ? `/update_income/${incomeId}` 
+            : '/add_income';
+        
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.id) {
+                location.reload();
+            } else {
+                alert('Error saving income');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred');
+        });
+    });
+
+    // Delete Income
+    window.deleteIncome = function(incomeId) {
+        if (confirm('Are you sure you want to delete this income?')) {
+            fetch(`/delete_income/${incomeId}`, {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    location.reload();
+                } else {
+                    alert('Error deleting income');
+                }
+            });
+        }
+    };
+
+    // Dynamically update subcategories based on category
+    document.getElementById('category').addEventListener('change', function() {
+        console.log('Category changed:', this.value);  // Debug logging
+        const subcategorySelect = document.getElementById('subcategory');
+        const category = this.value;
+        
+        // Clear existing options
+        subcategorySelect.innerHTML = '';
+        
+        // Special handling for different categories
+        if (category === 'Airport Transport') {
+            const airportSubcategories = [
+                'Departure',
+                'Arriving'
+            ];
+            
+            airportSubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+        } else if (category === 'Partnership') {
+            const partnershipSubcategories = [
+                'Rent',
+                'Car Rental',
+                'Maintenance',
+                'Other'
+            ];
+            
+            partnershipSubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+        } else if (category === 'Car Sell') {
+            const carSellSubcategories = [
+                'Used Car',
+                'New Car',
+                'Auction',
+                'Other'
+            ];
+            
+            carSellSubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+        } else if (category === 'Other') {
+            const otherSubcategories = [
+                'Miscellaneous',
+                'Additional Income',
+                'Bonus',
+                'Compensation'
+            ];
+            
+            otherSubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+        }
+        
+        // Ensure at least one option is selected
+        if (subcategorySelect.options.length > 0) {
+            subcategorySelect.selectedIndex = 0;
+        }
+    });
+
+    // Populate category dropdown
+    const categorySelect = document.getElementById('category');
+    const subcategorySelect = document.getElementById('subcategory');
+    const categories = {
+        'Airport Transport': ['Departure', 'Arriving'],
+        'Partnership': ['Rent', 'Car Rental', 'Maintenance', 'Other'],
+        'Car Sell': ['Used Car', 'New Car', 'Auction', 'Other'],
+        'Other': ['Miscellaneous', 'Additional Income', 'Bonus', 'Compensation']
+    };
+
+    // Clear existing options
+    categorySelect.innerHTML = '<option value="">Select Category</option>';
+    
+    // Add categories
+    Object.keys(categories).forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    });
+});
+</script>
+{% endblock %}
+
+{% block styles %}
+<style>
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,606 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Cars{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Manage Cars</h2>
+    
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Add New Car</h3>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('main.manage_cars') }}" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <input type="text" class="form-input" id="model" name="model" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="number" class="form-input" id="year" name="year" min="1900" max="2025" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="license_plate">License Plate</label>
+                            <input type="text" class="form-input" id="license_plate" name="license_plate" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="daily_rate">Daily Rate (KMF)</label>
+                            <input type="number" class="form-input" id="daily_rate" name="daily_rate" min="0" step="1" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select class="form-input" id="category" name="category" required>
+                                <option value="Economy">Economy</option>
+                                <option value="Compact">Compact</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Luxury">Luxury</option>
+                                <option value="Van">Van</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-input" id="description" name="description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="features">Features (one per line)</label>
+                            <textarea class="form-input" id="features" name="features" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="images">Car Images (first image will be the main image)</label>
+                            <input type="file" class="form-input" id="images" name="images" multiple accept="image/*">
+                            <small class="form-text text-muted">You can select multiple images. Supported formats: PNG, JPG, JPEG, GIF</small>
+                            <div class="image-preview mt-2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-3">Add Car</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3>Car Inventory</h3>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-sort"></i></th>
+                            <th>Image</th>
+                            <th>Model</th>
+                            <th>Year</th>
+                            <th>License Plate</th>
+                            <th>Daily Rate</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cars-sortable">
+                        {% for car in cars %}
+                        <tr id="car-{{ car.id }}" 
+                            data-car-id="{{ car.id }}" 
+                            data-description="{{ car.description or '' }}" 
+                            data-features="{{ car.features or '' }}"
+                            data-order="{{ car.display_order or loop.index }}"
+                            draggable="true">
+                            <td class="drag-handle" style="cursor: move;">
+                                <i class="fas fa-grip-vertical"></i>
+                            </td>
+                            <td>
+                                {% if car.main_image %}
+                                <img src="{{ url_for('static', filename=car.main_image) }}" alt="{{ car.model }}" class="car-thumbnail">
+                                {% else %}
+                                <img src="{{ url_for('static', filename='images/default-car.jpg') }}" alt="{{ car.model }}" class="car-thumbnail">
+                                {% endif %}
+                            </td>
+                            <td>{{ car.model }}</td>
+                            <td>{{ car.year }}</td>
+                            <td>{{ car.license_plate }}</td>
+                            <td>KMF {{ "%.0f"|format(car.daily_rate) }}</td>
+                            <td>{{ car.category }}</td>
+                            <td>
+                                <span class="badge {% if car.is_available %}bg-success{% else %}bg-danger{% endif %}">
+                                    {{ 'Available' if car.is_available else 'Rented' }}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-sm btn-primary edit-car" data-car-id="{{ car.id }}">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                    <button class="btn btn-sm btn-info manage-images" data-car-id="{{ car.id }}">
+                                        <i class="fas fa-images"></i> Images
+                                    </button>
+                                    <button class="btn btn-sm btn-danger delete-car" data-car-id="{{ car.id }}">
+                                        <i class="fas fa-trash"></i> Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Car Modal -->
+<div class="modal fade" id="editCarModal" tabindex="-1" aria-labelledby="editCarModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editCarModalLabel">Edit Car</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editCarForm">
+                    <div class="mb-3">
+                        <label for="edit_model" class="form-label">Model</label>
+                        <input type="text" class="form-control" id="edit_model" name="model" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_year" class="form-label">Year</label>
+                        <input type="number" class="form-control" id="edit_year" name="year" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_license_plate" class="form-label">License Plate</label>
+                        <input type="text" class="form-control" id="edit_license_plate" name="license_plate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_daily_rate" class="form-label">Daily Rate (KMF)</label>
+                        <input type="number" step="1" class="form-control" id="edit_daily_rate" name="daily_rate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_category" class="form-label">Category</label>
+                        <select class="form-select" id="edit_category" name="category" required>
+                            <option value="Economy">Economy</option>
+                            <option value="Compact">Compact</option>
+                            <option value="Mid-size">Mid-size</option>
+                            <option value="Full-size">Full-size</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Van">Van</option>
+                            <option value="Truck">Truck</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="edit_is_available" name="is_available">
+                            <label class="form-check-label" for="edit_is_available">Available</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_description" class="form-label">Description</label>
+                        <textarea class="form-control" id="edit_description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_features" class="form-label">Features (one per line)</label>
+                        <textarea class="form-control" id="edit_features" name="features" rows="4"></textarea>
+                        <small class="text-muted">Enter each feature on a new line</small>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveCarChanges">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Manage Images Modal -->
+<div class="modal fade" id="manageImagesModal" tabindex="-1" aria-labelledby="manageImagesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="manageImagesModalLabel">Manage Car Images</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="uploadImagesForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="upload_images">Add More Images</label>
+                        <input type="file" class="form-input" id="upload_images" name="images" multiple accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload Images</button>
+                </form>
+
+                <div class="car-images-grid mt-4">
+                    <!-- Images will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let currentCarId;
+    
+    // Preview images before upload
+    document.getElementById('images').addEventListener('change', function(e) {
+        const preview = document.createElement('div');
+        preview.className = 'image-preview mt-2';
+        preview.style.display = 'flex';
+        preview.style.gap = '10px';
+        preview.style.flexWrap = 'wrap';
+        
+        Array.from(e.target.files).forEach((file, index) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.style.width = '100px';
+                img.style.height = '100px';
+                img.style.objectFit = 'cover';
+                if (index === 0) {
+                    img.style.border = '2px solid green';
+                    img.title = 'Main Image';
+                }
+                preview.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+        });
+        
+        const existingPreview = this.parentElement.querySelector('.image-preview');
+        if (existingPreview) {
+            existingPreview.remove();
+        }
+        this.parentElement.appendChild(preview);
+    });
+    
+    // Edit car
+    document.querySelectorAll('.edit-car').forEach(button => {
+        button.addEventListener('click', function() {
+            try {
+                const carId = this.dataset.carId;
+                if (!carId) {
+                    console.error('No car ID found');
+                    return;
+                }
+                
+                currentCarId = carId;
+                const row = document.querySelector(`#car-${carId}`);
+                if (!row) {
+                    console.error(`No row found for car ID ${carId}`);
+                    return;
+                }
+                
+                // Safely get text content or use empty string
+                const safeGetText = (selector) => {
+                    const el = row.querySelector(selector);
+                    return el ? el.textContent.trim() : '';
+                };
+                
+                // Populate edit modal fields
+                document.getElementById('edit_model').value = safeGetText('td:nth-child(3)');
+                document.getElementById('edit_year').value = safeGetText('td:nth-child(4)');
+                document.getElementById('edit_license_plate').value = safeGetText('td:nth-child(5)');
+                
+                // Handle daily rate (remove 'KMF' if present)
+                const dailyRateText = safeGetText('td:nth-child(6)');
+                document.getElementById('edit_daily_rate').value = dailyRateText.replace('KMF', '').trim();
+                
+                document.getElementById('edit_category').value = safeGetText('td:nth-child(7)');
+                
+                // Set availability checkbox
+                const availabilityBadge = row.querySelector('td:nth-child(8) .badge');
+                document.getElementById('edit_is_available').checked = 
+                    availabilityBadge && availabilityBadge.textContent.trim() === 'Available';
+                
+                // Get description and features from data attributes
+                document.getElementById('edit_description').value = row.dataset.description || '';
+                document.getElementById('edit_features').value = row.dataset.features || '';
+                
+                console.log('Edit car data:', {
+                    model: document.getElementById('edit_model').value,
+                    year: document.getElementById('edit_year').value,
+                    licensePlate: document.getElementById('edit_license_plate').value,
+                    dailyRate: document.getElementById('edit_daily_rate').value,
+                    category: document.getElementById('edit_category').value,
+                    isAvailable: document.getElementById('edit_is_available').checked,
+                    description: document.getElementById('edit_description').value,
+                    features: document.getElementById('edit_features').value
+                });
+                
+                const editModal = new bootstrap.Modal(document.getElementById('editCarModal'));
+                editModal.show();
+            } catch (error) {
+                console.error('Error in edit car handler:', error);
+                alert(`Error preparing car edit: ${error.message}`);
+            }
+        });
+    });
+    
+    // Save car changes
+    document.getElementById('saveCarChanges').addEventListener('click', function() {
+        // Collect form data
+        const formData = new FormData();
+        formData.append('model', document.getElementById('edit_model').value);
+        formData.append('year', document.getElementById('edit_year').value);
+        formData.append('license_plate', document.getElementById('edit_license_plate').value);
+        formData.append('daily_rate', document.getElementById('edit_daily_rate').value);
+        formData.append('category', document.getElementById('edit_category').value);
+        
+        // Convert is_available to string explicitly
+        const isAvailable = document.getElementById('edit_is_available').checked;
+        formData.append('is_available', isAvailable ? 'true' : 'false');
+        
+        // Add description and features
+        formData.append('description', document.getElementById('edit_description').value);
+        formData.append('features', document.getElementById('edit_features').value);
+        
+        // Send update request
+        fetch(`/manage_cars/edit/${currentCarId}`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error) {
+                throw new Error(data.error);
+            }
+            // Simply reload the page without showing an alert
+            location.reload();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert(`Error: ${error.message}`);
+        });
+    });
+    
+    // Delete car
+    document.querySelectorAll('.delete-car').forEach(button => {
+        button.addEventListener('click', function() {
+            if (confirm('Are you sure you want to delete this car?')) {
+                const carId = this.dataset.carId;
+                
+                fetch(`/manage_cars/delete/${carId}`, {
+                    method: 'POST'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        document.querySelector(`#car-${carId}`).remove();
+                    } else {
+                        alert('Error deleting car');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Manage Images
+    document.querySelectorAll('.manage-images').forEach(button => {
+        button.addEventListener('click', function() {
+            currentCarId = this.dataset.carId;
+            loadCarImages(currentCarId);
+            const imagesModal = new bootstrap.Modal(document.getElementById('manageImagesModal'));
+            imagesModal.show();
+        });
+    });
+    
+    // Upload more images
+    document.getElementById('uploadImagesForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        
+        fetch(`/manage_cars/upload_images/${currentCarId}`, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                loadCarImages(currentCarId);
+                this.reset();
+            } else {
+                alert('Error uploading images');
+            }
+        });
+    });
+    
+    function loadCarImages(carId) {
+        const grid = document.querySelector('.car-images-grid');
+        grid.innerHTML = 'Loading images...';
+        
+        fetch(`/manage_cars/get_images/${carId}`)
+            .then(response => response.json())
+            .then(images => {
+                grid.innerHTML = '';
+                images.forEach(image => {
+                    const div = document.createElement('div');
+                    div.className = 'image-item';
+                    div.innerHTML = `
+                        <img src="${image.path}" alt="Car image">
+                        <div class="image-actions">
+                            <button class="btn btn-sm btn-primary set-main" data-image-id="${image.id}" 
+                                    ${image.is_main ? 'disabled' : ''}>
+                                ${image.is_main ? 'Main Image' : 'Set as Main'}
+                            </button>
+                            <button class="btn btn-sm btn-danger delete-image" data-image-id="${image.id}">
+                                Delete
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(div);
+                });
+                
+                // Add event listeners for image actions
+                grid.querySelectorAll('.set-main').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const imageId = this.dataset.imageId;
+                        fetch(`/manage_cars/set_main_image/${imageId}`, {
+                            method: 'POST'
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.message) {
+                                loadCarImages(currentCarId);
+                            } else {
+                                alert('Error setting main image');
+                            }
+                        });
+                    });
+                });
+                
+                grid.querySelectorAll('.delete-image').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        if (confirm('Are you sure you want to delete this image?')) {
+                            const imageId = this.dataset.imageId;
+                            fetch(`/manage_cars/delete_car_image/${imageId}`, {
+                                method: 'POST'
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.message) {
+                                    loadCarImages(currentCarId);
+                                } else {
+                                    alert('Error deleting image');
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+    }
+    
+    // Make table rows sortable
+    const sortable = document.getElementById('cars-sortable');
+    sortable.addEventListener('dragover', function(e) {
+        e.preventDefault();
+    });
+    
+    sortable.addEventListener('dragstart', function(e) {
+        const row = e.target.closest('tr');
+        e.dataTransfer.setData('text', row.dataset.carId);
+    });
+    
+    sortable.addEventListener('drop', function(e) {
+        e.preventDefault();
+        const carId = e.dataTransfer.getData('text');
+        const row = document.querySelector(`#car-${carId}`);
+        const targetRow = e.target.closest('tr');
+        if (targetRow) {
+            if (targetRow.dataset.carId === carId) {
+                return;
+            }
+            const targetIndex = Array.prototype.indexOf.call(sortable.children, targetRow);
+            const currentIndex = Array.prototype.indexOf.call(sortable.children, row);
+            if (targetIndex > currentIndex) {
+                sortable.insertBefore(row, targetRow.nextSibling);
+            } else {
+                sortable.insertBefore(row, targetRow);
+            }
+            updateCarOrder();
+        }
+    });
+    
+    function updateCarOrder() {
+        const rows = sortable.children;
+        const carIds = Array.prototype.map.call(rows, function(row) {
+            return row.dataset.carId;
+        });
+        fetch('/manage_cars/update_order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(carIds)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                console.log('Car order updated successfully');
+            } else {
+                console.error('Error updating car order');
+            }
+        });
+    }
+});
+</script>
+
+<style>
+.car-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.car-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.image-item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.image-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-item:hover .image-actions {
+    opacity: 1;
+}
+</style>
+{% endblock %}

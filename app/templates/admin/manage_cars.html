@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Cars - Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="admin-header">
+    <h2>Manage Cars</h2>
+</div>
+
+<div class="card">
+    <h3>Add New Car</h3>
+    <form method="POST" class="add-car-form">
+        <div class="form-group">
+            <label for="model" class="form-label">Model</label>
+            <input type="text" id="model" name="model" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="year" class="form-label">Year</label>
+            <input type="number" id="year" name="year" class="form-input" min="1900" max="2025" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="license_plate" class="form-label">License Plate</label>
+            <input type="text" id="license_plate" name="license_plate" class="form-input" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="daily_rate" class="form-label">Daily Rate (KMF)</label>
+            <input type="number" id="daily_rate" name="daily_rate" class="form-input" min="0" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="category" class="form-label">Category</label>
+            <select id="category" name="category" class="form-input" required>
+                <option value="Economy">Economy</option>
+                <option value="Compact">Compact</option>
+                <option value="Luxury">Luxury</option>
+                <option value="SUV">SUV</option>
+                <option value="Van">Van</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Car</button>
+    </form>
+</div>
+
+<div class="card">
+    <h3>Car Inventory</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>License Plate</th>
+                    <th>Daily Rate</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for car in cars %}
+                <tr>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.year }}</td>
+                    <td>{{ car.license_plate }}</td>
+                    <td>${{ "%.2f"|format(car.daily_rate) }}</td>
+                    <td>{{ car.category }}</td>
+                    <td>{{ "Available" if car.is_available else "Rented" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

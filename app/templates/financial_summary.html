@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Financial Summary{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0"><i class="fas fa-chart-line"></i> Financial Summary</h3>
+                    <div>
+                        <span class="me-3">Year: {{ today.year }}</span>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <h5>Total Rental Income</h5>
+                                    <p class="display-6">KMF {{ "%.0f"|format(total_rental_income) }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body">
+                                    <h5>Maintenance Expenses</h5>
+                                    <p class="display-6">KMF {{ "%.0f"|format(total_maintenance_expense) }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card {% if net_income >= 0 %}bg-info{% else %}bg-warning{% endif %} text-white">
+                                <div class="card-body">
+                                    <h5>Net Income</h5>
+                                    <p class="display-6">KMF {{ "%.0f"|format(net_income) }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h4>Monthly Rental Income</h4>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="monthlyIncomeChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h4>Car Performance</h4>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Car Model</th>
+                                                <th>Total Rentals</th>
+                                                <th>Total Income</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for car_id, car_data in car_performance.items() %}
+                                            <tr>
+                                                <td>{{ car_data.model }}</td>
+                                                <td>{{ car_data.total_rentals }}</td>
+                                                <td>KMF {{ "%.0f"|format(car_data.total_income) }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Booking Summary</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-car fa-2x me-3 text-primary"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Total Bookings</h6>
+                                                    <p class="h4 mb-0">{{ total_bookings }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-wrench fa-2x me-3 text-danger"></i>
+                                                <div>
+                                                    <h6 class="mb-1">Maintenance Records</h6>
+                                                    <p class="h4 mb-0">{{ total_maintenance_records }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Monthly Income Chart
+    const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June', 
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+
+    const monthlyIncomeData = {{ monthly_rental_income|tojson }};
+    
+    const ctx = document.getElementById('monthlyIncomeChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: monthNames,
+            datasets: [{
+                label: 'Monthly Rental Income (KMF)',
+                data: Object.values(monthlyIncomeData),
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return 'KMF ' + value;
+                        }
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+{% endblock %}
+
+{% block styles %}
+<style>
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+</style>
+{% endblock %}

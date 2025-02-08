@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Customer History - {{ customer.name }}{% endblock %}
+
+{% block content %}
+<div class="customer-history">
+    <div class="card customer-info">
+        <h2>Customer Information</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <label>Name:</label>
+                <span>{{ customer.name }}</span>
+            </div>
+            <div class="info-item">
+                <label>Phone:</label>
+                <span>{{ customer.phone }}</span>
+            </div>
+            <div class="info-item">
+                <label>Email:</label>
+                <span>{{ customer.email or 'Not provided' }}</span>
+            </div>
+            <div class="info-item">
+                <label>License Number:</label>
+                <span>{{ customer.license_number }}</span>
+            </div>
+            <div class="info-item full-width">
+                <label>Address:</label>
+                <span>{{ customer.address or 'Not provided' }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Rental History</h2>
+        {% if bookings %}
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Car</th>
+                        <th>Duration</th>
+                        <th>Total Cost</th>
+                        <th>Status</th>
+                        <th>Handled By</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.created_at.strftime('%Y-%m-%d') }}</td>
+                        <td>{{ booking.car.model }}</td>
+                        <td>{{ (booking.end_date - booking.start_date).days }} days</td>
+                        <td>${{ "%.2f"|format(booking.total_cost) }}</td>
+                        <td>
+                            <span class="status-badge status-{{ booking.status }}">
+                                {{ booking.status }}
+                            </span>
+                        </td>
+                        <td>{{ booking.employee.name }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="rental-summary">
+            <h3>Summary</h3>
+            <div class="summary-stats">
+                <div class="stat-item">
+                    <label>Total Rentals:</label>
+                    <span>{{ bookings|length }}</span>
+                </div>
+                <div class="stat-item">
+                    <label>Total Spent:</label>
+                    <span>${{ "%.2f"|format(bookings|sum(attribute='total_cost')) }}</span>
+                </div>
+                <div class="stat-item">
+                    <label>Average Rental Duration:</label>
+                    <span>{{ "%.1f"|format(bookings|map(attribute='end_date')|map('sub', bookings|map(attribute='start_date'))|map(attribute='days')|sum / bookings|length) }} days</span>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>No rental history found for this customer.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add any customer-specific JavaScript here
+});
+</script>
+{% endblock %}

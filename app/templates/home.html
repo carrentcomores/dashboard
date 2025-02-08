@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <h1 class="mb-4">Available Cars</h1>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for car in cars %}
+        <div class="col-md-4 mb-4">
+            <div class="card car-card h-100 {% if car.current_booking %}opacity-75 border border-warning{% endif %}" data-car-id="{{ car.id }}">
+                <!-- Single Car Image -->
+                {% if car.main_image %}
+                    <img src="{{ url_for('static', filename=car.main_image) }}" 
+                         class="card-img-top" alt="{{ car.model }}"
+                         style="height: 200px; object-fit: cover;">
+                {% elif car.images %}
+                    <img src="{{ url_for('static', filename=car.images[0].image_path) }}" 
+                         class="card-img-top" alt="{{ car.model }}"
+                         style="height: 200px; object-fit: cover;">
+                {% else %}
+                    <img src="{{ url_for('static', filename='images/default-car.jpg') }}" 
+                         class="card-img-top" alt="{{ car.model }}"
+                         style="height: 200px; object-fit: cover;">
+                {% endif %}
+
+                <!-- Car Details -->
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="card-title mb-0">{{ car.model }} <span class="text-muted">({{ car.year }})</span></h5>
+                        
+                        <!-- Booking Badge -->
+                        {% if car.current_booking %}
+                        <span class="badge bg-warning text-dark">
+                            <i class="fas fa-calendar-check"></i> Booked
+                        </span>
+                        {% elif not car.is_available %}
+                        <span class="badge bg-danger">
+                            <i class="fas fa-lock"></i> Unavailable
+                        </span>
+                        {% else %}
+                        <span class="badge bg-success">
+                            <i class="fas fa-check-circle"></i> Available
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Booking Details -->
+                    {% if car.current_booking %}
+                    <div class="booking-details mt-2 p-2 bg-light rounded">
+                        <small>
+                            {% if car.current_booking.customer_name == 'Agency Marked' %}
+                                <strong>Status:</strong> Marked as Booked by Agency
+                            {% else %}
+                                <strong>Booked by:</strong> {{ car.current_booking.customer_name }}<br>
+                                <strong>Booked through:</strong> {{ car.current_booking.booked_by_role|capitalize }}<br>
+                                <strong>From:</strong> {{ car.current_booking.start_date.strftime('%Y-%m-%d') }}<br>
+                                <strong>Until:</strong> {{ car.current_booking.end_date.strftime('%Y-%m-%d') }}
+                            {% endif %}
+                        </small>
+                    </div>
+                    {% endif %}
+
+                    <div class="car-specs">
+                        <div class="spec-item">
+                            <i class="fas fa-car"></i> 
+                            <span>{{ car.category }}</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-dollar-sign"></i> 
+                            <span>Daily Rate: KMF {{ "%.0f"|format(car.daily_rate) }}</span>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-tag"></i> 
+                            <span>License: {{ car.license_plate }}</span>
+                        </div>
+                    </div>
+
+                    {% if car.description %}
+                    <div class="car-description mt-2 text-muted">
+                        <p class="card-text small">{{ car.description }}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if car.features %}
+                    <div class="car-features mt-2">
+                        <strong>Features:</strong>
+                        <ul class="list-unstyled small">
+                            {% for feature in car.features.split('\n') %}
+                            <li><i class="fas fa-check-circle text-success me-2"></i>{{ feature.strip() }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    <!-- Book Button -->
+                    <div class="mt-3">
+                        {% if car.current_booking %}
+                        <button class="btn btn-warning w-100" disabled>
+                            <i class="fas fa-calendar-times"></i> Booked
+                        </button>
+                        {% elif not car.is_available %}
+                        <button class="btn btn-secondary w-100" disabled>
+                            <i class="fas fa-ban"></i> Unavailable
+                        </button>
+                        {% elif current_user.is_authenticated and current_user.role in ['admin', 'secretary'] %}
+                        <a href="{{ url_for('main.book_car', car_id=car.id) }}" class="btn btn-primary w-100">
+                            <i class="fas fa-calendar-plus"></i> Book Now
+                        </a>
+                        {% else %}
+                        <button class="btn btn-secondary w-100" disabled>
+                            <i class="fas fa-lock"></i> Booking Restricted
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% if current_user.role == 'agency' %}
+<!-- Car Status Update Modal -->
+<div class="modal fade" id="carStatusModal" tabindex="-1" aria-labelledby="carStatusModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="carStatusModalLabel">Update Car Status</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="carStatusForm">
+                    <input type="hidden" id="modalCarId" name="car_id">
+                    <div class="mb-3">
+                        <label for="carStatusSelect" class="form-label">Car Status</label>
+                        <select class="form-select" id="carStatusSelect" name="status" required>
+                            <option value="available">Available</option>
+                            <option value="booked">Booked</option>
+                            <option value="unavailable">Unavailable</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="carStatusNotes" class="form-label">Notes (Optional)</label>
+                        <textarea class="form-control" id="carStatusNotes" name="notes" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Status</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    {% if current_user.role == 'agency' %}
+    // Add click event to car cards for status update
+    document.querySelectorAll('.car-card').forEach(card => {
+        // Check if the card is bookable by agency
+        const isBookableByAgency = !card.querySelector('.booking-details') || 
+            (card.querySelector('.booking-details small').textContent.includes('Marked as Booked by Agency'));
+
+        if (isBookableByAgency) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function() {
+                const carId = this.getAttribute('data-car-id');
+                const carStatusModal = new bootstrap.Modal(document.getElementById('carStatusModal'));
+                document.getElementById('modalCarId').value = carId;
+                carStatusModal.show();
+            });
+        } else {
+            // Add a tooltip to explain why the car can't be modified
+            card.setAttribute('title', 'Car is currently booked by admin/manager and cannot be modified');
+            card.style.cursor = 'not-allowed';
+            card.classList.add('opacity-50');
+        }
+    });
+
+    // Handle form submission
+    document.getElementById('carStatusForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+
+        fetch("{{ url_for('main.update_agency_car_status') }}", {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // Optionally, reload the page or update the UI
+                location.reload();
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred while updating car status.');
+        });
+    });
+    {% endif %}
+});
+</script>
+{% endif %}
+
+<style>
+.card {
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.badge {
+    font-size: 0.9em;
+    padding: 0.5em 0.7em;
+}
+.car-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+.car-features {
+    margin-top: 0.5rem;
+}
+.car-features strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+.car-features ul {
+    padding-left: 0;
+    margin-bottom: 0.5rem;
+}
+.car-features li {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    list-style: none;
+}
+.car-features li i {
+    margin-right: 0.5rem;
+    color: #28a745;
+}
+.booking-details {
+    font-size: 0.8rem;
+}
+</style>
+{% endblock %}

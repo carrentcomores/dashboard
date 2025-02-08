@@ -1,0 +1,1117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs mb-4" id="managementTabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#employees">Manage Employees</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#agencies">Manage Agencies</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Employees Tab -->
+                <div class="tab-pane fade show active" id="employees">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Employee List</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Employee ID</th>
+                                        <th>Role</th>
+                                        <th>Monthly Salary</th>
+                                        <th>Phone Number</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for employee in employees %}
+                                        {% if not employee.is_admin and employee.role != 'agency' %}
+                                        <tr data-employee-id="{{ employee.id }}">
+                                            <td>{{ employee.name }}</td>
+                                            <td>{{ employee.email }}</td>
+                                            <td>{{ employee.employee_id }}</td>
+                                            <td>{{ employee.role }}</td>
+                                            <td>{{ "{:,.0f} KMF".format(employee.salary) }}</td>
+                                            <td>{{ employee.phone_number or 'N/A' }}</td>
+                                            <td>
+                                                {% if employee.is_active %}
+                                                    <span class="badge bg-success employee-status-badge">Active</span>
+                                                {% else %}
+                                                    <span class="badge bg-danger employee-status-badge">Inactive</span>
+                                                {% endif %}
+                                                <button class="btn btn-sm btn-toggle-status {% if employee.is_active %}btn-warning{% else %}btn-success{% endif %}" 
+                                                        data-user-id="{{ employee.id }}"
+                                                        title="{% if employee.is_active %}Deactivate{% else %}Activate{% endif %} User">
+                                                    <i class="fas {% if employee.is_active %}fa-times{% else %}fa-check{% endif %}"></i>
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <div class="btn-group" role="group">
+                                                    <button class="btn btn-sm btn-primary edit-employee" 
+                                                            data-id="{{ employee.id }}"
+                                                            data-name="{{ employee.name }}"
+                                                            data-email="{{ employee.email }}"
+                                                            data-edit_role="{{ employee.role }}"
+                                                            data-salary="{{ employee.salary }}"
+                                                            data-phone-number="{{ employee.phone_number or '' }}"
+                                                            data-employee-id="{{ employee.employee_id }}">
+                                                        <i class="fas fa-edit"></i> Edit
+                                                    </button>
+                                                    <button class="btn btn-sm btn-danger delete-employee" data-id="{{ employee.id }}">
+                                                        <i class="fas fa-trash"></i> Delete
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agencies Tab -->
+                <div class="tab-pane fade" id="agencies">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h3 class="card-title mb-0">Agency List</h3>
+                            <button class="btn btn-success btn-sm" id="add-agency-btn">
+                                <i class="fas fa-plus"></i> Add New Agency
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped table-hover" id="agency-table">
+                                <thead>
+                                    <tr>
+                                        <th>Agency Name</th>
+                                        <th>Agency ID</th>
+                                        <th>Contact Email</th>
+                                        <th>Phone Number</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for agency in agencies %}
+                                    <tr data-agency-id="{{ agency.id }}">
+                                        <td>{{ agency.name }}</td>
+                                        <td>{{ agency.employee_id }}</td>
+                                        <td>{{ agency.email }}</td>
+                                        <td>{{ agency.phone_number or 'N/A' }}</td>
+                                        <td>
+                                            {% if agency.is_active %}
+                                                <span class="badge bg-success agency-status-badge">Active</span>
+                                            {% else %}
+                                                <span class="badge bg-danger agency-status-badge">Inactive</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <button class="btn btn-sm btn-primary edit-agency" 
+                                                        data-id="{{ agency.id }}"
+                                                        data-name="{{ agency.name }}"
+                                                        data-email="{{ agency.email }}"
+                                                        data-agency-id="{{ agency.employee_id }}"
+                                                        data-phone-number="{{ agency.phone_number or '' }}"
+                                                        data-status="{{ 'active' if agency.is_active else 'inactive' }}">
+                                                    <i class="fas fa-edit"></i> Edit
+                                                </button>
+                                                <button class="btn btn-sm btn-danger delete-agency" data-id="{{ agency.id }}">
+                                                    <i class="fas fa-trash"></i> Delete
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Employee Modal -->
+<div class="modal fade" id="editEmployeeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Employee</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="POST" action="{{ url_for('main.manage_employees') }}" id="edit-employee-form">
+                <input type="hidden" name="action" value="edit_employee">
+                <input type="hidden" name="id" id="edit-id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="edit-name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="edit-name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="edit-email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-employee-id" class="form-label">Employee ID</label>
+                        <input type="text" class="form-control" id="edit-employee-id" name="employee_id" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit_role" class="form-label">Role</label>
+                        <select class="form-select" id="edit_role" name="role" required>
+                            <option value="employee">Employee</option>
+                            <option value="manager">Manager</option>
+                            <option value="secretary">Secretary</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-salary" class="form-label">Monthly Salary (KMF)</label>
+                        <input type="number" class="form-control" id="edit-salary" name="salary" min="0" step="0.01" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-phone-number" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="edit-phone-number" name="phone_number" pattern="[+]?[0-9]{10,14}" title="Please enter a valid phone number (10-14 digits, optional '+' prefix)">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Agency Modal -->
+<div class="modal fade" id="editAgencyModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Agency</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <form method="POST" action="{{ url_for('main.manage_employees') }}" id="edit-agency-form">
+                <input type="hidden" name="action" value="edit_agency">
+                <input type="hidden" name="id" id="edit-agency-id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="edit-agency-name" class="form-label">Agency Name</label>
+                        <input type="text" class="form-control" id="edit-agency-name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-agency-agency-id" class="form-label">Employee ID</label>
+                        <input type="text" class="form-control" id="edit-agency-agency-id" name="employee_id" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-agency-email" class="form-label">Contact Email</label>
+                        <input type="email" class="form-control" id="edit-agency-email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-agency-phone-number" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="edit-agency-phone-number" name="phone_number">
+                    </div>
+                    <div class="mb-3">
+                        <label for="edit-agency-status" class="form-label">Status</label>
+                        <select class="form-select" id="edit-agency-status" name="status">
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="car-visibility-container" class="form-label">Car Visibility</label>
+                        <div id="car-visibility-container"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Update Agency</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Add Agency Modal -->
+<div class="modal fade" id="addAgencyModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add New Agency</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="addAgencyForm" method="POST">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="agency-name" class="form-label">Agency Name</label>
+                            <input type="text" class="form-control" id="agency-name" name="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="agency-id" class="form-label">Agency ID</label>
+                            <input type="text" class="form-control" id="agency-id" name="agency_id" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="agency-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="agency-email" name="email" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="agency-phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="agency-phone" name="phone_number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="agency-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="agency-password" name="password" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="agency-confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="agency-confirm-password" name="confirm_password" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Car Selection Grid -->
+                    <div class="mb-3">
+                        <label class="form-label">Select Cars Visible to Agency</label>
+                        <div class="row g-2" id="car-selection-grid">
+                            {% for car in cars %}
+                            <div class="col-md-3 col-sm-4 col-6">
+                                <div class="card car-selection-card">
+                                    <img src="{{ 
+                                        url_for('static', filename=car.images[0].image_path) 
+                                        if car.images else 
+                                        url_for('static', filename='img/default_car.png') 
+                                    }}" 
+                                    class="card-img-top" alt="{{ car.name }}"
+                                    onerror="this.onerror=null; this.src='{{ url_for('static', filename='img/default_car.png') }}'"
+                                    >
+                                    <div class="card-body p-2">
+                                        <h6 class="card-title mb-1">{{ car.name }}</h6>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" 
+                                                   name="visible_cars" 
+                                                   value="{{ car.id }}" 
+                                                   id="car-{{ car.id }}">
+                                            <label class="form-check-label" for="car-{{ car.id }}">
+                                                Visible
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Agency</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Agency Management Initialization
+    console.log('Agency Management Script Loaded');
+
+    // Precise Selector Verification
+    const requiredElements = [
+        'addAgencyModal', 
+        'editAgencyModal', 
+        'addAgencyForm', 
+        'edit-agency-form',
+        'add-agency-btn'
+    ];
+
+    requiredElements.forEach(id => {
+        const element = document.getElementById(id);
+        if (!element) {
+            console.error(`Required element not found: ${id}`);
+        }
+    });
+
+    // Add Agency Button Handler
+    const addAgencyBtn = document.getElementById('add-agency-btn');
+    if (addAgencyBtn) {
+        addAgencyBtn.addEventListener('click', function() {
+            const addAgencyModal = new bootstrap.Modal(document.getElementById('addAgencyModal'));
+            addAgencyModal.show();
+        });
+    }
+
+    // Agency Action Buttons Event Delegation
+    document.addEventListener('click', function(e) {
+        // Edit Agency Button
+        const editButton = e.target.closest('.edit-agency');
+        if (editButton) {
+            console.log('Edit Agency Button Clicked', editButton);
+            
+            // Extract data attributes with fallback
+            const agencyId = editButton.getAttribute('data-id') || '';
+            const name = editButton.getAttribute('data-name') || '';
+            const email = editButton.getAttribute('data-email') || '';
+            const employeeId = editButton.getAttribute('data-agency-id') || '';
+            const phoneNumber = editButton.getAttribute('data-phone-number') || '';
+
+            // Find edit modal and form elements
+            const editModal = document.getElementById('editAgencyModal');
+            const editForm = document.getElementById('edit-agency-form');
+
+            if (editModal && editForm) {
+                // Precise selector for form inputs
+                const agencyIdInput = editForm.querySelector('#edit-agency-id');
+                const nameInput = editForm.querySelector('#edit-agency-name');
+                const emailInput = editForm.querySelector('#edit-agency-email');
+                const employeeIdInput = editForm.querySelector('#edit-agency-agency-id');
+                const phoneNumberInput = editForm.querySelector('#edit-agency-phone-number');
+                const statusInput = editForm.querySelector('#edit-agency-status');
+
+                // Populate form with data
+                if (agencyIdInput) agencyIdInput.value = agencyId;
+                if (nameInput) nameInput.value = name;
+                if (emailInput) emailInput.value = email;
+                if (employeeIdInput) employeeIdInput.value = employeeId;
+                if (phoneNumberInput) phoneNumberInput.value = phoneNumber;
+                if (statusInput) statusInput.value = editButton.getAttribute('data-status');
+
+                // Create an AbortController for the fetch request with a timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => {
+                    controller.abort();
+                    showToast('Request timed out. Please try again.', 'warning');
+                }, 10000); // 10 seconds timeout
+
+                // Fetch all cars and current visible cars
+                fetch(`/get_agency_cars/${agencyId}`, { 
+                    signal: controller.signal,
+                    method: 'GET',
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    }
+                })
+                .then(response => {
+                    clearTimeout(timeoutId);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const carVisibilityContainer = document.getElementById('car-visibility-container');
+                    carVisibilityContainer.innerHTML = ''; // Clear previous options
+
+                    // Populate car visibility checkboxes
+                    data.all_cars.forEach(car => {
+                        const checkboxDiv = document.createElement('div');
+                        checkboxDiv.className = 'form-check';
+                        
+                        const checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.className = 'form-check-input';
+                        checkbox.id = `car-${car.id}`;
+                        checkbox.name = 'visible_cars';
+                        checkbox.value = car.id;
+                        
+                        // Check if this car is currently visible to the agency
+                        if (data.visible_car_ids.includes(car.id)) {
+                            checkbox.checked = true;
+                        }
+                        
+                        const label = document.createElement('label');
+                        label.className = 'form-check-label';
+                        label.htmlFor = `car-${car.id}`;
+                        label.textContent = `${car.model} (${car.license_plate})`;
+                        
+                        checkboxDiv.appendChild(checkbox);
+                        checkboxDiv.appendChild(label);
+                        carVisibilityContainer.appendChild(checkboxDiv);
+                    });
+
+                    // Show the modal
+                    const modalInstance = new bootstrap.Modal(editModal);
+                    modalInstance.show();
+                })
+                .catch(error => {
+                    clearTimeout(timeoutId);
+                    
+                    // Check for specific error types
+                    if (error.name === 'AbortError') {
+                        showToast('Request timed out. Please refresh the page.', 'warning');
+                    } else if (error.name === 'TypeError') {
+                        showToast('Network error. Please check your connection.', 'danger');
+                    } else {
+                        console.error('Error fetching car visibility:', error);
+                        showToast('Failed to load car visibility options', 'danger');
+                    }
+
+                    // Ensure modal is closed if fetch fails
+                    const modalInstance = bootstrap.Modal.getInstance(editModal);
+                    if (modalInstance) {
+                        modalInstance.hide();
+                    }
+                });
+            } else {
+                console.error('Edit modal or form not found', {
+                    editModal: !!editModal,
+                    editForm: !!editForm
+                });
+            }
+        }
+
+        // Delete Agency Button
+        const deleteButton = e.target.closest('.delete-agency');
+        if (deleteButton) {
+            const agencyId = deleteButton.getAttribute('data-id');
+            const row = deleteButton.closest('tr');
+
+            console.log('Delete Agency Button Clicked', {
+                agencyId: agencyId,
+                rowExists: !!row,
+                buttonDetails: {
+                    name: deleteButton.getAttribute('data-name'),
+                    email: deleteButton.getAttribute('data-email')
+                }
+            });
+
+            if (confirm('Are you sure you want to delete this agency?')) {
+                fetch(`/delete_agency/${agencyId}`, {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    console.log('Delete Response Status:', response.status);
+                    const contentType = response.headers.get('content-type');
+                    if (contentType && contentType.includes('application/json')) {
+                        return response.json();
+                    } else {
+                        // If not JSON, try to parse as text or throw an error
+                        return response.text().then(text => {
+                            throw new Error(text || 'Unexpected response format');
+                        });
+                    }
+                })
+                .then(data => {
+                    console.log('Delete Agency Response:', data);
+                    
+                    // Remove the row from the table
+                    if (row) {
+                        row.remove();
+                    }
+                    
+                    // Show success toast
+                    showToast('Agency deleted successfully', 'success');
+                    
+                    // Reload the page to refresh all data
+                    window.location.reload();
+                })
+                .catch(error => {
+                    console.error('Delete Agency Error:', error);
+                    
+                    // Show error toast
+                    showToast(error.message || 'Failed to delete agency', 'danger');
+                });
+            }
+        }
+    });
+
+    // Form Submission Handlers
+    function handleFormSubmission(form, entityType) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const entityId = formData.get('id');
+            
+            // Construct the correct URL dynamically
+            const url = entityType === 'employee' 
+                ? `/edit_employee/${entityId}` 
+                : `/edit_agency/${entityId}`;
+
+            // Log detailed information for debugging
+            console.log('Form Submission Details:', {
+                entityType: entityType,
+                entityId: entityId,
+                url: url,
+                formData: Object.fromEntries(formData)
+            });
+
+            // Validate form data
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const employeeId = formData.get('employee_id');
+
+            // Client-side validation specific to each entity type
+            if (entityType === 'employee') {
+                // For employees, ensure all required fields are present
+                if (!name || !email || !employeeId) {
+                    console.error('Validation Failed:', { name, email, employeeId });
+                    showToast('Name, email, and employee ID are required.', 'danger');
+                    return;
+                }
+            } else if (entityType === 'agency') {
+                // Agency-specific validation (if needed)
+                if (!name || !email) {
+                    showToast('Name and email are required.', 'danger');
+                    return;
+                }
+            }
+
+            fetch(url, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                console.log('Response Status:', response.status);
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => {
+                        console.error('Non-JSON Response:', text);
+                        throw new Error(text || 'Unexpected response format');
+                    });
+                }
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    // Close modal
+                    const modalId = entityType === 'employee' 
+                        ? 'editEmployeeModal' 
+                        : 'editAgencyModal';
+                    const modal = bootstrap.Modal.getInstance(document.getElementById(modalId));
+                    if (modal) {
+                        modal.hide();
+                    }
+                    
+                    // Update table row
+                    updateTableRow(
+                        entityType === 'employee' ? data.employee : data.agency, 
+                        entityType
+                    );
+                    
+                    // Show success toast
+                    showToast(data.message, 'success');
+                } else {
+                    // Fallback error handling
+                    showToast(data.message || `Failed to edit ${entityType}`, 'danger');
+                }
+            })
+            .catch(error => {
+                console.error(`Edit ${entityType} Error:`, error);
+                showToast(`An error occurred: ${error.message}`, 'danger');
+            });
+        });
+    }
+
+    // Initialize form submissions
+    const editEmployeeForm = document.getElementById('edit-employee-form');
+    if (editEmployeeForm) {
+        handleFormSubmission(editEmployeeForm, 'employee');
+    }
+
+    const editAgencyForm = document.getElementById('edit-agency-form');
+    if (editAgencyForm) {
+        editAgencyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const agencyId = formData.get('id');
+
+            fetch(`/edit_agency/${agencyId}`, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => {
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => {
+                        throw new Error(text || 'Unexpected response format');
+                    });
+                }
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    // Close modal
+                    const editAgencyModal = bootstrap.Modal.getInstance(document.getElementById('editAgencyModal'));
+                    if (editAgencyModal) {
+                        editAgencyModal.hide();
+                    }
+                    
+                    // Show success toast
+                    showToast(data.message, 'success');
+                    
+                    // Reload the page after a short delay to show the toast
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000);
+                } else {
+                    // Fallback error handling
+                    showToast(data.message || 'Failed to edit agency', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Edit Agency Error:', error);
+                showToast(`An error occurred: ${error.message}`, 'danger');
+            });
+        });
+    }
+
+    // Centralized event delegation for employee management actions
+    document.addEventListener('click', function(e) {
+        // Delete Employee Button
+        const deleteButton = e.target.closest('.delete-employee');
+        if (deleteButton) {
+            const employeeId = deleteButton.getAttribute('data-id');
+            const row = deleteButton.closest('tr');
+
+            if (confirm('Are you sure you want to delete this employee? This action cannot be undone.')) {
+                fetch(`/delete_employee/${employeeId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => {
+                    // Check if the response is JSON
+                    const contentType = response.headers.get('content-type');
+                    if (contentType && contentType.includes('application/json')) {
+                        return response.json();
+                    } else {
+                        // If not JSON, try to parse as text or throw an error
+                        return response.text().then(text => {
+                            throw new Error(text || 'Unexpected response format');
+                        });
+                    }
+                })
+                .then(data => {
+                    // Handle successful deletion
+                    if (data.status === 'success') {
+                        // Remove the row from the table
+                        row.remove();
+                        
+                        // Show success toast
+                        showToast(data.message, 'success');
+                    } else {
+                        // Show error toast
+                        showToast(data.message || 'Failed to delete employee', 'danger');
+                    }
+                })
+                .catch(error => {
+                    console.error('Delete Employee Error:', error);
+                    showToast(`An error occurred: ${error.message}`, 'danger');
+                });
+            }
+        }
+
+        // User Status Toggle Button
+        const toggleStatusButton = e.target.closest('.btn-toggle-status');
+        if (toggleStatusButton) {
+            const userId = toggleStatusButton.getAttribute('data-user-id');
+            const statusBadge = toggleStatusButton.previousElementSibling;
+            const row = toggleStatusButton.closest('tr');
+
+            fetch("{{ url_for('main.toggle_user_status') }}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: `user_id=${userId}`
+            })
+            .then(response => {
+                // Check if the response is JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    // If not JSON, try to parse as text or throw an error
+                    return response.text().then(text => {
+                        throw new Error(text || 'Unexpected response format');
+                    });
+                }
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    // Update status badge
+                    statusBadge.textContent = data.is_active ? 'Active' : 'Inactive';
+                    statusBadge.className = `badge employee-status-badge ${data.is_active ? 'bg-success' : 'bg-danger'}`;
+
+                    // Update button
+                    toggleStatusButton.classList.toggle('btn-success');
+                    toggleStatusButton.classList.toggle('btn-warning');
+                    const icon = toggleStatusButton.querySelector('i');
+                    icon.classList.toggle('fa-check');
+                    icon.classList.toggle('fa-times');
+                    toggleStatusButton.setAttribute('title', data.is_active ? 'Deactivate User' : 'Activate User');
+
+                    // Show success message
+                    showToast(data.message, 'success');
+                } else {
+                    // Show error message
+                    showToast(data.message || 'Failed to toggle user status', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Toggle Status Error:', error);
+                showToast(`An error occurred: ${error.message}`, 'danger');
+            });
+        }
+    });
+
+    // Function to dynamically update table rows
+    function updateTableRow(data, entityType) {
+        let rowSelector, updateFunction;
+
+        switch(entityType) {
+            case 'employee':
+                rowSelector = `tr[data-employee-id="${data.id}"]`;
+                updateFunction = (row) => {
+                    // Update employee-specific fields
+                    const nameCell = row.querySelector('td:nth-child(1)');
+                    const emailCell = row.querySelector('td:nth-child(2)');
+                    const employeeIdCell = row.querySelector('td:nth-child(3)');
+                    const roleCell = row.querySelector('td:nth-child(4)');
+                    const salaryCell = row.querySelector('td:nth-child(5)');
+                    const phoneCell = row.querySelector('td:nth-child(6)');
+                    const statusBadge = row.querySelector('.employee-status-badge');
+
+                    if (nameCell) nameCell.textContent = data.name;
+                    if (emailCell) emailCell.textContent = data.email;
+                    if (employeeIdCell) employeeIdCell.textContent = data.employee_id;
+                    if (roleCell) roleCell.textContent = data.role;
+                    if (salaryCell) salaryCell.textContent = data.salary ? `${parseFloat(data.salary).toLocaleString()} KMF` : '';
+                    if (phoneCell) phoneCell.textContent = data.phone_number || 'N/A';
+                    
+                    if (statusBadge) {
+                        statusBadge.textContent = data.is_active ? 'Active' : 'Inactive';
+                        statusBadge.className = `badge employee-status-badge ${data.is_active ? 'bg-success' : 'bg-danger'}`;
+                    }
+                };
+                break;
+
+            case 'agency':
+                rowSelector = `tr[data-agency-id="${data.id}"]`;
+                updateFunction = (row) => {
+                    // Update agency-specific fields
+                    const nameCell = row.querySelector('td:nth-child(1)');
+                    const employeeIdCell = row.querySelector('td:nth-child(2)');
+                    const emailCell = row.querySelector('td:nth-child(3)');
+                    const phoneCell = row.querySelector('td:nth-child(4)');
+                    const statusBadge = row.querySelector('.agency-status-badge');
+
+                    if (nameCell) nameCell.textContent = data.name;
+                    if (employeeIdCell) employeeIdCell.textContent = data.employee_id;
+                    if (emailCell) emailCell.textContent = data.email;
+                    if (phoneCell) phoneCell.textContent = data.phone_number || 'N/A';
+                    
+                    if (statusBadge) {
+                        statusBadge.textContent = data.is_active ? 'Active' : 'Inactive';
+                        statusBadge.className = `badge agency-status-badge ${data.is_active ? 'bg-success' : 'bg-danger'}`;
+                    }
+                };
+                break;
+
+            default:
+                console.error('Unknown entity type:', entityType);
+                return;
+        }
+
+        const row = document.querySelector(rowSelector);
+        if (row) {
+            updateFunction(row);
+        } else {
+            console.warn(`Row not found for ${entityType} with ID:`, data.id);
+        }
+    }
+
+    // Function to add a new agency to the table
+    function addAgencyToTable(agency) {
+        const agenciesTableBody = document.querySelector('#agency-table tbody');
+        if (agenciesTableBody) {
+            const newRow = document.createElement('tr');
+            newRow.setAttribute('data-agency-id', agency.id);
+            newRow.innerHTML = `
+                <td>${agency.name}</td>
+                <td>${agency.employee_id}</td>
+                <td>${agency.email}</td>
+                <td>${agency.phone_number || 'N/A'}</td>
+                <td>
+                    <span class="badge agency-status-badge ${agency.is_active ? 'bg-success' : 'bg-danger'}">
+                        ${agency.is_active ? 'Active' : 'Inactive'}
+                    </span>
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-primary edit-agency" 
+                            data-id="${agency.id}"
+                            data-name="${agency.name}"
+                            data-email="${agency.email}"
+                            data-agency-id="${agency.employee_id}"
+                            data-phone-number="${agency.phone_number || ''}"
+                            data-status="${agency.is_active ? 'active' : 'inactive'}">
+                        Edit
+                    </button>
+                    <button class="btn btn-sm btn-danger delete-agency" 
+                            data-id="${agency.id}">
+                        Delete
+                    </button>
+                </td>
+            `;
+            agenciesTableBody.appendChild(newRow);
+        }
+    }
+
+    // Add Agency Form Submission
+    const addAgencyForm = document.getElementById('addAgencyForm');
+    if (addAgencyForm) {
+        addAgencyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            // Validate form data client-side
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const employeeId = formData.get('agency_id');
+            const password = formData.get('password');
+            const confirmPassword = formData.get('confirm_password');
+
+            // Client-side validation
+            if (!name || !email || !employeeId) {
+                showToast('Name, email, and agency ID are required.', 'danger');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showToast('Passwords do not match.', 'danger');
+                return;
+            }
+
+            fetch("{{ url_for('main.add_agency') }}", {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    return response.text().then(text => {
+                        throw new Error(text || 'Unexpected response format');
+                    });
+                }
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    // Reset form
+                    addAgencyForm.reset();
+                    
+                    // Close modal
+                    const addAgencyModal = bootstrap.Modal.getInstance(document.getElementById('addAgencyModal'));
+                    if (addAgencyModal) {
+                        addAgencyModal.hide();
+                    }
+                    
+                    // Add new agency to table
+                    addAgencyToTable(data.agency);
+                    
+                    // Show success toast
+                    showToast(data.message, 'success');
+                } else {
+                    // Fallback error handling
+                    showToast(data.message || 'Failed to add agency', 'danger');
+                }
+            })
+            .catch(error => {
+                console.error('Add Agency Error:', {
+                    message: error.message,
+                    stack: error.stack
+                });
+                showToast(`An error occurred: ${error.message}`, 'danger');
+            });
+        });
+    }
+
+    // Edit Modal Handling for Employees
+    const editEmployeeButtons = document.querySelectorAll('.edit-employee');
+    const editEmployeeModal = new bootstrap.Modal(document.getElementById('editEmployeeModal'));
+    
+    editEmployeeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Populate edit modal fields
+            document.getElementById('edit-id').value = this.getAttribute('data-id');
+            document.getElementById('edit-name').value = this.getAttribute('data-name');
+            document.getElementById('edit-email').value = this.getAttribute('data-email');
+            document.getElementById('edit_role').value = this.getAttribute('data-edit_role');
+            document.getElementById('edit-salary').value = this.getAttribute('data-salary');
+            document.getElementById('edit-phone-number').value = this.getAttribute('data-phone-number');
+            
+            // Add Employee ID field population
+            const employeeIdField = document.getElementById('edit-employee-id');
+            if (employeeIdField) {
+                employeeIdField.value = this.getAttribute('data-employee-id');
+            }
+            
+            // Show the modal
+            editEmployeeModal.show();
+        });
+    });
+
+    // Edit Modal Handling for Agencies
+    const editAgencyButtons = document.querySelectorAll('.edit-agency');
+    const editAgencyModal = new bootstrap.Modal(document.getElementById('editAgencyModal'));
+    
+    editAgencyButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Populate basic agency fields
+            const agencyId = this.getAttribute('data-id');
+            document.getElementById('edit-agency-id').value = agencyId;
+            document.getElementById('edit-agency-name').value = this.getAttribute('data-name');
+            document.getElementById('edit-agency-email').value = this.getAttribute('data-email');
+            document.getElementById('edit-agency-employee-id').value = this.getAttribute('data-agency-id');
+            document.getElementById('edit-agency-phone-number').value = this.getAttribute('data-phone-number');
+            
+            // Set agency status
+            const statusSelect = document.getElementById('edit-agency-status');
+            statusSelect.value = this.getAttribute('data-status');
+
+            // Create an AbortController for the fetch request with a timeout
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => {
+                controller.abort();
+                showToast('Request timed out. Please try again.', 'warning');
+            }, 10000); // 10 seconds timeout
+
+            // Fetch all cars and current visible cars
+            fetch(`/get_agency_cars/${agencyId}`, { 
+                signal: controller.signal,
+                method: 'GET',
+                headers: {
+                    'Cache-Control': 'no-cache',
+                    'Pragma': 'no-cache'
+                }
+            })
+            .then(response => {
+                clearTimeout(timeoutId);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const carVisibilityContainer = document.getElementById('car-visibility-container');
+                carVisibilityContainer.innerHTML = ''; // Clear previous options
+
+                // Populate car visibility checkboxes
+                data.all_cars.forEach(car => {
+                    const checkboxDiv = document.createElement('div');
+                    checkboxDiv.className = 'form-check';
+                    
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.className = 'form-check-input';
+                    checkbox.id = `car-${car.id}`;
+                    checkbox.name = 'visible_cars';
+                    checkbox.value = car.id;
+                    
+                    // Check if this car is currently visible to the agency
+                    if (data.visible_car_ids.includes(car.id)) {
+                        checkbox.checked = true;
+                    }
+                    
+                    const label = document.createElement('label');
+                    label.className = 'form-check-label';
+                    label.htmlFor = `car-${car.id}`;
+                    label.textContent = `${car.model} (${car.license_plate})`;
+                    
+                    checkboxDiv.appendChild(checkbox);
+                    checkboxDiv.appendChild(label);
+                    carVisibilityContainer.appendChild(checkboxDiv);
+                });
+
+                // Show the modal
+                const modalInstance = new bootstrap.Modal(document.getElementById('editAgencyModal'));
+                modalInstance.show();
+            })
+            .catch(error => {
+                clearTimeout(timeoutId);
+                
+                // Check for specific error types
+                if (error.name === 'AbortError') {
+                    showToast('Request timed out. Please refresh the page.', 'warning');
+                } else if (error.name === 'TypeError') {
+                    showToast('Network error. Please check your connection.', 'danger');
+                } else {
+                    console.error('Error fetching car visibility:', error);
+                    showToast('Failed to load car visibility options', 'danger');
+                }
+
+                // Ensure modal is closed if fetch fails
+                const modalInstance = bootstrap.Modal.getInstance(document.getElementById('editAgencyModal'));
+                if (modalInstance) {
+                    modalInstance.hide();
+                }
+            });
+        });
+    });
+
+    // Toast Notification Function
+    function showToast(message, type) {
+        const toastContainer = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.classList.add('toast', `bg-${type}`);
+        toast.setAttribute('role', 'alert');
+        toast.innerHTML = `
+            <div class="toast-header">
+                <strong class="me-auto">${type === 'success' ? 'Success' : 'Error'}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">${message}</div>
+        `;
+
+        toastContainer.appendChild(toast);
+        const bsToast = new bootstrap.Toast(toast);
+        bsToast.show();
+
+        // Remove toast after it's hidden
+        toast.addEventListener('hidden.bs.toast', function () {
+            toast.remove();
+        });
+    }
+});
+</script>
+{% endblock %}

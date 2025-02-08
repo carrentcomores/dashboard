@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ car.model }} - Car Details{% endblock %}
+
+{% block content %}
+<div class="car-details-container">
+    <div class="card">
+        <div class="car-header">
+            <img src="{{ url_for('static', filename='images/default-car.jpg') }}" alt="{{ car.model }}" class="car-image">
+            <h2>{{ car.model }} ({{ car.year }})</h2>
+        </div>
+        
+        <div class="car-info">
+            <div class="info-group">
+                <h3>Car Details</h3>
+                <p><strong>Category:</strong> {{ car.category }}</p>
+                <p><strong>License Plate:</strong> {{ car.license_plate }}</p>
+                <p><strong>Daily Rate:</strong> ${{ "%.2f"|format(car.daily_rate) }}</p>
+                <p><strong>Status:</strong> 
+                    {% if car.is_available %}
+                        <span class="status-available">Available</span>
+                    {% else %}
+                        <span class="status-unavailable">Currently Rented</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        {% if car.is_available and current_user.is_authenticated and current_user.role != 'manager' %}
+        <div class="booking-section">
+            <a href="{{ url_for('main.book_car', car_id=car.id) }}" class="btn btn-primary">Book Now</a>
+        </div>
+        {% elif not current_user.is_authenticated %}
+        <div class="booking-section">
+            <p>Please <a href="{{ url_for('auth.login') }}">login</a> to book this car.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

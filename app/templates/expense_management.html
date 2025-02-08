@@ -1,0 +1,393 @@
+{% extends "base.html" %}
+
+{% block title %}Expense Management{% endblock %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0"><i class="fas fa-money-bill-wave"></i> Expense Management</h3>
+                    <div class="d-flex align-items-center">
+                        <form id="monthFilterForm" class="d-flex me-3" method="get" action="{{ url_for('main.expense_management') }}">
+                            <select name="month" class="form-select form-select-sm me-2" style="width: auto;">
+                                {% for month_num, month_name in months %}
+                                <option value="{{ month_num }}" {% if month_num == selected_month %}selected{% endif %}>
+                                    {{ month_name }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <select name="year" class="form-select form-select-sm me-2" style="width: auto;">
+                                {% for year in years %}
+                                <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>
+                                    {{ year }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <button type="submit" class="btn btn-light btn-sm">
+                                <i class="fas fa-filter"></i>
+                            </button>
+                        </form>
+                        <button class="btn btn-light" onclick="openAddExpenseModal()">
+                            <i class="fas fa-plus"></i> Add Expense
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <h4 class="mb-4 text-center">
+                        Expenses for 
+                        {% for month_num, month_name in months %}
+                            {% if month_num == selected_month %}
+                                {{ month_name }} {{ selected_year }}
+                            {% endif %}
+                        {% endfor %}
+                    </h4>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body">
+                                    <h5>Total Expenses</h5>
+                                    <p class="display-6">KMF {{ "%.0f"|format(total_expenses) }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-warning text-white">
+                                <div class="card-body">
+                                    <h5>Expenses by Category</h5>
+                                    <ul class="list-unstyled">
+                                        {% for category, amount in category_totals.items() %}
+                                        <li>
+                                            <strong>{{ category }}:</strong> 
+                                            KMF {{ "%.0f"|format(amount) }}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Category</th>
+                                    <th>Subcategory</th>
+                                    <th>Amount</th>
+                                    <th>Description</th>
+                                    <th>User</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for expense in expenses %}
+                                <tr>
+                                    <td>{{ expense.date.strftime('%Y-%m-%d %H:%M') }}</td>
+                                    <td>
+                                        <span class="badge bg-danger">
+                                            {{ expense.category }}
+                                        </span>
+                                    </td>
+                                    <td>{{ expense.subcategory }}</td>
+                                    <td>KMF {{ "%.0f"|format(expense.amount) }}</td>
+                                    <td>{{ expense.description }}</td>
+                                    <td>{{ expense.user.name }}</td>
+                                    <td>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-sm btn-primary" 
+                                                    onclick="editExpense({{ expense.id }})">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" 
+                                                    onclick="deleteExpense({{ expense.id }})">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add/Edit Expense Modal -->
+<div class="modal fade" id="expenseModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Add Expense</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="expenseForm">
+                    <input type="hidden" id="expense_id" name="expense_id">
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Category</label>
+                        <select class="form-select" id="category" name="category" required>
+                            <optgroup label="Expenses">
+                                <option value="Products">Buy Products</option>
+                                <option value="Bank">Put Money in Bank</option>
+                                <option value="Salaries">Pay Employees</option>
+                                <option value="Bills">Pay Bills</option>
+                                <option value="Other">Other Expenses</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subcategory" class="form-label">Subcategory</label>
+                        <select class="form-select" id="subcategory" name="subcategory" required>
+                            <!-- Subcategories will be dynamically populated -->
+                            <option value="Office Supplies">Office Supplies</option>
+                            <option value="Maintenance Supplies">Maintenance Supplies</option>
+                            <option value="Electricity">Electricity</option>
+                            <option value="Water">Water</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Internet">Internet</option>
+                            <option value="Salaries">Salaries</option>
+                            <option value="Bonuses">Bonuses</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount (KMF)</label>
+                        <input type="number" class="form-control" id="amount" name="amount" min="0" step="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter description" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveExpense">Save Expense</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const expenseModal = new bootstrap.Modal(document.getElementById('expenseModal'));
+    const expenseForm = document.getElementById('expenseForm');
+    const saveExpenseBtn = document.getElementById('saveExpense');
+
+    // Dynamically update subcategories and description based on category
+    document.getElementById('category').addEventListener('change', function() {
+        console.log('Category changed:', this.value);  // Debug logging
+        const subcategorySelect = document.getElementById('subcategory');
+        const descriptionLabel = document.querySelector('label[for="description"]');
+        const descriptionInput = document.getElementById('description');
+        const category = this.value;
+        
+        // Clear existing options
+        subcategorySelect.innerHTML = '';
+        
+        // Define subcategories for Buy Products
+        const buyProductSubcategories = [
+            'Maintenance Supplier', 
+            'Car Product', 
+            'Item', 
+            'Other'
+        ];
+        
+        // Define default subcategories for other categories
+        const defaultSubcategories = [
+            'Office Supplies',
+            'Maintenance Supplies',
+            'Electricity',
+            'Water',
+            'Rent',
+            'Internet',
+            'Salaries',
+            'Bonuses',
+            'Other'
+        ];
+        
+        // Special handling for different categories
+        if (category === 'Bank') {
+            // Set fixed subcategory for Bank
+            const option = document.createElement('option');
+            option.value = '0011049933';
+            option.textContent = 'Account Number 0011049933';
+            subcategorySelect.appendChild(option);
+            
+            // Change description label and placeholder
+            descriptionLabel.textContent = 'Depositor Name';
+            descriptionInput.placeholder = 'Enter depositor name';
+        } else if (category === 'Salaries') {
+            // Specific subcategories for Pay Employees
+            const salarySubcategories = [
+                'Salary',
+                'Advance Salary'
+            ];
+            
+            salarySubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+            
+            // Change description label and placeholder for Salaries
+            descriptionLabel.textContent = 'Name of Employee';
+            descriptionInput.placeholder = 'Enter employee name';
+        } else if (category === 'Bills') {
+            // Specific subcategories for Pay Bills
+            const billSubcategories = [
+                'Electricity',
+                'Water',
+                'Rent',
+                'Internet',
+                'Subscription',
+                'Other'
+            ];
+            
+            billSubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+            
+            // Reset description label and placeholder for Bills
+            descriptionLabel.textContent = 'Description';
+            descriptionInput.placeholder = 'Enter bill details';
+        } else if (category === 'Other') {
+            // Block subcategory for Other Expenses
+            const option = document.createElement('option');
+            option.value = '';
+            option.textContent = 'No Subcategory Available';
+            option.disabled = true;
+            subcategorySelect.appendChild(option);
+            
+            // Disable subcategory selection
+            subcategorySelect.disabled = true;
+            
+            // Reset description label and placeholder
+            descriptionLabel.textContent = 'Description';
+            descriptionInput.placeholder = 'Enter description';
+        } else {
+            // Re-enable subcategory selection
+            subcategorySelect.disabled = false;
+            
+            // Populate subcategories based on selected category
+            const subcategoriesToUse = category === 'Products' 
+                ? buyProductSubcategories 
+                : defaultSubcategories;
+            
+            // Clear existing options
+            subcategorySelect.innerHTML = '';
+            
+            subcategoriesToUse.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
+            
+            // Reset description label and placeholder
+            descriptionLabel.textContent = 'Description';
+            descriptionInput.placeholder = 'Enter description';
+        }
+        
+        // Ensure at least one option is selected
+        if (subcategorySelect.options.length > 0) {
+            subcategorySelect.selectedIndex = 0;
+        }
+    });
+
+    // Trigger initial population of subcategories on modal open
+    window.openAddExpenseModal = function() {
+        document.getElementById('modalTitle').textContent = 'Add Expense';
+        document.getElementById('expenseForm').reset();
+        document.getElementById('expense_id').value = '';
+        
+        // Trigger change event to populate subcategories
+        const categorySelect = document.getElementById('category');
+        categorySelect.dispatchEvent(new Event('change'));
+        
+        expenseModal.show();
+    };
+
+    // Edit Expense
+    window.editExpense = function(expenseId) {
+        fetch(`/get_expense/${expenseId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('modalTitle').textContent = 'Edit Expense';
+                document.getElementById('expense_id').value = data.id;
+                document.getElementById('category').value = data.category;
+                document.getElementById('subcategory').value = data.subcategory;
+                document.getElementById('amount').value = Math.round(data.amount);
+                document.getElementById('description').value = data.description;
+                expenseModal.show();
+            });
+    };
+
+    // Save Expense
+    saveExpenseBtn.addEventListener('click', function() {
+        const formData = new FormData(expenseForm);
+        const expenseId = formData.get('expense_id');
+        
+        const url = expenseId 
+            ? `/update_expense/${expenseId}` 
+            : '/add_expense';
+        
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.id) {
+                location.reload();
+            } else {
+                alert('Error saving expense');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred');
+        });
+    });
+
+    // Delete Expense
+    window.deleteExpense = function(expenseId) {
+        if (confirm('Are you sure you want to delete this expense?')) {
+            fetch(`/delete_expense/${expenseId}`, {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    location.reload();
+                } else {
+                    alert('Error deleting expense');
+                }
+            });
+        }
+    };
+});
+</script>
+{% endblock %}
+
+{% block styles %}
+<style>
+.table-responsive {
+    max-height: 500px;
+    overflow-y: auto;
+}
+</style>
+{% endblock %}
