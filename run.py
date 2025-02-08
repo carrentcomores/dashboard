@@ -1,32 +1,35 @@
+import os
+import logging
 from app import create_app, db
 from app.models import User
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
-import logging
-import os
+from config import config
 
-# Ensure log directory exists
-log_dir = os.path.join(os.path.dirname(__file__), 'logs')
-os.makedirs(log_dir, exist_ok=True)
+# Determine the configuration environment
+config_name = os.environ.get('FLASK_ENV', 'production')
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler(os.path.join(log_dir, 'app.log'))
-    ]
-)
-
-app = create_app()
-
-# Optionally, configure Flask's logger
-app.logger.setLevel(logging.INFO)
-
-if __name__ == '__main__':
-    print("Starting Car Rent System...")
+# Create the Flask application
+def init_app():
+    app = create_app(config[config_name])
     
+    # Ensure log directory exists
+    log_dir = os.path.join(os.path.dirname(__file__), 'logs')
+    os.makedirs(log_dir, exist_ok=True)
+
+    # Configure logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(os.path.join(log_dir, 'app.log'))
+        ]
+    )
+
+    # Optionally, configure Flask's logger
+    app.logger.setLevel(logging.INFO)
+
     with app.app_context():
         # Create all tables
         db.create_all()
@@ -50,7 +53,13 @@ if __name__ == '__main__':
                 print("Admin user already exists.")
         except Exception as e:
             print(f"Error creating admin user: {e}")
+    
+    return app
 
-    # Run the app with debug mode and logging
+# Create the app for Gunicorn
+app = init_app()
+
+if __name__ == '__main__':
+    print("Starting Car Rent System...")
     print("Application starting on http://0.0.0.0:5003")
     app.run(debug=True, host='0.0.0.0', port=5003)

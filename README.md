@@ -36,3 +36,4 @@ flask run
 - `/app/templates` - HTML templates
 - `/app/static` - Static files (CSS, JS, images)
 # dashboard
+# dashboard
