@@ -4562,3 +4562,39 @@ AttributeError: type object 'Booking' has no attribute 'agency_id'
 2025-02-08 21:10:47,840 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:10:47] "GET /manage_employees HTTP/1.1" 200 -
 2025-02-08 21:10:47,854 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:10:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-02-08 21:10:47,854 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:10:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:15:53,877 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/run.py', reloading
+2025-02-08 21:15:54,043 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 21:15:54,682 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 21:15:54,694 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 21:16:22,274 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:22] "GET / HTTP/1.1" 200 -
+2025-02-08 21:16:22,314 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:22,316 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:22,316 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:22] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 21:16:23,455 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:23] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 21:16:23,463 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:23,463 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,008 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "GET /maintenance HTTP/1.1" 200 -
+2025-02-08 21:16:24,021 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,022 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,462 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-08 21:16:24,469 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,470 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,470 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,894 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "GET /financial_summary HTTP/1.1" 200 -
+2025-02-08 21:16:24,900 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:24,901 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:25,390 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:25] "GET /manage_clients HTTP/1.1" 200 -
+2025-02-08 21:16:25,402 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:25,403 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:25,943 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:25] "GET /expense_management HTTP/1.1" 200 -
+2025-02-08 21:16:25,949 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:25,949 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:26,440 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:26] "GET /income_management HTTP/1.1" 200 -
+2025-02-08 21:16:26,447 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:26,447 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:26,847 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:26] "GET /add_employee HTTP/1.1" 200 -
+2025-02-08 21:16:26,862 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:26,863 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 21:16:27,348 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:27] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-08 21:16:27,355 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 21:16:27,355 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:16:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
