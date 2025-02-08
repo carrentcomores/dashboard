@@ -1,21 +1,15 @@
-import os
-import logging
 from app import create_app, db
 from app.models import User
 from werkzeug.security import generate_password_hash
 from sqlalchemy.exc import IntegrityError
-from config import config
+import logging
+import os
 
-# Determine the configuration environment
-config_name = os.environ.get('FLASK_ENV', 'production')
-
-# Create the Flask application
-app = create_app(config[config_name])
-
-# Configure logging
+# Ensure log directory exists
 log_dir = os.path.join(os.path.dirname(__file__), 'logs')
 os.makedirs(log_dir, exist_ok=True)
 
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -25,12 +19,19 @@ logging.basicConfig(
     ]
 )
 
+app = create_app()
+
 # Optionally, configure Flask's logger
 app.logger.setLevel(logging.INFO)
 
-# Ensure admin user exists
-def create_admin_user():
+if __name__ == '__main__':
+    print("Starting Car Rent System...")
+    
     with app.app_context():
+        # Create all tables
+        db.create_all()
+        
+        # Ensure admin user exists
         try:
             admin = User.query.filter_by(email='admin@carrent.com').first()
             if not admin:
@@ -50,12 +51,6 @@ def create_admin_user():
         except Exception as e:
             print(f"Error creating admin user: {e}")
 
-# Create admin user when the script is run directly
-if __name__ == '__main__':
-    create_admin_user()
-    print("Starting Car Rent System...")
+    # Run the app with debug mode and logging
     print("Application starting on http://0.0.0.0:5003")
     app.run(debug=True, host='0.0.0.0', port=5003)
-else:
-    # When imported, create admin user
-    create_admin_user()
