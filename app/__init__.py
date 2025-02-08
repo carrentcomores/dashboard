@@ -3,19 +3,31 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from os import path
+import os
 
 db = SQLAlchemy()
 migrate = Migrate()
 DB_NAME = "car_rental.db"
 
-def create_app():
+def create_app(config_object=None):
     app = Flask(__name__)
-    app.config['SECRET_KEY'] = 'your-secret-key'  # Change this in production
+    
+    # Apply configuration
+    if config_object:
+        app.config.from_object(config_object)
+    
+    # Fallback to default configuration if not provided
+    if 'SECRET_KEY' not in app.config:
+        app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
     
     # Use an absolute path for the database
     base_dir = path.abspath(path.dirname(__file__))
     db_path = path.join(base_dir, DB_NAME)
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
+    
+    # Set database URI if not already set
+    if 'SQLALCHEMY_DATABASE_URI' not in app.config:
+        app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
+    
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     db.init_app(app)
