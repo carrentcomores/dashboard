@@ -4,14 +4,14 @@ from datetime import datetime
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(150), nullable=False)
-    password = db.Column(db.String(150), nullable=False)
-    name = db.Column(db.String(150), nullable=False)
-    employee_id = db.Column(db.String(50), unique=True, nullable=False)
+    email = db.Column(db.String(255), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    name = db.Column(db.String(255), nullable=False)
+    employee_id = db.Column(db.String(100), unique=True, nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
-    role = db.Column(db.String(20), nullable=False, default='employee')  # 'admin', 'manager', 'secretary'
+    role = db.Column(db.String(50), nullable=False, default='employee')  # 'admin', 'manager', 'secretary'
     salary = db.Column(db.Float, nullable=True, default=0.0)  # Employee salary
-    phone_number = db.Column(db.String(20), nullable=True)  # Employee phone number
+    phone_number = db.Column(db.String(50), nullable=True)  # Employee phone number
     is_active = db.Column(db.Boolean, default=True)  # New column for active/inactive status
     bookings_created = db.relationship('Booking', backref='employee', lazy=True)
     user_expenses = db.relationship('Expense', backref='user', lazy=True)
