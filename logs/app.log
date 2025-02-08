@@ -4588,3 +4588,7 @@ AttributeError: type object 'Booking' has no attribute 'agency_id'
 2025-02-08 22:36:16,945 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:36:16] "GET /expense_management HTTP/1.1" 200 -
 2025-02-08 22:36:16,962 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:36:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-02-08 22:36:16,963 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:36:16] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:39:00,767 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/wsgi.py', reloading
+2025-02-08 22:39:01,143 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 22:39:01,801 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 22:39:01,814 - werkzeug - INFO -  * Debugger PIN: 133-132-395
