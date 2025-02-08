@@ -1,16 +1,18 @@
-import sys
 import os
+import sys
 
-# Add the project directory to the Python path
+# Get the absolute path of the project directory
 project_dir = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, project_dir)
 
-# Ensure the virtual environment's site-packages is in the path
-venv_path = os.path.join(project_dir, 'venv', 'lib', 'python3.10', 'site-packages')
-if os.path.exists(venv_path):
-    sys.path.insert(0, venv_path)
+# Print sys.path for debugging
+print("Python path:", sys.path)
 
-# Import the configuration and create_app function
+# Modify Python path to include parent directory
+parent_dir = os.path.dirname(project_dir)
+sys.path.insert(0, parent_dir)
+
+# Absolute imports
 from config import config
 from app import create_app
 
