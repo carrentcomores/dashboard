@@ -7,20 +7,54 @@ import os
 import secrets
 import logging
 import traceback
+import sys
 
 db = SQLAlchemy()
 migrate = Migrate()
 DB_NAME = "car_rental.db"
 
+def configure_logging(app):
+    # Remove all existing handlers
+    del app.logger.handlers[:]
+    
+    # Create console handler
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.DEBUG)
+    
+    # Create file handler for errors
+    log_dir = path.join(path.dirname(path.abspath(__file__)), '..', 'logs')
+    os.makedirs(log_dir, exist_ok=True)
+    file_handler = logging.FileHandler(path.join(log_dir, 'app.log'))
+    file_handler.setLevel(logging.ERROR)
+    
+    # Create formatters
+    console_formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+    file_formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s'
+    )
+    
+    # Set formatters
+    console_handler.setFormatter(console_formatter)
+    file_handler.setFormatter(file_formatter)
+    
+    # Add handlers to the app logger
+    app.logger.addHandler(console_handler)
+    app.logger.addHandler(file_handler)
+    
+    # Set logging level
+    app.logger.setLevel(logging.DEBUG)
+
 def create_app(config_object=None):
     app = Flask(__name__)
-    
-    # Configure logging
-    logging.basicConfig(level=logging.DEBUG)
     
     # Apply configuration
     if config_object:
         app.config.from_object(config_object)
+    
+    # Configure logging early
+    configure_logging(app)
     
     # Ensure a valid SECRET_KEY
     if not app.config.get('SECRET_KEY'):
@@ -72,7 +106,11 @@ def create_app(config_object=None):
                 new_admin = User(
                     email=admin_email, 
                     password=generate_password_hash(admin_password, method='pbkdf2:sha256'),
-                    is_admin=True
+                    is_admin=True,
+                    role='admin',
+                    name='System Administrator',
+                    employee_id='ADMIN001',
+                    is_active=True
                 )
                 db.session.add(new_admin)
                 db.session.commit()
