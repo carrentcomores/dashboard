@@ -4980,3 +4980,33 @@ AttributeError: type object 'Booking' has no attribute 'agency_id'
 2025-02-08 23:05:54,453 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:05:54] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
 2025-02-08 23:05:54,456 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:05:54] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
 2025-02-08 23:05:54,459 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:05:54] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:09:02,428 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-08 23:09:02,431 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:02] "GET /login HTTP/1.1" 200 -
+2025-02-08 23:09:02,446 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:09:02,446 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:09:07,809 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-08 23:09:07,816 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:07] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 23:09:07,826 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:09:07,826 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:09:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:10:51,047 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/migrate.py', reloading
+2025-02-08 23:10:51,136 - werkzeug - INFO -  * Restarting with stat
+2025-02-08 23:10:51,538 - werkzeug - WARNING -  * Debugger is active!
+2025-02-08 23:10:51,548 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 23:11:24,736 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:24] "[32mGET /maintenance HTTP/1.1[0m" 302 -
+2025-02-08 23:11:24,774 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:24] "GET /login?next=/maintenance HTTP/1.1" 200 -
+2025-02-08 23:11:24,803 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:11:24,805 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:11:31,003 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:31] "[32mPOST /login?next=/maintenance HTTP/1.1[0m" 302 -
+2025-02-08 23:11:31,071 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:31] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 23:11:31,085 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:31] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 23:11:31,086 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,064 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "GET / HTTP/1.1" 200 -
+2025-02-08 23:11:35,079 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,088 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,092 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,092 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,095 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,103 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,136 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,150 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 23:11:35,151 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:11:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
