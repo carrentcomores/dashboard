@@ -35,7 +35,11 @@ def run_migrations():
                 new_admin = User(
                     email=admin_email, 
                     password=generate_password_hash(admin_password, method='pbkdf2:sha256'),
-                    is_admin=True
+                    is_admin=True,
+                    role='admin',
+                    name='System Administrator',
+                    employee_id='ADMIN001',  # Specific employee ID
+                    is_active=True
                 )
                 db.session.add(new_admin)
                 db.session.commit()
