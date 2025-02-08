@@ -4471,3 +4471,16 @@ AttributeError: type object 'Booking' has no attribute 'agency_id'
 2025-02-08 22:00:27,381 - werkzeug - INFO -  * Restarting with stat
 2025-02-08 22:00:27,726 - werkzeug - WARNING -  * Debugger is active!
 2025-02-08 22:00:27,734 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-08 22:22:04,396 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:04] "GET /dashboard HTTP/1.1" 200 -
+2025-02-08 22:22:04,443 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:22:04,443 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,179 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "GET / HTTP/1.1" 200 -
+2025-02-08 22:22:05,193 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,193 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "GET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-08 22:22:05,194 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,198 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/uploads/cars/3/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,199 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,201 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,205 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,206 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-08 22:22:05,208 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 22:22:05] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
