@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: car-rent-system
+    name: dashboard
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn wsgi:app
