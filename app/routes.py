@@ -319,27 +319,70 @@ def book_car(car_id):
             total_cost = car.daily_rate * days
             deposit_amount = total_cost * 0.3  # 30% deposit
             
-            # Create booking
-            booking = Booking(
+            # Find all admin agencies
+            admin_agencies = User.query.filter_by(role='admin').all()
+            
+            if not admin_agencies:
+                flash('No admin agencies found. Cannot complete booking.', 'error')
+                return redirect(url_for('main.home'))
+            
+            # Determine the booking source
+            if current_user.is_admin:
+                booking_source_id = current_user.id
+                booking_source_type = "Admin"
+            else:
+                booking_source_id = admin_agencies[0].id
+                booking_source_type = "Secretary"
+            
+            # Update car status with specific 'booked' status
+            car.is_available = False
+            
+            # Create or update AgencyCarStatus for all admin agencies
+            for admin_agency in admin_agencies:
+                # Update or create AgencyCarStatus
+                agency_car_status = AgencyCarStatus.query.filter_by(
+                    agency_id=admin_agency.id, 
+                    car_id=car.id
+                ).first()
+                
+                if agency_car_status:
+                    agency_car_status.status = 'booked'
+                else:
+                    agency_car_status = AgencyCarStatus(
+                        agency_id=admin_agency.id, 
+                        car_id=car.id, 
+                        status='booked'
+                    )
+                    db.session.add(agency_car_status)
+                
+                # Create or update AgencyVisibleCar
+                agency_visible_car = AgencyVisibleCar.query.filter_by(
+                    agency_id=admin_agency.id, 
+                    car_id=car.id
+                ).first()
+                
+                if not agency_visible_car:
+                    agency_visible_car = AgencyVisibleCar(
+                        agency_id=admin_agency.id, 
+                        car_id=car.id
+                    )
+                    db.session.add(agency_visible_car)
+            
+            # Create booking record 
+            new_booking = Booking(
+                employee_id=booking_source_id,
+                customer_id=customer.id,
                 car_id=car.id,
-                customer_id=customer.id,  # Ensure customer ID is set
-                employee_id=current_user.id,
-                start_date=start_date,
-                end_date=end_date,
+                start_date=datetime.strptime(request.form.get('start_date'), '%Y-%m-%d'),
+                end_date=datetime.strptime(request.form.get('end_date'), '%Y-%m-%d'),
                 total_cost=total_cost,
                 deposit_amount=deposit_amount,
                 status='active',
-                created_at=datetime.now()
+                notes=f"Booked through {booking_source_type} {current_user.name}"
             )
-            
-            # Validate booking before saving
-            print(f"Booking details - Car ID: {booking.car_id}, Customer ID: {booking.customer_id}, Employee ID: {booking.employee_id}")
-            
-            # Update car availability
-            car.is_available = False
+            db.session.add(new_booking)
             
             # Commit transaction
-            db.session.add(booking)
             db.session.commit()
             
             # Flash success message
@@ -663,13 +706,38 @@ def update_return_date():
         
         booking = Booking.query.get_or_404(booking_id)
         
-        # Check if user is admin or the booking creator
-        if not current_user.is_admin and booking.employee_id != current_user.id:
-            return jsonify({'success': False, 'error': 'Unauthorized'}), 403
+        # Determine the booking source from the notes
+        booking_source = None
+        if booking.notes:
+            if "Booked through Secretary" in booking.notes:
+                booking_source = "Secretary"
+            elif "Booked through Admin" in booking.notes:
+                booking_source = "Admin"
+        
+        # Permission check
+        if current_user.is_admin:
+            # Admins can edit any booking
+            pass
+        elif current_user.role == 'secretary':
+            # Secretaries can edit any booking, but log the action
+            current_app.logger.info(
+                f"Secretary {current_user.id} editing booking {booking_id} "
+                f"originally booked through {booking_source}"
+            )
+        else:
+            # Other roles can only edit their own bookings
+            if booking.employee_id != current_user.id:
+                return jsonify({
+                    'success': False, 
+                    'error': 'You are not authorized to edit this booking.'
+                }), 403
             
         # Validate the new end date
         if new_end_date <= booking.start_date:
-            return jsonify({'success': False, 'error': 'End date must be after start date'}), 400
+            return jsonify({
+                'success': False, 
+                'error': 'End date must be after start date'
+            }), 400
             
         # Calculate new total cost
         days = (new_end_date - booking.start_date).days
@@ -679,44 +747,187 @@ def update_return_date():
         booking.end_date = new_end_date
         booking.total_cost = total_cost
         
+        # If edited by a secretary, update the notes to reflect this
+        if current_user.role == 'secretary':
+            booking.notes += f" (Edited by Secretary {current_user.name} on {datetime.now().strftime('%Y-%m-%d %H:%M')})"
+        
         db.session.commit()
+        
+        # Log the booking update
+        current_app.logger.info(
+            f"Booking {booking_id} updated: "
+            f"New end date: {new_end_date}, "
+            f"New total cost: {total_cost}, "
+            f"Updated by: {current_user.name} ({current_user.role})"
+        )
+        
         return jsonify({'success': True})
         
     except ValueError:
-        return jsonify({'success': False, 'error': 'Invalid date format'}), 400
+        return jsonify({
+            'success': False, 
+            'error': 'Invalid date format'
+        }), 400
     except Exception as e:
         db.session.rollback()
-        print(f"Error updating return date: {str(e)}")
-        return jsonify({'success': False, 'error': str(e)}), 500
+        current_app.logger.error(f"Error updating return date: {str(e)}", exc_info=True)
+        return jsonify({
+            'success': False, 
+            'error': str(e)
+        }), 500
 
 @main.route('/delete_booking/<int:booking_id>', methods=['POST'])
 @login_required
 def delete_booking(booking_id):
+    # Import additional debugging tools
+    import traceback
+    
+    # Detailed logging of the deletion attempt
+    current_app.logger.info(f"Attempting to delete booking {booking_id}")
+    current_app.logger.info(f"Current user: {current_user.id}, Name: {current_user.name}, Role: {current_user.role}")
+    
     try:
-        booking = Booking.query.get_or_404(booking_id)
+        # Find the booking with comprehensive error checking
+        booking = Booking.query.get(booking_id)
+        if not booking:
+            current_app.logger.error(f"Booking with ID {booking_id} not found in database")
+            return jsonify({
+                'success': False, 
+                'error': 'Booking not found.'
+            }), 404
         
-        # Check if user is admin or the booking creator
-        if not current_user.is_admin and booking.employee_id != current_user.id:
-            return jsonify({'success': False, 'error': 'Unauthorized'}), 403
+        # Log detailed booking information
+        current_app.logger.info(f"Booking details - ID: {booking.id}, Car ID: {booking.car_id}, "
+                                f"Customer ID: {booking.customer_id}, Employee ID: {booking.employee_id}, "
+                                f"Status: {booking.status}")
         
-        # Make car available again if booking was active
-        if booking.status == 'active':
-            car = Car.query.get(booking.car_id)
-            if car:
-                car.is_available = True
+        # Determine the booking source from the notes
+        booking_source = None
+        if booking.notes:
+            if "Booked through Secretary" in booking.notes:
+                booking_source = "Secretary"
+            elif "Booked through Admin" in booking.notes:
+                booking_source = "Admin"
+        
+        # Permission check
+        if current_user.is_admin:
+            # Admins can delete any booking
+            pass
+        elif current_user.role == 'secretary':
+            # Secretaries can only delete bookings made by a secretary
+            if booking_source != "Secretary":
+                current_app.logger.warning(
+                    f"Unauthorized deletion attempt for booking {booking_id}. "
+                    f"Secretary {current_user.id} cannot delete a non-secretary booking."
+                )
+                return jsonify({
+                    'success': False, 
+                    'error': 'You can only delete bookings made by a secretary.'
+                }), 403
+        else:
+            # Other roles cannot delete bookings
+            current_app.logger.warning(
+                f"Unauthorized deletion attempt for booking {booking_id}. "
+                f"User {current_user.id} is not authorized to delete bookings."
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'You are not authorized to delete bookings.'
+            }), 403
+        
+        # Find the car associated with the booking
+        car = Car.query.get(booking.car_id)
+        if not car:
+            current_app.logger.error(f"Car not found for booking {booking_id}")
+            return jsonify({
+                'success': False, 
+                'error': 'Associated car not found.'
+            }), 404
+        
+        # Log car details before deletion
+        current_app.logger.info(f"Car details before deletion - ID: {car.id}, "
+                                f"License Plate: {car.license_plate}, "
+                                f"Current Availability: {car.is_available}")
+        
+        # Reset car availability completely
+        car.is_available = True
+        
+        # Remove all agency-specific car status and visibility entries
+        try:
+            agency_car_status_query = AgencyCarStatus.query.filter_by(car_id=car.id)
+            agency_car_status_count = agency_car_status_query.count()
+            agency_car_status_query.delete()
+            
+            agency_visible_car_query = AgencyVisibleCar.query.filter_by(car_id=car.id)
+            agency_visible_car_count = agency_visible_car_query.count()
+            agency_visible_car_query.delete()
+        except Exception as agency_delete_error:
+            current_app.logger.error(f"Error removing agency entries: {str(agency_delete_error)}")
+            current_app.logger.error(traceback.format_exc())
+            return jsonify({
+                'success': False, 
+                'error': f'Error removing agency entries: {str(agency_delete_error)}'
+            }), 500
         
         # Delete the booking
-        db.session.delete(booking)
-        db.session.commit()
+        try:
+            db.session.delete(booking)
+        except Exception as booking_delete_error:
+            current_app.logger.error(f"Error deleting booking: {str(booking_delete_error)}")
+            current_app.logger.error(traceback.format_exc())
+            return jsonify({
+                'success': False, 
+                'error': f'Error deleting booking: {str(booking_delete_error)}'
+            }), 500
         
-        return jsonify({'success': True})
+        # Commit changes
+        try:
+            db.session.commit()
+        except Exception as commit_error:
+            db.session.rollback()
+            current_app.logger.error(f"Error committing transaction: {str(commit_error)}")
+            current_app.logger.error(traceback.format_exc())
+            return jsonify({
+                'success': False, 
+                'error': f'Error committing transaction: {str(commit_error)}'
+            }), 500
         
+        # Log successful deletion with detailed information
+        current_app.logger.info(
+            f"Successfully deleted booking {booking_id}. "
+            f"Car {car.id} is now available. "
+            f"Removed {agency_car_status_count} agency car statuses and "
+            f"{agency_visible_car_count} agency visible car entries."
+        )
+        
+        return jsonify({
+            'success': True
+        }), 200
+    
     except Exception as e:
+        # Catch-all error handling
         db.session.rollback()
-        print(f"Error deleting booking: {str(e)}")
-        return jsonify({'success': False, 'error': str(e)}), 500
+        
+        # Extremely detailed error logging
+        current_app.logger.error(
+            f"Critical error deleting booking {booking_id}: {str(e)}\n"
+            f"User: {current_user.id} ({current_user.name})\n"
+            f"Full Traceback: {traceback.format_exc()}"
+        )
+        
+        # Additional context logging
+        try:
+            import sys
+            current_app.logger.error(f"Python version: {sys.version}")
+            current_app.logger.error(f"Exception type: {type(e).__name__}")
+        except Exception as log_error:
+            current_app.logger.error(f"Error during additional logging: {log_error}")
+        
+        return jsonify({
+            'success': False, 
+            'error': f'An unexpected error occurred: {str(e)}'
+        }), 500
 
-# Maintenance Routes
 @main.route('/maintenance')
 @login_required
 def maintenance():
@@ -1588,7 +1799,7 @@ def add_agency():
             'name': new_agency.name,
             'email': new_agency.email,
             'employee_id': new_agency.employee_id,
-            'phone_number': new_agency.phone_number or 'N/A',
+            'phone_number': new_agency.phone_number,
             'is_active': new_agency.is_active,
             'visible_cars_count': len(selected_car_ids)
         }
@@ -1742,9 +1953,9 @@ def delete_agency(agency_id):
             }), 400
         
         # Delete associated visible cars
-        visible_cars_count = AgencyVisibleCar.query.filter_by(agency_id=agency_id).count()
+        visible_car_ids = [vc.car_id for vc in AgencyVisibleCar.query.filter_by(agency_id=agency_id).all()]
         AgencyVisibleCar.query.filter_by(agency_id=agency_id).delete()
-        current_app.logger.info(f"Deleted {visible_cars_count} visible cars for agency {agency_id}")
+        current_app.logger.info(f"Deleted {len(visible_car_ids)} visible cars for agency {agency_id}")
         
         # Delete the agency
         db.session.delete(agency)
