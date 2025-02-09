@@ -92,32 +92,87 @@ def create_app(config_object=None):
         return "An internal server error occurred", 500
 
     with app.app_context():
-        # Ensure database is created
+        # Ensure database is created with comprehensive error handling
         try:
-            db.create_all()
+            # Validate database path
+            base_dir = path.abspath(path.dirname(__file__))
+            db_path = path.join(base_dir, DB_NAME)
+            
+            # Check directory permissions
+            if not path.exists(base_dir):
+                raise OSError(f"Base directory does not exist: {base_dir}")
+            
+            if not os.access(base_dir, os.W_OK):
+                raise OSError(f"No write permission for directory: {base_dir}")
+            
+            # Attempt to create database with detailed logging
+            try:
+                db.create_all()
+                app.logger.info(f"Database created successfully at {db_path}")
+            except Exception as create_error:
+                app.logger.critical(
+                    f"Failed to create database at {db_path}:\n"
+                    f"Error: {str(create_error)}\n"
+                    f"Traceback: {traceback.format_exc()}"
+                )
+                raise
+            
+            # Validate database connection
+            try:
+                # Attempt a simple query to test connection
+                from sqlalchemy import text
+                result = db.session.execute(text('SELECT 1'))
+                result.fetchone()
+                app.logger.info("Database connection test successful")
+            except Exception as connection_error:
+                app.logger.critical(
+                    f"Database connection test failed:\n"
+                    f"Error: {str(connection_error)}\n"
+                    f"Traceback: {traceback.format_exc()}"
+                )
+                raise
             
             # Check if admin user exists, if not create one
             admin_email = os.environ.get('ADMIN_EMAIL', 'admin@carrent.com')
             admin_password = os.environ.get('ADMIN_PASSWORD', 'default_admin_password')
             
+            from .models import User
             existing_admin = User.query.filter_by(email=admin_email).first()
+            
             if not existing_admin:
-                from werkzeug.security import generate_password_hash
-                new_admin = User(
-                    email=admin_email, 
-                    password=generate_password_hash(admin_password, method='pbkdf2:sha256'),
-                    is_admin=True,
-                    role='admin',
-                    name='System Administrator',
-                    employee_id='ADMIN001',
-                    is_active=True
-                )
-                db.session.add(new_admin)
-                db.session.commit()
-                app.logger.info(f"Created admin user: {admin_email}")
-        except Exception as e:
-            app.logger.error(f"Error during database initialization: {str(e)}")
-            app.logger.error(traceback.format_exc())
+                try:
+                    from werkzeug.security import generate_password_hash
+                    new_admin = User(
+                        email=admin_email,
+                        name='System Administrator',
+                        password=generate_password_hash(admin_password),
+                        role='admin'
+                    )
+                    db.session.add(new_admin)
+                    db.session.commit()
+                    app.logger.info("Default admin user created successfully")
+                except Exception as admin_create_error:
+                    app.logger.error(
+                        f"Failed to create default admin user:\n"
+                        f"Error: {str(admin_create_error)}\n"
+                        f"Traceback: {traceback.format_exc()}"
+                    )
+                    db.session.rollback()
+        
+        except Exception as init_error:
+            # Critical error handling for database initialization
+            app.logger.critical(
+                f"CRITICAL DATABASE INITIALIZATION ERROR:\n"
+                f"Error: {str(init_error)}\n"
+                f"Traceback: {traceback.format_exc()}\n"
+                f"System Details:\n"
+                f"  Python Version: {sys.version}\n"
+                f"  Current Directory: {os.getcwd()}\n"
+                f"  Base Directory: {base_dir}\n"
+                f"  Database Path: {db_path}"
+            )
+            # Re-raise to prevent application startup
+            raise
 
     app.register_blueprint(auth)
     app.register_blueprint(main)

@@ -11,6 +11,8 @@ from werkzeug.security import generate_password_hash
 from functools import wraps
 from sqlalchemy import extract
 from sqlalchemy.orm import joinedload
+from flask import send_from_directory
+from sqlalchemy.exc import SQLAlchemyError, DatabaseError
 
 def admin_required(f):
     @wraps(f)
@@ -931,18 +933,163 @@ def delete_booking(booking_id):
 @main.route('/maintenance')
 @login_required
 def maintenance():
-    maintenance_records = Maintenance.query.order_by(Maintenance.created_at.desc()).all()
-    cars = Car.query.all()
-    return render_template('maintenance.html', 
-                         maintenance=maintenance_records,
-                         cars=cars,
-                         now=datetime.now())
+    # Extremely verbose logging for debugging
+    import traceback
+    import sys
+    from sqlalchemy.exc import SQLAlchemyError, DatabaseError
+    
+    # Log the start of the maintenance route access with maximum detail
+    current_app.logger.info(
+        f"Maintenance page access attempt. "
+        f"User Details:\n"
+        f"  ID: {current_user.id}\n"
+        f"  Name: {current_user.name}\n"
+        f"  Role: {current_user.role}\n"
+        f"  Is Authenticated: {current_user.is_authenticated}\n"
+        f"Python Version: {sys.version}\n"
+        f"Current Working Directory: {os.getcwd()}"
+    )
+    
+    # Validate user permissions early
+    if not (current_user.is_admin or current_user.role in ['manager', 'secretary']):
+        current_app.logger.warning(
+            f"Unauthorized maintenance page access blocked. "
+            f"User ID: {current_user.id}, Role: {current_user.role}"
+        )
+        flash('You do not have permission to access the maintenance page.', 'error')
+        return redirect(url_for('main.home'))
+    
+    # Comprehensive error handling with multiple fallback mechanisms
+    try:
+        # Validate database connection
+        try:
+            from sqlalchemy import text
+            db.session.execute(text('SELECT 1'))
+            current_app.logger.info("Database connection is active and responsive.")
+        except Exception as db_connection_error:
+            current_app.logger.critical(
+                f"Database connection error: {str(db_connection_error)}\n"
+                f"Full Traceback: {traceback.format_exc()}"
+            )
+            flash('Database connection error. Please contact support.', 'error')
+            return redirect(url_for('main.home'))
+        
+        # Fetch maintenance records with multiple error handling layers
+        maintenance_records = []
+        cars = []
+        
+        # Attempt to fetch maintenance records
+        try:
+            # Detailed query logging with SQLAlchemy error handling
+            current_app.logger.info("Attempting to query maintenance records...")
+            maintenance_records = Maintenance.query.order_by(Maintenance.created_at.desc()).all()
+            
+            # Safely handle None cost values
+            for record in maintenance_records:
+                if record.cost is None:
+                    current_app.logger.warning(
+                        f"Maintenance record {record.id} has a None cost value. "
+                        f"Replacing with 0 to prevent rendering errors."
+                    )
+                    record.cost = 0
+            
+            current_app.logger.info(f"Successfully retrieved {len(maintenance_records)} maintenance records.")
+        except SQLAlchemyError as maintenance_query_error:
+            current_app.logger.error(
+                f"Critical SQLAlchemy error querying maintenance records:\n"
+                f"Error Type: {type(maintenance_query_error).__name__}\n"
+                f"Error Details: {str(maintenance_query_error)}\n"
+                f"Full Traceback: {traceback.format_exc()}"
+            )
+            # Additional logging of database connection state
+            try:
+                db.session.rollback()
+                current_app.logger.info("Database session rolled back successfully.")
+            except Exception as rollback_error:
+                current_app.logger.error(f"Error during rollback: {str(rollback_error)}")
+        
+        # Attempt to fetch cars
+        try:
+            current_app.logger.info("Attempting to query cars...")
+            cars = Car.query.all()
+            current_app.logger.info(f"Successfully retrieved {len(cars)} cars.")
+        except SQLAlchemyError as car_query_error:
+            current_app.logger.error(
+                f"Critical SQLAlchemy error querying cars:\n"
+                f"Error Type: {type(car_query_error).__name__}\n"
+                f"Error Details: {str(car_query_error)}\n"
+                f"Full Traceback: {traceback.format_exc()}"
+            )
+        
+        # Log query results with extensive details
+        current_app.logger.info(
+            f"Maintenance Page Query Results:\n"
+            f"  Maintenance Records: {len(maintenance_records)}\n"
+            f"  Cars: {len(cars)}\n"
+            f"  User: {current_user.name} (ID: {current_user.id})\n"
+            f"  Timestamp: {datetime.now()}"
+        )
+        
+        # Render template with available data
+        return render_template('maintenance.html', 
+                             maintenance=maintenance_records,
+                             cars=cars,
+                             now=datetime.now())
+    
+    except Exception as critical_error:
+        # Extremely detailed critical error logging
+        current_app.logger.critical(
+            f"CRITICAL ERROR in maintenance route:\n"
+            f"Error: {str(critical_error)}\n"
+            f"Error Type: {type(critical_error).__name__}\n"
+            f"User Details:\n"
+            f"  ID: {current_user.id}\n"
+            f"  Name: {current_user.name}\n"
+            f"  Role: {current_user.role}\n"
+            f"Python Details:\n"
+            f"  Version: {sys.version}\n"
+            f"  Path: {sys.path}\n"
+            f"Full Traceback:\n{traceback.format_exc()}"
+        )
+        
+        # Additional context logging
+        try:
+            current_app.logger.error(f"Exception module: {critical_error.__class__.__module__}")
+        except Exception as log_error:
+            current_app.logger.error(f"Error during additional logging: {log_error}")
+        
+        # Provide a more informative error message
+        flash(
+            'A critical error occurred while accessing the maintenance page. '
+            'Our team has been notified. Please try again later or contact support.', 
+            'error'
+        )
+        return redirect(url_for('main.home'))
 
 @main.route('/get_maintenance/<int:maintenance_id>')
 @login_required
 def get_maintenance(maintenance_id):
     try:
+        # Check user permissions
+        if not (current_user.is_admin or current_user.role in ['manager', 'secretary']):
+            current_app.logger.warning(
+                f"Unauthorized access to get maintenance details by user {current_user.id} with role {current_user.role}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'You do not have permission to access maintenance details.'
+            }), 403
+        
         maintenance = Maintenance.query.get_or_404(maintenance_id)
+        
+        # Log maintenance details retrieval
+        current_app.logger.info(
+            f"Maintenance details retrieved: ID {maintenance_id}, "
+            f"Car ID: {maintenance.car_id}, "
+            f"Status: {maintenance.status}, "
+            f"By user: {current_user.id} ({current_user.name})"
+        )
+        
         return jsonify({
             'success': True,
             'maintenance': {
@@ -957,52 +1104,151 @@ def get_maintenance(maintenance_id):
             }
         })
     except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+        current_app.logger.error(
+            f"Error retrieving maintenance details for ID {maintenance_id}: {str(e)}", 
+            exc_info=True
+        )
+        return jsonify({
+            'success': False, 
+            'error': 'An unexpected error occurred while retrieving maintenance details.'
+        }), 500
 
 @main.route('/add_maintenance', methods=['POST'])
 @login_required
 def add_maintenance():
     try:
+        # Check user permissions
+        if not (current_user.is_admin or current_user.role in ['manager', 'secretary']):
+            current_app.logger.warning(
+                f"Unauthorized maintenance addition by user {current_user.id} with role {current_user.role}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'You do not have permission to add maintenance records.'
+            }), 403
+        
+        # Validate input
+        car_id = request.form.get('car_id')
+        status = request.form.get('status')
+        start_date = request.form.get('start_date')
+        
+        if not all([car_id, status, start_date]):
+            current_app.logger.warning(
+                f"Incomplete maintenance data submitted by user {current_user.id}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'Missing required maintenance information.'
+            }), 400
+        
+        # Validate car exists
+        car = Car.query.get(car_id)
+        if not car:
+            current_app.logger.warning(
+                f"Attempted to add maintenance for non-existent car {car_id}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'Invalid car selected for maintenance.'
+            }), 400
+        
         maintenance = Maintenance(
-            car_id=request.form.get('car_id'),
+            car_id=car_id,
             employee_id=current_user.id,
-            status=request.form.get('status'),
-            issue_description=request.form.get('issue_description'),
-            start_date=datetime.strptime(request.form.get('start_date'), '%Y-%m-%d'),
+            status=status,
+            issue_description=request.form.get('issue_description', ''),
+            start_date=datetime.strptime(start_date, '%Y-%m-%d'),
             end_date=datetime.strptime(request.form.get('end_date'), '%Y-%m-%d') if request.form.get('end_date') else None,
             cost=float(request.form.get('cost')) if request.form.get('cost') else None,
-            notes=request.form.get('notes')
+            notes=request.form.get('notes', '')
         )
         
         # Update car status if maintenance is in progress
-        car = Car.query.get(maintenance.car_id)
         if maintenance.status in ['pending', 'in_progress']:
             car.is_available = False
         
         db.session.add(maintenance)
+        
+        # Log maintenance addition
+        current_app.logger.info(
+            f"Maintenance record added: Car ID {car_id}, "
+            f"Status {status}, "
+            f"By user: {current_user.id} ({current_user.name})"
+        )
+        
         db.session.commit()
         return jsonify({'success': True})
         
+    except ValueError as ve:
+        current_app.logger.error(
+            f"Invalid date or number format in maintenance addition: {str(ve)}", 
+            exc_info=True
+        )
+        return jsonify({
+            'success': False, 
+            'error': 'Invalid date or cost format.'
+        }), 400
     except Exception as e:
         db.session.rollback()
-        return jsonify({'success': False, 'error': str(e)}), 500
+        current_app.logger.error(
+            f"Error adding maintenance record: {str(e)}", 
+            exc_info=True
+        )
+        return jsonify({
+            'success': False, 
+            'error': 'An unexpected error occurred while adding maintenance record.'
+        }), 500
 
 @main.route('/update_maintenance/<int:maintenance_id>', methods=['POST'])
 @login_required
 def update_maintenance(maintenance_id):
     try:
+        # Check user permissions
+        if not (current_user.is_admin or current_user.role in ['manager', 'secretary']):
+            current_app.logger.warning(
+                f"Unauthorized maintenance update by user {current_user.id} with role {current_user.role}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'You do not have permission to update maintenance records.'
+            }), 403
+        
         maintenance = Maintenance.query.get_or_404(maintenance_id)
         
-        maintenance.car_id = request.form.get('car_id')
-        maintenance.status = request.form.get('status')
-        maintenance.issue_description = request.form.get('issue_description')
-        maintenance.start_date = datetime.strptime(request.form.get('start_date'), '%Y-%m-%d')
+        # Validate input
+        car_id = request.form.get('car_id')
+        status = request.form.get('status')
+        start_date = request.form.get('start_date')
+        
+        if not all([car_id, status, start_date]):
+            current_app.logger.warning(
+                f"Incomplete maintenance data submitted by user {current_user.id}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'Missing required maintenance information.'
+            }), 400
+        
+        # Validate car exists
+        car = Car.query.get(car_id)
+        if not car:
+            current_app.logger.warning(
+                f"Attempted to update maintenance for non-existent car {car_id}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'Invalid car selected for maintenance.'
+            }), 400
+        
+        maintenance.car_id = car_id
+        maintenance.status = status
+        maintenance.issue_description = request.form.get('issue_description', '')
+        maintenance.start_date = datetime.strptime(start_date, '%Y-%m-%d')
         maintenance.end_date = datetime.strptime(request.form.get('end_date'), '%Y-%m-%d') if request.form.get('end_date') else None
         maintenance.cost = float(request.form.get('cost')) if request.form.get('cost') else None
-        maintenance.notes = request.form.get('notes')
+        maintenance.notes = request.form.get('notes', '')
         
         # Update car status based on maintenance status
-        car = Car.query.get(maintenance.car_id)
         if maintenance.status == 'completed':
             car.is_available = True
         else:
@@ -1011,14 +1257,40 @@ def update_maintenance(maintenance_id):
         db.session.commit()
         return jsonify({'success': True})
         
+    except ValueError as ve:
+        current_app.logger.error(
+            f"Invalid date or number format in maintenance update: {str(ve)}", 
+            exc_info=True
+        )
+        return jsonify({
+            'success': False, 
+            'error': 'Invalid date or cost format.'
+        }), 400
     except Exception as e:
         db.session.rollback()
-        return jsonify({'success': False, 'error': str(e)}), 500
+        current_app.logger.error(
+            f"Error updating maintenance record: {str(e)}", 
+            exc_info=True
+        )
+        return jsonify({
+            'success': False, 
+            'error': 'An unexpected error occurred while updating maintenance record.'
+        }), 500
 
 @main.route('/delete_maintenance/<int:maintenance_id>', methods=['POST'])
 @login_required
 def delete_maintenance(maintenance_id):
     try:
+        # Check user permissions
+        if not (current_user.is_admin or current_user.role in ['manager', 'secretary']):
+            current_app.logger.warning(
+                f"Unauthorized maintenance deletion by user {current_user.id} with role {current_user.role}"
+            )
+            return jsonify({
+                'success': False, 
+                'error': 'You do not have permission to delete maintenance records.'
+            }), 403
+        
         maintenance = Maintenance.query.get_or_404(maintenance_id)
         
         # Make car available if it was under maintenance
@@ -1032,7 +1304,14 @@ def delete_maintenance(maintenance_id):
         
     except Exception as e:
         db.session.rollback()
-        return jsonify({'success': False, 'error': str(e)}), 500
+        current_app.logger.error(
+            f"Error deleting maintenance record: {str(e)}", 
+            exc_info=True
+        )
+        return jsonify({
+            'success': False, 
+            'error': 'An unexpected error occurred while deleting maintenance record.'
+        }), 500
 
 @main.route('/financial_summary')
 @login_required
@@ -1573,6 +1852,9 @@ def delete_employee(employee_id):
         db.session.delete(employee)
         db.session.commit()
         
+        # Log successful deletion
+        current_app.logger.info(f"Employee {employee_id} deleted successfully.")
+        
         # Prepare success response
         success_response = {
             'status': 'success', 
@@ -1586,6 +1868,8 @@ def delete_employee(employee_id):
         )
     
     except Exception as e:
+        # Log the full error for debugging
+        current_app.logger.error(f"Error deleting employee {employee_id}: {str(e)}", exc_info=True)
         db.session.rollback()
         error_response = {
             'status': 'error', 
@@ -2279,3 +2563,15 @@ def get_agency_cars(agency_id):
             'status': 'error',
             'message': 'An unexpected error occurred while fetching cars.'
         }), 500
+
+@main.route('/favicon.ico')
+def favicon():
+    try:
+        return send_from_directory(
+            os.path.join(current_app.root_path, 'static'), 
+            'favicon.ico', 
+            mimetype='image/vnd.microsoft.icon'
+        )
+    except Exception as e:
+        current_app.logger.error(f"Favicon error: {str(e)}", exc_info=True)
+        return '', 404
