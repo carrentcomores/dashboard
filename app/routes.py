@@ -86,11 +86,11 @@ def home():
         # Get the IDs of cars visible to this agency
         visible_car_ids = [vc.car_id for vc in current_user.agency_visible_cars]
         
-        # Filter cars based on visibility
-        cars = Car.query.filter(Car.id.in_(visible_car_ids)).all()
+        # Filter cars based on visibility and sort by display_order
+        cars = Car.query.filter(Car.id.in_(visible_car_ids)).order_by(Car.display_order).all()
     else:
-        # For non-agency users, show all cars
-        cars = Car.query.all()
+        # For non-agency users, show all cars sorted by display_order
+        cars = Car.query.order_by(Car.display_order).all()
 
     # Get active bookings with their associated cars and customers
     active_bookings = Booking.query.join(Customer).join(User, Booking.employee_id == User.id).filter(
