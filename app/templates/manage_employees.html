@@ -36,7 +36,6 @@
                                 </thead>
                                 <tbody>
                                     {% for employee in employees %}
-                                        {% if not employee.is_admin and employee.role != 'agency' %}
                                         <tr data-employee-id="{{ employee.id }}">
                                             <td>{{ employee.name }}</td>
                                             <td>{{ employee.email }}</td>
@@ -74,7 +73,6 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        {% endif %}
                                     {% endfor %}
                                 </tbody>
                             </table>

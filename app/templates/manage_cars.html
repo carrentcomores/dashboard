@@ -185,8 +185,7 @@
                         <select class="form-select" id="edit_category" name="category" required>
                             <option value="Economy">Economy</option>
                             <option value="Compact">Compact</option>
-                            <option value="Mid-size">Mid-size</option>
-                            <option value="Full-size">Full-size</option>
+                            <option value="Sedan">Sedan</option>
                             <option value="SUV">SUV</option>
                             <option value="Luxury">Luxury</option>
                             <option value="Van">Van</option>
@@ -483,18 +482,65 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 grid.querySelectorAll('.delete-image').forEach(btn => {
                     btn.addEventListener('click', function() {
+                        console.log('Delete image button clicked');
+                        console.log('Image ID:', this.dataset.imageId);
+                        
                         if (confirm('Are you sure you want to delete this image?')) {
                             const imageId = this.dataset.imageId;
-                            fetch(`/manage_cars/delete_car_image/${imageId}`, {
-                                method: 'POST'
+                            console.log('Sending delete request for image ID:', imageId);
+                            
+                            fetch(`/manage_cars/delete_image/${imageId}`, {
+                                method: 'DELETE',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+                                credentials: 'same-origin'  // Include cookies for authentication
                             })
-                            .then(response => response.json())
-                            .then(data => {
-                                if (data.message) {
-                                    loadCarImages(currentCarId);
-                                } else {
-                                    alert('Error deleting image');
+                            .then(response => {
+                                console.log('Delete response status:', response.status);
+                                console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+                                
+                                // Check if the response is OK before parsing JSON
+                                if (!response.ok) {
+                                    // Try to parse error details
+                                    return response.json().then(errorData => {
+                                        console.error('Error response:', errorData);
+                                        throw new Error(errorData.error || 'Failed to delete image');
+                                    }).catch(() => {
+                                        // If JSON parsing fails, throw a generic error
+                                        throw new Error(`HTTP error! status: ${response.status}`);
+                                    });
                                 }
+                                
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log('Delete response data:', data);
+                                if (data.message) {
+                                    console.log('Image deleted successfully');
+                                    loadCarImages(currentCarId);
+                                } else if (data.error) {
+                                    console.error('Error deleting image:', data.error);
+                                    alert(data.error || 'Error deleting image');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Fetch error details:', {
+                                    name: error.name,
+                                    message: error.message,
+                                    stack: error.stack
+                                });
+                                
+                                // More informative error message
+                                let errorMessage = 'Network error deleting image';
+                                if (error instanceof TypeError) {
+                                    errorMessage = 'Network connection failed. Please check your internet connection.';
+                                } else if (error.message) {
+                                    errorMessage = error.message;
+                                }
+                                
+                                alert(errorMessage);
                             });
                         }
                     });

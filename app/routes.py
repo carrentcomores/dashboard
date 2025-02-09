@@ -548,38 +548,67 @@ def upload_car_images(car_id):
         db.session.rollback()
         return jsonify({'error': 'Error uploading images'}), 500
 
-@main.route('/manage_cars/delete_image/<int:image_id>', methods=['POST'])
+@main.route('/manage_cars/delete_image/<int:image_id>', methods=['DELETE'])
 @login_required
 def delete_car_image(image_id):
+    # Log the incoming request details
+    current_app.logger.info(f"Delete car image request received. Image ID: {image_id}")
+    current_app.logger.info(f"Current User: {current_user.email}, Is Admin: {current_user.is_admin}, Role: {current_user.role}")
+    
     # Allow both admin and manager to delete car images
     if not (current_user.is_admin or current_user.role == 'manager'):
+        current_app.logger.warning(f"Unauthorized delete image attempt by user {current_user.email}")
         return jsonify({'error': 'Access denied'}), 403
     
-    image = CarImage.query.get_or_404(image_id)
-    
     try:
+        # Try to find the image
+        image = CarImage.query.get(image_id)
+        if not image:
+            current_app.logger.error(f"Image not found. Image ID: {image_id}")
+            return jsonify({'error': 'Image not found'}), 404
+        
+        car = image.car  # Store reference to car before deleting image
+        
         # Delete the physical file
         file_path = os.path.join(current_app.root_path, 'static', image.image_path)
+        current_app.logger.info(f"Attempting to delete file: {file_path}")
+        
         if os.path.exists(file_path):
             os.remove(file_path)
+            current_app.logger.info(f"File deleted successfully: {file_path}")
+        else:
+            current_app.logger.warning(f"File does not exist: {file_path}")
         
         # If this was the main image, set another image as main
         if image.is_main:
             next_image = CarImage.query.filter_by(car_id=image.car_id).filter(CarImage.id != image_id).first()
             if next_image:
                 next_image.is_main = True
-                image.car.main_image = next_image.image_path
+                car.main_image = next_image.image_path
+                current_app.logger.info(f"New main image set: {next_image.image_path}")
             else:
-                image.car.main_image = None
+                car.main_image = None
+                current_app.logger.info("No alternative main image found")
         
+        # Delete the image record
         db.session.delete(image)
         db.session.commit()
         
-        return jsonify({'message': 'Image deleted successfully'})
+        current_app.logger.info(f"Image {image_id} deleted successfully")
+        return jsonify({'message': 'Image deleted successfully', 'car_id': car.id}), 200
         
     except Exception as e:
+        # Log the full error for server-side debugging
+        current_app.logger.error(f"Error deleting car image: {str(e)}", exc_info=True)
+        
+        # Rollback the session to prevent any partial commits
         db.session.rollback()
-        return jsonify({'error': 'Error deleting image'}), 500
+        
+        # Return a JSON error response with a generic message
+        return jsonify({
+            'error': 'Failed to delete image',
+            'details': str(e)
+        }), 500
 
 @main.route('/manage_cars/edit/<int:car_id>', methods=['POST'])
 @login_required
@@ -957,7 +986,7 @@ def maintenance():
             f"User ID: {current_user.id}, Role: {current_user.role}"
         )
         flash('You do not have permission to access the maintenance page.', 'error')
-        return redirect(url_for('main.home'))
+        return redirect(url_for('main.dashboard'))
     
     # Comprehensive error handling with multiple fallback mechanisms
     try:
@@ -972,7 +1001,7 @@ def maintenance():
                 f"Full Traceback: {traceback.format_exc()}"
             )
             flash('Database connection error. Please contact support.', 'error')
-            return redirect(url_for('main.home'))
+            return redirect(url_for('main.dashboard'))
         
         # Fetch maintenance records with multiple error handling layers
         maintenance_records = []
@@ -1417,9 +1446,7 @@ def expense_management():
     # Calculate summary by category
     category_totals = {}
     for expense in expenses:
-        if expense.category not in category_totals:
-            category_totals[expense.category] = 0
-        category_totals[expense.category] += expense.amount
+        category_totals[expense.category] = category_totals.get(expense.category, 0) + expense.amount
 
     # Prepare context
     context = {
@@ -1457,9 +1484,7 @@ def view_income_management():
     # Calculate summary by category
     category_totals = {}
     for income in incomes:
-        if income.category not in category_totals:
-            category_totals[income.category] = 0
-        category_totals[income.category] += income.amount
+        category_totals[income.category] = category_totals.get(income.category, 0) + income.amount
 
     # Prepare context
     context = {
@@ -1771,9 +1796,34 @@ def manage_employees():
                 }), 500
 
     # GET request: Fetch employees, agencies, and cars
-    employees = User.query.filter(
-        (User.is_admin == False) & (User.role != 'agency')
+    # Fetch all users and log detailed information
+    all_users = User.query.all()
+    current_app.logger.info("DEBUG: Total number of users: %d", len(all_users))
+    
+    # Detailed logging for all users
+    for user in all_users:
+        current_app.logger.info(
+            "DEBUG User Details: ID=%d, Name=%s, Email=%s, Role=%s, Is Admin=%s, Is Active=%s", 
+            user.id, user.name, user.email, user.role, user.is_admin, user.is_active
+        )
+    
+    # Fetch employees with multiple filtering approaches
+    employees_query = User.query
+    
+    # Try different filtering strategies
+    employees = employees_query.filter(
+        User.role != 'agency'
     ).all()
+    
+    current_app.logger.info("DEBUG: Number of employees after filtering: %d", len(employees))
+    
+    # Log details of filtered employees
+    for employee in employees:
+        current_app.logger.info(
+            "DEBUG Filtered Employee: ID=%d, Name=%s, Email=%s, Role=%s, Is Admin=%s", 
+            employee.id, employee.name, employee.email, employee.role, employee.is_admin
+        )
+    
     agencies = User.query.filter_by(role='agency').all()
     
     # Get IDs of cars already assigned to agencies
