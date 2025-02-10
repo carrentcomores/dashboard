@@ -13,7 +13,6 @@ from sqlalchemy import extract
 from sqlalchemy.orm import joinedload
 from flask import send_from_directory
 from sqlalchemy.exc import SQLAlchemyError, DatabaseError
-from .cloudinary_config import upload_image, delete_image
 
 def admin_required(f):
     @wraps(f)
@@ -66,25 +65,19 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-def save_image(image, car_id):
-    """
-    Save image to Cloudinary and return the URL
-    """
-    if image and allowed_file(image.filename):
-        try:
-            # Upload to Cloudinary with a unique filename
-            filename = f"car_{car_id}_{secure_filename(image.filename)}"
-            cloudinary_url = upload_image(image)
-            
-            if cloudinary_url:
-                return cloudinary_url
-            else:
-                flash('Error uploading image to cloud storage', 'danger')
-                return None
-        except Exception as e:
-            current_app.logger.error(f"Image upload error: {str(e)}")
-            flash(f'Error saving image: {str(e)}', 'danger')
-            return None
+def save_image(file, car_id):
+    if file and allowed_file(file.filename):
+        # Create car directory if it doesn't exist
+        car_dir = os.path.join(UPLOAD_FOLDER, str(car_id))
+        os.makedirs(car_dir, exist_ok=True)
+        
+        # Secure the filename and save the file
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(car_dir, filename)
+        file.save(file_path)
+        
+        # Return the relative path for database storage
+        return os.path.join('uploads', 'cars', str(car_id), filename)
     return None
 
 @main.route('/')
@@ -522,39 +515,40 @@ def manage_cars():
 
     return render_template('manage_cars.html', cars=cars)
 
-@main.route('/manage_car_images/<int:car_id>', methods=['POST'])
+@main.route('/manage_cars/upload_images/<int:car_id>', methods=['POST'])
 @login_required
-@manager_or_admin_required
-def manage_car_images(car_id):
-    car = Car.query.get_or_404(car_id)
+def upload_car_images(car_id):
+    # Allow both admin and manager to upload car images
+    if not (current_user.is_admin or current_user.role == 'manager'):
+        return jsonify({'error': 'Access denied'}), 403
     
-    # Handle image uploads
+    car = Car.query.get_or_404(car_id)
     images = request.files.getlist('images')
     
-    for image in images:
-        if image and allowed_file(image.filename):
-            # Upload to Cloudinary
-            cloudinary_url = upload_image(image)
-            
-            if cloudinary_url:
-                # Create a new CarImage record
-                car_image = CarImage(car_id=car.id, image_path=cloudinary_url)
-                db.session.add(car_image)
-                
-                # Set first image as main image if not already set
-                if not car.main_image:
-                    car.main_image = cloudinary_url
-    
     try:
+        for image in images:
+            if image and allowed_file(image.filename):
+                image_path = save_image(image, car.id)
+                if image_path:
+                    car_image = CarImage(
+                        car_id=car.id,
+                        image_path=image_path,
+                        caption=request.form.get('caption')
+                    )
+                    db.session.add(car_image)
+                    
+                    # Set as main image if car doesn't have one
+                    if not car.main_image:
+                        car.main_image = image_path
+        
         db.session.commit()
-        flash('Car images updated successfully!', 'success')
+        return jsonify({'message': 'Images uploaded successfully'})
+        
     except Exception as e:
         db.session.rollback()
-        flash(f'Error updating car images: {str(e)}', 'danger')
-    
-    return redirect(url_for('main.manage_cars'))
+        return jsonify({'error': 'Error uploading images'}), 500
 
-@main.route('/delete_car_image/<int:image_id>', methods=['DELETE'])
+@main.route('/manage_cars/delete_image/<int:image_id>', methods=['DELETE'])
 @login_required
 def delete_car_image(image_id):
     # Log the incoming request details
@@ -575,14 +569,26 @@ def delete_car_image(image_id):
         
         car = image.car  # Store reference to car before deleting image
         
-        # Delete the image from Cloudinary
-        try:
-            # Extract public_id from Cloudinary URL if possible
-            # This might need adjustment based on your Cloudinary URL format
-            public_id = image.image_path.split('/')[-1].split('.')[0]
-            delete_image(public_id)
-        except Exception as e:
-            current_app.logger.error(f"Error deleting Cloudinary image: {str(e)}")
+        # Delete the physical file
+        file_path = os.path.join(current_app.root_path, 'static', image.image_path)
+        current_app.logger.info(f"Attempting to delete file: {file_path}")
+        
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            current_app.logger.info(f"File deleted successfully: {file_path}")
+        else:
+            current_app.logger.warning(f"File does not exist: {file_path}")
+        
+        # If this was the main image, set another image as main
+        if image.is_main:
+            next_image = CarImage.query.filter_by(car_id=image.car_id).filter(CarImage.id != image_id).first()
+            if next_image:
+                next_image.is_main = True
+                car.main_image = next_image.image_path
+                current_app.logger.info(f"New main image set: {next_image.image_path}")
+            else:
+                car.main_image = None
+                current_app.logger.info("No alternative main image found")
         
         # Delete the image record
         db.session.delete(image)
@@ -604,9 +610,8 @@ def delete_car_image(image_id):
             'details': str(e)
         }), 500
 
-@main.route('/edit_car/<int:car_id>', methods=['POST'])
+@main.route('/manage_cars/edit/<int:car_id>', methods=['POST'])
 @login_required
-@manager_or_admin_required
 def edit_car(car_id):
     # Allow both admin and manager to edit cars
     if not (current_user.is_admin or current_user.role == 'manager'):
@@ -665,9 +670,8 @@ def edit_car(car_id):
         db.session.rollback()
         return jsonify({'error': f'Error updating car: {str(e)}'}), 500
 
-@main.route('/delete_car/<int:car_id>', methods=['POST'])
+@main.route('/manage_cars/delete/<int:car_id>', methods=['POST'])
 @login_required
-@manager_or_admin_required
 def delete_car(car_id):
     # Allow both admin and manager to delete cars
     if not (current_user.is_admin or current_user.role == 'manager'):
@@ -676,24 +680,8 @@ def delete_car(car_id):
     car = Car.query.get_or_404(car_id)
     
     try:
-        # Delete associated images from Cloudinary
-        car_images = CarImage.query.filter_by(car_id=car_id).all()
-        for car_image in car_images:
-            try:
-                # Extract public_id from Cloudinary URL if possible
-                # This might need adjustment based on your Cloudinary URL format
-                public_id = car_image.image_path.split('/')[-1].split('.')[0]
-                delete_image(public_id)
-            except Exception as e:
-                current_app.logger.error(f"Error deleting Cloudinary image: {str(e)}")
-        
-        # Delete car images from database
-        CarImage.query.filter_by(car_id=car_id).delete()
-        
-        # Delete the car
         db.session.delete(car)
         db.session.commit()
-        
         return jsonify({'message': 'Car deleted successfully'})
     except Exception as e:
         db.session.rollback()
@@ -708,7 +696,7 @@ def get_car_images(car_id):
     for image in car.images:
         images.append({
             'id': image.id,
-            'path': image.image_path,
+            'path': url_for('static', filename=image.image_path),
             'caption': image.caption,
             'is_main': image.is_main
         })
@@ -717,7 +705,6 @@ def get_car_images(car_id):
 
 @main.route('/manage_cars/set_main_image/<int:image_id>', methods=['POST'])
 @login_required
-@manager_or_admin_required
 def set_main_image(image_id):
     # Allow both admin and manager to set main image
     if not (current_user.is_admin or current_user.role == 'manager'):
