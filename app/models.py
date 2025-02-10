@@ -100,7 +100,7 @@ class Car(db.Model):
     category = db.Column(db.String(50), nullable=False)
     description = db.Column(db.Text)
     features = db.Column(db.Text)  # Store as JSON string
-    main_image = db.Column(db.String(200))  # Path to main display image
+    main_image = db.Column(db.String(500), nullable=True)  # Increased from 200 to 500
     display_order = db.Column(db.Integer, default=0)  # New field for custom ordering
     images = db.relationship('CarImage', backref='car', lazy=True, cascade='all, delete-orphan')
     bookings = db.relationship('Booking', backref='car', lazy=False)
@@ -109,7 +109,7 @@ class Car(db.Model):
 class CarImage(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     car_id = db.Column(db.Integer, db.ForeignKey('car.id'), nullable=False)
-    image_path = db.Column(db.String(200), nullable=False)
+    image_path = db.Column(db.String(500), nullable=False)  # Increased from 200 to 500
     caption = db.Column(db.String(200))
     is_main = db.Column(db.Boolean, default=False)
     upload_date = db.Column(db.DateTime, default=datetime.utcnow)
