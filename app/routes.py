@@ -1599,14 +1599,20 @@ def add_expense():
     data = request.form
     
     # Validate input
-    if not all(key in data for key in ['amount', 'category', 'subcategory', 'description']):
+    if not all(key in data for key in ['amount', 'category', 'description']):
         return jsonify({'error': 'Missing required fields'}), 400
     
     try:
         amount = float(data['amount'])
         category = data['category']
-        subcategory = data['subcategory']
         description = data['description']
+        
+        # Make subcategory optional, default to 'Other' if not provided
+        subcategory = data.get('subcategory', 'Other')
+        
+        # If category is 'Other' and no subcategory is provided, use 'Other'
+        if category == 'Other' and not subcategory:
+            subcategory = 'Other'
     except ValueError:
         return jsonify({'error': 'Invalid amount'}), 400
     
@@ -1619,10 +1625,14 @@ def add_expense():
         user_id=current_user.id
     )
     
-    db.session.add(expense)
-    db.session.commit()
-    
-    return jsonify(expense.to_dict()), 201
+    try:
+        db.session.add(expense)
+        db.session.commit()
+        return jsonify(expense.to_dict()), 201
+    except Exception as e:
+        db.session.rollback()
+        current_app.logger.error(f"Error saving expense: {str(e)}")
+        return jsonify({'error': f'Error saving expense: {str(e)}'}), 500
 
 @main.route('/get_expense/<int:expense_id>')
 @login_required
