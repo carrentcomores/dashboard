@@ -880,24 +880,64 @@ def delete_booking(booking_id):
                                 f"License Plate: {car.license_plate}, "
                                 f"Current Availability: {car.is_available}")
         
-        # Reset car availability completely
+        # Determine the booking agency
+        booking_agency_id = None
+        try:
+            # Safely get agency ID, handling different possible scenarios
+            if hasattr(current_user, 'agency_id') and current_user.agency_id:
+                booking_agency_id = current_user.agency_id
+            elif hasattr(current_user, 'agency') and current_user.agency:
+                booking_agency_id = current_user.agency.id
+            
+            # If no agency found, try to get from the booking or use a fallback
+            if not booking_agency_id:
+                # Check if the booking has an associated agency
+                if booking.employee and hasattr(booking.employee, 'agency_id'):
+                    booking_agency_id = booking.employee.agency_id
+                
+                current_app.logger.warning(
+                    f"No agency found for user {current_user.id}. "
+                    f"Using booking employee's agency: {booking_agency_id}"
+                )
+        except Exception as agency_lookup_error:
+            current_app.logger.error(
+                f"Error looking up agency for user {current_user.id}: {str(agency_lookup_error)}"
+            )
+        
+        # Comprehensive car availability reset
         car.is_available = True
         
-        # Remove all agency-specific car status and visibility entries
+        # Remove any agency-specific booking status
         try:
-            agency_car_status_query = AgencyCarStatus.query.filter_by(car_id=car.id)
-            agency_car_status_count = agency_car_status_query.count()
-            agency_car_status_query.delete()
+            # Find and update any agency-specific car statuses
+            agency_car_statuses = AgencyCarStatus.query.filter_by(car_id=car.id).all()
+            for status in agency_car_statuses:
+                # Reset status to available and clear notes
+                status.status = 'available'
+                status.notes = None
             
-            agency_visible_car_query = AgencyVisibleCar.query.filter_by(car_id=car.id)
-            agency_visible_car_count = agency_visible_car_query.count()
-            agency_visible_car_query.delete()
-        except Exception as agency_delete_error:
-            current_app.logger.error(f"Error removing agency entries: {str(agency_delete_error)}")
+            # Cancel all active bookings for this car
+            Booking.query.filter_by(
+                car_id=car.id, 
+                status='active'
+            ).update({
+                'status': 'cancelled'
+            })
+            
+            # Log the comprehensive reset
+            current_app.logger.info(
+                f"Comprehensively reset car {car.id} availability. "
+                f"Updated {len(agency_car_statuses)} agency car statuses."
+            )
+        
+        except Exception as status_update_error:
+            current_app.logger.error(
+                f"Error updating car availability status: {str(status_update_error)}"
+            )
             current_app.logger.error(traceback.format_exc())
             return jsonify({
                 'success': False, 
-                'error': f'Error removing agency entries: {str(agency_delete_error)}'
+                'error': f'Error resetting car availability: {str(status_update_error)}'
             }), 500
         
         # Delete the booking
@@ -927,8 +967,6 @@ def delete_booking(booking_id):
         current_app.logger.info(
             f"Successfully deleted booking {booking_id}. "
             f"Car {car.id} is now available. "
-            f"Removed {agency_car_status_count} agency car statuses and "
-            f"{agency_visible_car_count} agency visible car entries."
         )
         
         return jsonify({
@@ -1632,7 +1670,10 @@ def add_expense():
     except Exception as e:
         db.session.rollback()
         current_app.logger.error(f"Error saving expense: {str(e)}")
-        return jsonify({'error': f'Error saving expense: {str(e)}'}), 500
+        return jsonify({
+            'error': 'Error saving expense',
+            'details': str(e)
+        }), 500
 
 @main.route('/get_expense/<int:expense_id>')
 @login_required
@@ -2288,7 +2329,9 @@ def delete_agency(agency_id):
                 f"Booking ID: {booking.id}, Status: {booking.status}, Car ID: {booking.car_id}" 
                 for booking in active_bookings
             ]
-            current_app.logger.warning(f"Cannot delete agency. Active bookings: {booking_details}")
+            current_app.logger.warning(
+                f"Cannot delete agency. Active bookings: {booking_details}"
+            )
             
             return jsonify({
                 'status': 'error',

@@ -16683,3 +16683,1292 @@ werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on 
 2025-02-10 07:01:50,093 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
 2025-02-10 07:01:50,094 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
 2025-02-10 07:01:50,110 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 09:02:00,234 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 09:02:00,235 - app - INFO - Database connection test successful
+2025-02-10 09:02:00,290 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://172.20.10.2:5003
+2025-02-10 09:02:00,290 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 09:02:00,293 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 09:02:03,263 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 09:02:03,263 - app - INFO - Database connection test successful
+2025-02-10 09:02:03,288 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 09:02:03,297 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 09:02:06,923 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:06] "[32mGET /manage_cars HTTP/1.1[0m" 302 -
+2025-02-10 09:02:06,958 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:06] "GET /login?next=/manage_cars HTTP/1.1" 200 -
+2025-02-10 09:02:07,025 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:07] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-10 09:02:07,025 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:07] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-02-10 09:02:07,145 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:07] "GET /favicon.ico HTTP/1.1" 200 -
+2025-02-10 09:02:17,302 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 09:02:17,305 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 09:02:17,305 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 09:02:17,403 - app - INFO - Password match result: True
+2025-02-10 09:02:17,404 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:17] "[32mPOST /login?next=/manage_cars HTTP/1.1[0m" 302 -
+2025-02-10 09:02:17,426 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:17] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 09:02:17,439 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 09:02:17,440 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 09:02:17,461 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 09:02:19,760 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 09:02:19,775 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 09:02:19,778 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,778 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,778 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,782 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,784 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 09:02:19,795 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,813 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "GET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:19,831 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 09:02:24,718 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 09:02:24,726 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:24,728 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:24,730 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:24,731 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:24,732 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:24,732 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:24,754 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:24] "GET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 09:02:35,613 - app - INFO - Editing car 10: Received form data: {'model': 'Mitsubishi Pajero', 'year': '2013', 'license_plate': '028BY73', 'daily_rate': '40000', 'category': 'SUV', 'is_available': 'true', 'description': '', 'features': 'Automatique\r\nEssence'}
+2025-02-10 09:02:35,615 - app - INFO - Successfully updated car 10
+2025-02-10 09:02:35,617 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "POST /manage_cars/edit/10 HTTP/1.1" 200 -
+2025-02-10 09:02:35,639 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 09:02:35,655 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,657 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,659 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,660 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,662 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,663 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,664 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,666 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,666 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 09:02:35,677 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 09:02:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:56:50,999 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 13:56:50,999 - app - INFO - Database connection test successful
+2025-02-10 13:56:51,039 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://172.20.10.2:5003
+2025-02-10 13:56:51,039 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 13:56:51,039 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 13:56:54,589 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 13:56:54,590 - app - INFO - Database connection test successful
+2025-02-10 13:56:54,617 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 13:56:54,626 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 13:57:02,822 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 13:57:02,845 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:02] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 13:57:02,869 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:02,870 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:02,913 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:09,105 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 13:57:09,107 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 13:57:09,107 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 13:57:09,173 - app - INFO - Password match result: True
+2025-02-10 13:57:09,173 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:09] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 13:57:09,196 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:09] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 13:57:09,223 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:09,224 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:09,245 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:10,658 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 13:57:10,659 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 13:57:10,659 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 13:57:10,659 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 13:57:10,659 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 13:57:10,660 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 13:57:10,662 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 13:57:10,662 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 13:57:10,662 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 13:57:10,662 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 13:57:10,662 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 13:57:10,696 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 13:57:10,709 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:10,710 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:10,711 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:10,713 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "GET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 13:57:10,714 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:10,735 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:16,330 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:16] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 13:57:19,883 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:19] "POST /edit_agency/3 HTTP/1.1" 200 -
+2025-02-10 13:57:20,902 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 13:57:20,903 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 13:57:20,904 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 13:57:20,904 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 13:57:20,904 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 13:57:20,904 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 13:57:20,906 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 13:57:20,906 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 13:57:20,906 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 13:57:20,906 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 13:57:20,906 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 13:57:20,912 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:20] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 13:57:20,927 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:20,928 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:20] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:20,929 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:20] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:20,950 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,510 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "GET / HTTP/1.1" 200 -
+2025-02-10 13:57:21,524 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,527 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,529 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,531 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,533 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,535 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,536 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,541 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,541 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:21,553 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,890 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "GET /book/10 HTTP/1.1" 200 -
+2025-02-10 13:57:23,903 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,903 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,904 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,905 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,910 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,911 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,911 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,913 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,914 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,916 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:23,964 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:27,605 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:27] "GET /search_customer?query=492 HTTP/1.1" 200 -
+2025-02-10 13:57:33,998 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:33] "[32mPOST /book/10 HTTP/1.1[0m" 302 -
+2025-02-10 13:57:34,010 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:34] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 13:57:34,026 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:34,027 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:34,051 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:37,482 - app - INFO - Attempting to delete booking 1
+2025-02-10 13:57:37,482 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 13:57:37,485 - app - INFO - Booking details - ID: 1, Car ID: 10, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 13:57:37,486 - app - INFO - Car details before deletion - ID: 10, License Plate: 028BY73, Current Availability: False
+2025-02-10 13:57:37,502 - app - INFO - Successfully deleted booking 1. Car 10 is now available. Removed 1 agency car statuses and 2 agency visible car entries.
+2025-02-10 13:57:37,503 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:37] "POST /delete_booking/1 HTTP/1.1" 200 -
+2025-02-10 13:57:37,517 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:37] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 13:57:37,529 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:37,530 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:37] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:37,548 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:37] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:38,921 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 13:57:38,922 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 13:57:38,922 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 13:57:38,922 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 13:57:38,922 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 13:57:38,922 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 13:57:38,924 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 13:57:38,924 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 13:57:38,924 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 13:57:38,925 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 13:57:38,925 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 13:57:38,932 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:38] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 13:57:38,949 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 13:57:38,951 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 13:57:38,951 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:38] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:38,953 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:38] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 13:57:38,970 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:38] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 13:57:41,607 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 13:57:41] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:00:52,303 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py', reloading
+2025-02-10 14:00:52,419 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 14:00:56,053 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 14:00:56,053 - app - INFO - Database connection test successful
+2025-02-10 14:00:56,078 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 14:00:56,084 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 14:02:11,120 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py', reloading
+2025-02-10 14:02:11,194 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 14:02:14,506 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 14:02:14,507 - app - INFO - Database connection test successful
+2025-02-10 14:02:14,534 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 14:02:14,541 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 14:02:24,323 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:24] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:02:24,352 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:24] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:02:24,373 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:02:24,376 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:02:24,390 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:02:28,717 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 14:02:28,719 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 14:02:28,720 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 14:02:28,823 - app - INFO - Password match result: True
+2025-02-10 14:02:28,823 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:28] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:02:28,846 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:28] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:02:28,857 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:02:28,868 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:02:28,883 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,585 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "GET / HTTP/1.1" 200 -
+2025-02-10 14:02:32,601 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,602 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,603 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,606 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,606 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,607 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,610 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,611 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,611 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:32,659 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:32] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,268 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "GET /book/10 HTTP/1.1" 200 -
+2025-02-10 14:02:34,280 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,285 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,287 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,289 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,291 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,292 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,294 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,295 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,296 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,297 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:02:34,374 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:02:39,135 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:39] "GET /search_customer?query=49240 HTTP/1.1" 200 -
+2025-02-10 14:02:50,317 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:02:50,328 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:50] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:02:50,336 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:50] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-02-10 14:02:50,400 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-02-10 14:02:51,124 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 14:02:51,124 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 14:02:51,128 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 841, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 450, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 14:02:51,128 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 841, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 450, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 14:02:51,128 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:51] "[35m[1mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 500 -
+2025-02-10 14:02:51,133 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 14:02:51,133 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 14:02:51,134 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 841, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 450, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 14:02:51,134 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 841, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 450, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 14:02:51,134 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:02:51] "[35m[1mGET /apple-touch-icon.png HTTP/1.1[0m" 500 -
+2025-02-10 14:03:00,989 - app - INFO - Login attempt for email: farha@carrent.com
+2025-02-10 14:03:00,996 - app - INFO - User found: farha@carrent.com, ID: 3, Role: agency
+2025-02-10 14:03:00,996 - app - INFO - Stored password hash: pbkdf2:sha256:600000$AIvxCjOiZPVKzfeW$a6ee1dda8570f831e6eb949e516f74ca73600ccfb5e4b335050637a3e0dbf966
+2025-02-10 14:03:01,111 - app - INFO - Password match result: True
+2025-02-10 14:03:01,112 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:03:01,339 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "GET / HTTP/1.1" 200 -
+2025-02-10 14:03:01,361 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:01,364 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:01,364 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "GET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 14:03:01,367 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "GET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 14:03:01,370 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "GET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 14:03:01,371 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "GET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 14:03:01,371 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:01] "GET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 14:03:07,346 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 14:03:07,346 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:03:07,346 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:03:07,347 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:03:07,347 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:03:07,347 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:03:07,348 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:03:07,348 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:03:07,349 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:03:07,349 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:03:07,349 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:03:07,380 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:07] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:03:07,395 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:07,401 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:07,402 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:07] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:07,403 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:07] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:07,417 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:03:10,125 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:10] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:03:12,890 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:12] "POST /edit_agency/3 HTTP/1.1" 200 -
+2025-02-10 14:03:13,909 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 14:03:13,910 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:03:13,910 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:03:13,910 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:03:13,910 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:03:13,910 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:03:13,912 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:03:13,912 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:03:13,912 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:03:13,912 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:03:13,912 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:03:13,918 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:13] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:03:13,933 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:13,935 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:13] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:13,935 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:13,955 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:13] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,046 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "GET / HTTP/1.1" 200 -
+2025-02-10 14:03:15,048 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,049 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,058 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,061 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 14:03:15,064 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,065 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,065 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,065 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,065 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:15,068 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,224 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "GET / HTTP/1.1" 200 -
+2025-02-10 14:03:17,241 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,242 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,247 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,247 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,250 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,250 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,250 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,253 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,254 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:17,306 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,455 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "GET /book/10 HTTP/1.1" 200 -
+2025-02-10 14:03:18,470 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,477 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,479 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,481 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,482 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,482 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,483 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,487 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:18,568 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:03:21,265 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:21] "GET /search_customer?query=492 HTTP/1.1" 200 -
+2025-02-10 14:03:27,823 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:27] "[32mPOST /book/10 HTTP/1.1[0m" 302 -
+2025-02-10 14:03:27,834 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:27] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:03:27,852 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:27,853 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:27,874 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:27] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,415 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "GET / HTTP/1.1" 200 -
+2025-02-10 14:03:30,434 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,444 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,444 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,445 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,445 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,445 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,446 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:03:30,447 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:03:35,378 - app - INFO - Attempting to delete booking 1
+2025-02-10 14:03:35,378 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 14:03:35,380 - app - INFO - Booking details - ID: 1, Car ID: 10, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 14:03:35,382 - app - INFO - Car details before deletion - ID: 10, License Plate: 028BY73, Current Availability: False
+2025-02-10 14:03:35,386 - app - ERROR - routes.py:982 - Critical error deleting booking 1: 'User' object has no attribute 'agency'
+User: 1 (Admin)
+Full Traceback: Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py", line 885, in delete_booking
+    if current_user.agency:
+AttributeError: 'User' object has no attribute 'agency'
+
+2025-02-10 14:03:35,386 - app - ERROR - Critical error deleting booking 1: 'User' object has no attribute 'agency'
+User: 1 (Admin)
+Full Traceback: Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py", line 885, in delete_booking
+    if current_user.agency:
+AttributeError: 'User' object has no attribute 'agency'
+
+2025-02-10 14:03:35,386 - app - ERROR - routes.py:991 - Python version: 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)]
+2025-02-10 14:03:35,386 - app - ERROR - Python version: 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)]
+2025-02-10 14:03:35,386 - app - ERROR - routes.py:992 - Exception type: AttributeError
+2025-02-10 14:03:35,386 - app - ERROR - Exception type: AttributeError
+2025-02-10 14:03:35,387 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:03:35] "[35m[1mPOST /delete_booking/1 HTTP/1.1[0m" 500 -
+2025-02-10 14:04:40,773 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py', reloading
+2025-02-10 14:04:40,857 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 14:04:51,578 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 14:04:51,579 - app - INFO - Database connection test successful
+2025-02-10 14:04:51,604 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 14:04:51,612 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 14:04:56,043 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:04:56] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:04:56,079 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:04:56] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:04:56,105 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:04:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:04:56,106 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:04:56] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,273 - app - INFO - Login attempt for email: farha@carrent.com
+2025-02-10 14:05:05,275 - app - INFO - User found: farha@carrent.com, ID: 3, Role: agency
+2025-02-10 14:05:05,275 - app - INFO - Stored password hash: pbkdf2:sha256:600000$AIvxCjOiZPVKzfeW$a6ee1dda8570f831e6eb949e516f74ca73600ccfb5e4b335050637a3e0dbf966
+2025-02-10 14:05:05,393 - app - INFO - Password match result: True
+2025-02-10 14:05:05,394 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:05:05,635 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "GET / HTTP/1.1" 200 -
+2025-02-10 14:05:05,661 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,666 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,667 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,667 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,668 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,668 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,668 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:05,672 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:09,232 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:09] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-02-10 14:05:09,242 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:09] "GET /login?next=/dashboard HTTP/1.1" 200 -
+2025-02-10 14:05:09,259 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:05:09,260 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:09,274 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:05:12,869 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 14:05:12,871 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 14:05:12,871 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 14:05:12,973 - app - INFO - Password match result: True
+2025-02-10 14:05:12,974 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:12] "[32mPOST /login?next=/dashboard HTTP/1.1[0m" 302 -
+2025-02-10 14:05:12,996 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:12] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:05:13,029 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:05:13,029 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:13,046 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:13] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:05:17,527 - app - INFO - Attempting to delete booking 1
+2025-02-10 14:05:17,528 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 14:05:17,530 - app - INFO - Booking details - ID: 1, Car ID: 10, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 14:05:17,537 - app - INFO - Car details before deletion - ID: 10, License Plate: 028BY73, Current Availability: False
+2025-02-10 14:05:17,538 - app - WARNING - No agency found for user 1. Using booking employee's agency: None
+2025-02-10 14:05:17,538 - app - WARNING - No agency found for user 1 when deleting booking 1. Skipping agency-specific visibility update.
+2025-02-10 14:05:17,547 - app - INFO - Successfully deleted booking 1. Car 10 is now available. 
+2025-02-10 14:05:17,547 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:17] "POST /delete_booking/1 HTTP/1.1" 200 -
+2025-02-10 14:05:17,561 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:17] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:05:17,574 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:05:17,575 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:17,594 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,760 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "GET / HTTP/1.1" 200 -
+2025-02-10 14:05:19,776 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,786 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:19,789 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:19] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,141 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "GET / HTTP/1.1" 200 -
+2025-02-10 14:05:28,160 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,161 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,162 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,164 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,165 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,168 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,168 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,169 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,169 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:05:28,186 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:05:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:06:48,297 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 14:06:48,298 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:06:48,298 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:06:48,298 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:06:48,298 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:06:48,298 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:06:48,300 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:06:48,300 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:06:48,300 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:06:48,300 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:06:48,300 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:06:48,332 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:48] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:06:48,347 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:06:48,348 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:06:48,348 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:48] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:06:48,373 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:06:50,912 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:50] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:06:55,298 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:55] "GET /add_employee HTTP/1.1" 200 -
+2025-02-10 14:06:55,309 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:06:55,311 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:06:55,319 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:06:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:01,651 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py', reloading
+2025-02-10 14:07:01,735 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 14:07:05,030 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 14:07:05,031 - app - INFO - Database connection test successful
+2025-02-10 14:07:05,055 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 14:07:05,066 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 14:07:10,697 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:10] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:07:10,709 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:10] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:07:10,724 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:10,724 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:10,745 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:16,981 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 14:07:16,984 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 14:07:16,984 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 14:07:17,087 - app - INFO - Password match result: True
+2025-02-10 14:07:17,087 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:17] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:07:17,110 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:17] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:07:17,139 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:17,139 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:17,152 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:21,749 - app - INFO - Maintenance page access attempt. User Details:
+  ID: 1
+  Name: Admin
+  Role: admin
+  Is Authenticated: True
+Python Version: 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)]
+Current Working Directory: /Users/mohamedabdallah/Desktop/CarRent System
+2025-02-10 14:07:21,750 - app - INFO - Database connection is active and responsive.
+2025-02-10 14:07:21,750 - app - INFO - Attempting to query maintenance records...
+2025-02-10 14:07:21,753 - app - INFO - Successfully retrieved 0 maintenance records.
+2025-02-10 14:07:21,754 - app - INFO - Attempting to query cars...
+2025-02-10 14:07:21,756 - app - INFO - Successfully retrieved 7 cars.
+2025-02-10 14:07:21,756 - app - INFO - Maintenance Page Query Results:
+  Maintenance Records: 0
+  Cars: 7
+  User: Admin (ID: 1)
+  Timestamp: 2025-02-10 14:07:21.756501
+2025-02-10 14:07:21,770 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:21] "GET /maintenance HTTP/1.1" 200 -
+2025-02-10 14:07:21,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:21,786 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:21,806 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,849 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "GET / HTTP/1.1" 200 -
+2025-02-10 14:07:22,862 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,866 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,869 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,869 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,871 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,872 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,874 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,875 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,876 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:22,884 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:26,256 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:26] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:07:26,273 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:26,273 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:26] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:26,288 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:32,468 - app - INFO - Maintenance page access attempt. User Details:
+  ID: 1
+  Name: Admin
+  Role: admin
+  Is Authenticated: True
+Python Version: 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)]
+Current Working Directory: /Users/mohamedabdallah/Desktop/CarRent System
+2025-02-10 14:07:32,469 - app - INFO - Database connection is active and responsive.
+2025-02-10 14:07:32,469 - app - INFO - Attempting to query maintenance records...
+2025-02-10 14:07:32,470 - app - INFO - Successfully retrieved 0 maintenance records.
+2025-02-10 14:07:32,470 - app - INFO - Attempting to query cars...
+2025-02-10 14:07:32,472 - app - INFO - Successfully retrieved 7 cars.
+2025-02-10 14:07:32,472 - app - INFO - Maintenance Page Query Results:
+  Maintenance Records: 0
+  Cars: 7
+  User: Admin (ID: 1)
+  Timestamp: 2025-02-10 14:07:32.472606
+2025-02-10 14:07:32,474 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:32] "GET /maintenance HTTP/1.1" 200 -
+2025-02-10 14:07:32,489 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:32,491 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:32] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:32,503 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:32] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,025 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 14:07:34,040 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,044 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,046 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,047 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,048 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,050 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,052 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,052 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,054 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:34,070 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,486 - app - INFO - Editing car 10: Received form data: {'model': 'Mitsubishi Pajero', 'year': '2013', 'license_plate': '028BY73', 'daily_rate': '40000', 'category': 'SUV', 'is_available': 'true', 'description': '', 'features': 'Automatique\r\nEssence'}
+2025-02-10 14:07:38,492 - app - INFO - Successfully updated car 10
+2025-02-10 14:07:38,494 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "POST /manage_cars/edit/10 HTTP/1.1" 200 -
+2025-02-10 14:07:38,511 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 14:07:38,527 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,529 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,531 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,532 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,533 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,535 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,536 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,539 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,539 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:38,568 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:38] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,504 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "GET / HTTP/1.1" 200 -
+2025-02-10 14:07:40,522 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,526 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,526 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,526 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,529 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,530 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,531 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,532 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,533 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:40,549 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:40] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,775 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 14:07:43,792 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,794 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,796 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,799 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,799 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,800 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,802 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,804 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,804 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:07:43,819 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:07:48,494 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:07:48] "POST /manage_cars/delete/10 HTTP/1.1" 200 -
+2025-02-10 14:08:15,792 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[32mPOST /manage_cars HTTP/1.1[0m" 302 -
+2025-02-10 14:08:15,801 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 14:08:15,813 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,813 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,814 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,815 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,818 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,818 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,819 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,821 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:15,821 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "GET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:15,836 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:08:19,246 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 14:08:19,255 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:19,255 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:19,256 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:19,261 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:19,263 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:19,263 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:19,286 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:19] "GET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 14:08:20,221 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:20] "POST /manage_cars/set_main_image/67 HTTP/1.1" 200 -
+2025-02-10 14:08:20,229 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:20] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 14:08:23,166 - app - INFO - DEBUG: Total number of users: 5
+2025-02-10 14:08:23,166 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:08:23,167 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:08:23,167 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:08:23,167 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:08:23,167 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:08:23,169 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:08:23,169 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:08:23,169 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:08:23,169 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:08:23,169 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:08:23,202 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:23] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:08:23,216 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:23] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:23,217 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:08:23,218 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:23] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:23,219 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:08:23,237 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:08:39,845 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:39] "[35m[1mPOST /add_agency HTTP/1.1[0m" 201 -
+2025-02-10 14:08:50,964 - app - INFO - DEBUG: Total number of users: 6
+2025-02-10 14:08:50,965 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:08:50,965 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:08:50,965 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:08:50,965 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:08:50,965 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:08:50,966 - app - INFO - DEBUG User Details: ID=6, Name=Mahmoud Car, Email=mahmoud@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:08:50,967 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:08:50,967 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:08:50,967 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:08:50,967 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:08:50,967 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:08:50,971 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:50] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:08:50,987 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:08:50,989 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:08:50,990 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:50] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:08:51,009 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:51] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:08:53,621 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:53] "GET /get_agency_cars/6 HTTP/1.1" 200 -
+2025-02-10 14:08:57,397 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:08:57] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:09:00,333 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:00] "POST /edit_agency/3 HTTP/1.1" 200 -
+2025-02-10 14:09:01,351 - app - INFO - DEBUG: Total number of users: 6
+2025-02-10 14:09:01,351 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:09:01,352 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:09:01,352 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:09:01,352 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:09:01,352 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:09:01,352 - app - INFO - DEBUG User Details: ID=6, Name=Mahmoud Car, Email=mahmoud@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:09:01,353 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:09:01,353 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:09:01,353 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:09:01,354 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:09:01,354 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:09:01,358 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:01] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:09:01,374 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:01,375 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:01,393 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:01] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,636 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "GET / HTTP/1.1" 200 -
+2025-02-10 14:09:06,652 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,654 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,657 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,658 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,660 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,661 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,664 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,664 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,664 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:06,673 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:06] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,319 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "GET /book/10 HTTP/1.1" 200 -
+2025-02-10 14:09:09,333 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,334 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,334 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,338 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,340 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,344 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,345 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,347 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,349 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,349 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:09,373 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:09:12,413 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:12] "GET /search_customer?query=492 HTTP/1.1" 200 -
+2025-02-10 14:09:18,783 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:18] "[32mPOST /book/10 HTTP/1.1[0m" 302 -
+2025-02-10 14:09:18,796 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:18] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:09:18,811 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:18,811 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:18,831 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:09:22,870 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:09:22,879 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:22] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:09:22,900 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:22,903 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,187 - app - INFO - Login attempt for email: farha@carrent.com
+2025-02-10 14:09:34,189 - app - INFO - User found: farha@carrent.com, ID: 3, Role: agency
+2025-02-10 14:09:34,189 - app - INFO - Stored password hash: pbkdf2:sha256:600000$AIvxCjOiZPVKzfeW$a6ee1dda8570f831e6eb949e516f74ca73600ccfb5e4b335050637a3e0dbf966
+2025-02-10 14:09:34,309 - app - INFO - Password match result: True
+2025-02-10 14:09:34,310 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:09:34,520 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "GET / HTTP/1.1" 200 -
+2025-02-10 14:09:34,545 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,548 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,549 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,549 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 14:09:34,550 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,552 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,552 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:34,553 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:34] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:41,192 - app - INFO - Attempting to delete booking 1
+2025-02-10 14:09:41,192 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 14:09:41,194 - app - INFO - Booking details - ID: 1, Car ID: 10, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 14:09:41,195 - app - INFO - Car details before deletion - ID: 10, License Plate: 028BY73, Current Availability: False
+2025-02-10 14:09:41,196 - app - WARNING - No agency found for user 1. Using booking employee's agency: None
+2025-02-10 14:09:41,196 - app - WARNING - No agency found for user 1 when deleting booking 1. Skipping agency-specific visibility update.
+2025-02-10 14:09:41,204 - app - INFO - Car 10 reset to available. Cancelled 0 active bookings.
+2025-02-10 14:09:41,209 - app - INFO - Successfully deleted booking 1. Car 10 is now available. 
+2025-02-10 14:09:41,210 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:41] "POST /delete_booking/1 HTTP/1.1" 200 -
+2025-02-10 14:09:41,226 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:41] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:09:41,241 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:41,242 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:41,261 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "GET / HTTP/1.1" 200 -
+2025-02-10 14:09:43,802 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,804 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,808 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,809 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,811 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,812 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,812 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,815 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,816 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:43,837 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,527 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "GET / HTTP/1.1" 200 -
+2025-02-10 14:09:49,548 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,558 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,558 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,559 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,559 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,559 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,559 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:49,564 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,515 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "POST /agency/update_car_status HTTP/1.1" 200 -
+2025-02-10 14:09:53,527 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "GET / HTTP/1.1" 200 -
+2025-02-10 14:09:53,541 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,543 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,543 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,543 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,544 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,545 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,545 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:09:53,556 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:09:53] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:10:59,525 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:10:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-10 14:10:59,535 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:10:59] "GET /login HTTP/1.1" 200 -
+2025-02-10 14:10:59,543 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:10:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:10:59,543 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:10:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:10:59,565 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:10:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:10:59,567 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:10:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:11:09,932 - app - INFO - Login attempt for email: mahamoud@carrent.com
+2025-02-10 14:11:09,935 - app - WARNING - No user found with email: mahamoud@carrent.com
+2025-02-10 14:11:09,935 - app - ERROR - auth.py:60 - Login failed for email: mahamoud@carrent.com
+2025-02-10 14:11:09,935 - app - ERROR - Login failed for email: mahamoud@carrent.com
+2025-02-10 14:11:09,936 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:09] "POST /login HTTP/1.1" 200 -
+2025-02-10 14:11:09,956 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:11:09,958 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:11:34,540 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py', reloading
+2025-02-10 14:11:34,660 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 14:11:38,127 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 14:11:38,127 - app - INFO - Database connection test successful
+2025-02-10 14:11:38,152 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 14:11:38,163 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 14:11:43,507 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:43] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:11:43,522 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:43] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:11:43,552 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:11:43,552 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:11:43,560 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:11:48,623 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 14:11:48,626 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 14:11:48,627 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 14:11:48,729 - app - INFO - Password match result: True
+2025-02-10 14:11:48,730 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:48] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:11:48,753 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:48] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:11:48,762 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:11:48,762 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:11:48,775 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:11:51,910 - app - INFO - DEBUG: Total number of users: 6
+2025-02-10 14:11:51,911 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:11:51,911 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:11:51,911 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:11:51,911 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:11:51,911 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:11:51,911 - app - INFO - DEBUG User Details: ID=6, Name=Mahmoud Car, Email=mahmoud@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:11:51,914 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:11:51,914 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:11:51,914 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:11:51,914 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:11:51,914 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:11:51,945 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:51] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:11:51,957 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:11:51,957 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:11:51,983 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:51] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:11:54,319 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:54] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:11:56,877 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:11:56] "GET /get_agency_cars/6 HTTP/1.1" 200 -
+2025-02-10 14:12:06,683 - app - INFO - Login attempt for email: mahmoud@carrent.com
+2025-02-10 14:12:06,685 - app - INFO - User found: mahmoud@carrent.com, ID: 6, Role: agency
+2025-02-10 14:12:06,685 - app - INFO - Stored password hash: pbkdf2:sha256:600000$j4uq2HySeNXMOGR0$4bf3be38447a60f181400cd2931fae295dc340b28dd2f8eb04993e9a7446520f
+2025-02-10 14:12:06,806 - app - INFO - Password match result: True
+2025-02-10 14:12:06,807 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-10 14:12:07,043 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:07] "GET / HTTP/1.1" 200 -
+2025-02-10 14:12:07,067 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:12:07,070 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:12:07,073 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:07] "GET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:10,838 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "GET / HTTP/1.1" 200 -
+2025-02-10 14:12:10,855 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,858 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,858 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,860 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,863 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,865 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,865 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,866 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,868 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:10,921 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,089 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 14:12:14,107 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,108 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,109 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,112 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,112 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,113 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,116 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,117 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,118 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:14,139 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:12:19,398 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:19] "POST /manage_cars/delete/10 HTTP/1.1" 200 -
+2025-02-10 14:12:47,634 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[32mPOST /manage_cars HTTP/1.1[0m" 302 -
+2025-02-10 14:12:47,643 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 14:12:47,656 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,656 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,658 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,660 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,661 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,663 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,663 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,664 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:47,665 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "GET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:47,678 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:12:49,408 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 14:12:49,417 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:49,417 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:49,421 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:49,422 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:49,426 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:49,427 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:49,444 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:49] "GET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:50,451 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:50] "POST /manage_cars/set_main_image/67 HTTP/1.1" 200 -
+2025-02-10 14:12:50,460 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:50] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 14:12:53,013 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "GET / HTTP/1.1" 200 -
+2025-02-10 14:12:53,031 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,032 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,035 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,037 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,038 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,040 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,041 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,043 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,043 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:53,062 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:53] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:12:55,700 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /book/6 HTTP/1.1" 200 -
+2025-02-10 14:12:55,714 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:12:55,716 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:12:55,720 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,720 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,722 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,728 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,728 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:12:55,729 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,738 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,763 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "GET /static/uploads/cars/6/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 14:12:55,787 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:12:59,325 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:12:59] "GET /search_customer?query=492 HTTP/1.1" 200 -
+2025-02-10 14:13:05,612 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:05] "[32mPOST /book/6 HTTP/1.1[0m" 302 -
+2025-02-10 14:13:05,625 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:05] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:13:05,638 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:05,639 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:05,658 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:05] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,665 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "GET / HTTP/1.1" 200 -
+2025-02-10 14:13:08,681 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,682 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,689 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,689 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,691 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,692 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,692 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,693 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,695 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:08,705 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:13:10,843 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:10] "GET / HTTP/1.1" 200 -
+2025-02-10 14:13:10,864 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:10,868 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:10,869 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:10] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:12,818 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-02-10 14:13:12,827 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:12] "GET /login HTTP/1.1" 200 -
+2025-02-10 14:13:12,830 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:12,832 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:12,847 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:12,849 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,574 - app - INFO - Login attempt for email: farha@carrent.com
+2025-02-10 14:13:19,576 - app - INFO - User found: farha@carrent.com, ID: 3, Role: agency
+2025-02-10 14:13:19,576 - app - INFO - Stored password hash: pbkdf2:sha256:600000$AIvxCjOiZPVKzfeW$a6ee1dda8570f831e6eb949e516f74ca73600ccfb5e4b335050637a3e0dbf966
+2025-02-10 14:13:19,701 - app - INFO - Password match result: True
+2025-02-10 14:13:19,701 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-02-10 14:13:19,905 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "GET / HTTP/1.1" 200 -
+2025-02-10 14:13:19,924 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,930 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,931 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,932 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,934 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,934 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:19,934 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:19] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:13:24,378 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:24] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:13:24,396 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:13:24,396 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:24] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:13:24,418 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:13:26,623 - app - INFO - Attempting to delete booking 1
+2025-02-10 14:13:26,624 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 14:13:26,628 - app - INFO - Booking details - ID: 1, Car ID: 6, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 14:13:26,629 - app - INFO - Car details before deletion - ID: 6, License Plate: 863CA73, Current Availability: False
+2025-02-10 14:13:26,629 - app - WARNING - No agency found for user 1. Using booking employee's agency: None
+2025-02-10 14:13:26,635 - app - ERROR - routes.py:940 - Error updating car availability status: Unconsumed column names: is_booked
+2025-02-10 14:13:26,635 - app - ERROR - Error updating car availability status: Unconsumed column names: is_booked
+2025-02-10 14:13:26,647 - app - ERROR - routes.py:943 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py", line 921, in delete_booking
+    AgencyVisibleCar.query.filter_by(car_id=car.id).update({
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 3295, in update
+    result: CursorResult[Any] = self.session.execute(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/bulk_persistence.py", line 1648, in orm_execute_statement
+    return super().orm_execute_statement(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 703, in _compile_w_cache
+    compiled_sql = self._compiler(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/annotation.py", line 344, in _compiler_dispatch
+    return self.__element.__class__._compiler_dispatch(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 6209, in visit_update
+    crud_params_struct = crud._get_crud_params(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/crud.py", line 335, in _get_crud_params
+    raise exc.CompileError(
+sqlalchemy.exc.CompileError: Unconsumed column names: is_booked
+
+2025-02-10 14:13:26,647 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py", line 921, in delete_booking
+    AgencyVisibleCar.query.filter_by(car_id=car.id).update({
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/query.py", line 3295, in update
+    result: CursorResult[Any] = self.session.execute(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/bulk_persistence.py", line 1648, in orm_execute_statement
+    return super().orm_execute_statement(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 703, in _compile_w_cache
+    compiled_sql = self._compiler(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/elements.py", line 316, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 1429, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 870, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 915, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/annotation.py", line 344, in _compiler_dispatch
+    return self.__element.__class__._compiler_dispatch(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/visitors.py", line 141, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/compiler.py", line 6209, in visit_update
+    crud_params_struct = crud._get_crud_params(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/sqlalchemy/sql/crud.py", line 335, in _get_crud_params
+    raise exc.CompileError(
+sqlalchemy.exc.CompileError: Unconsumed column names: is_booked
+
+2025-02-10 14:13:26,648 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:13:26] "[35m[1mPOST /delete_booking/1 HTTP/1.1[0m" 500 -
+2025-02-10 14:14:18,822 - werkzeug - INFO -  * Detected change in '/Users/mohamedabdallah/Desktop/CarRent System/app/routes.py', reloading
+2025-02-10 14:14:18,956 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 14:14:24,506 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 14:14:24,507 - app - INFO - Database connection test successful
+2025-02-10 14:14:24,550 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 14:14:24,572 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 14:14:30,179 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:14:30,207 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:30] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:14:30,230 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:30,231 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:30,246 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:30] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:14:34,609 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 14:14:34,612 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 14:14:34,612 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 14:14:34,715 - app - INFO - Password match result: True
+2025-02-10 14:14:34,715 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:34] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:14:34,739 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:34] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:14:34,750 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:34,750 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:34,775 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:14:40,355 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:40] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 14:14:40,366 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:40] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 14:14:40,389 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:40,395 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:40] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,391 - app - INFO - Login attempt for email: farha@carrent.com
+2025-02-10 14:14:48,393 - app - INFO - User found: farha@carrent.com, ID: 3, Role: agency
+2025-02-10 14:14:48,394 - app - INFO - Stored password hash: pbkdf2:sha256:600000$AIvxCjOiZPVKzfeW$a6ee1dda8570f831e6eb949e516f74ca73600ccfb5e4b335050637a3e0dbf966
+2025-02-10 14:14:48,518 - app - INFO - Password match result: True
+2025-02-10 14:14:48,518 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 14:14:48,740 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "GET / HTTP/1.1" 200 -
+2025-02-10 14:14:48,766 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,771 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,771 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,771 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,771 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,773 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:48,773 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:48] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:51,676 - app - INFO - Maintenance page access attempt. User Details:
+  ID: 1
+  Name: Admin
+  Role: admin
+  Is Authenticated: True
+Python Version: 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)]
+Current Working Directory: /Users/mohamedabdallah/Desktop/CarRent System
+2025-02-10 14:14:51,677 - app - INFO - Database connection is active and responsive.
+2025-02-10 14:14:51,678 - app - INFO - Attempting to query maintenance records...
+2025-02-10 14:14:51,684 - app - INFO - Successfully retrieved 0 maintenance records.
+2025-02-10 14:14:51,684 - app - INFO - Attempting to query cars...
+2025-02-10 14:14:51,686 - app - INFO - Successfully retrieved 7 cars.
+2025-02-10 14:14:51,686 - app - INFO - Maintenance Page Query Results:
+  Maintenance Records: 0
+  Cars: 7
+  User: Admin (ID: 1)
+  Timestamp: 2025-02-10 14:14:51.686235
+2025-02-10 14:14:51,699 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:51] "GET /maintenance HTTP/1.1" 200 -
+2025-02-10 14:14:51,712 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:51,712 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:51,732 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:51] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:14:53,068 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:53] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:14:53,083 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:53,084 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:53] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:53,105 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:53] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:14:55,620 - app - INFO - Attempting to delete booking 1
+2025-02-10 14:14:55,621 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 14:14:55,624 - app - INFO - Booking details - ID: 1, Car ID: 6, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 14:14:55,630 - app - INFO - Car details before deletion - ID: 6, License Plate: 863CA73, Current Availability: False
+2025-02-10 14:14:55,630 - app - WARNING - No agency found for user 1. Using booking employee's agency: None
+2025-02-10 14:14:55,639 - app - INFO - Comprehensively reset car 6 availability. Updated 1 agency car statuses.
+2025-02-10 14:14:55,646 - app - INFO - Successfully deleted booking 1. Car 6 is now available. 
+2025-02-10 14:14:55,647 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:55] "POST /delete_booking/1 HTTP/1.1" 200 -
+2025-02-10 14:14:55,661 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:55] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:14:55,673 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:55,674 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:55,694 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,233 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "GET / HTTP/1.1" 200 -
+2025-02-10 14:14:57,248 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,250 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,252 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,253 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,257 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,259 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,260 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,261 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,263 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:14:57,271 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:14:57] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,539 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "GET / HTTP/1.1" 200 -
+2025-02-10 14:15:00,560 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,570 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:00,573 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:00] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:21,545 - app - INFO - DEBUG: Total number of users: 6
+2025-02-10 14:15:21,546 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:15:21,546 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:15:21,546 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:15:21,546 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:15:21,546 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:15:21,546 - app - INFO - DEBUG User Details: ID=6, Name=Mahmoud Car, Email=mahmoud@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:15:21,548 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:15:21,549 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:15:21,549 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:15:21,549 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:15:21,549 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:15:21,581 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:21] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:15:21,596 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:21,597 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:21,597 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:21] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:21,618 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:15:23,701 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:23] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:15:28,400 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:28] "POST /edit_agency/3 HTTP/1.1" 200 -
+2025-02-10 14:15:29,414 - app - INFO - DEBUG: Total number of users: 6
+2025-02-10 14:15:29,414 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:15:29,414 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:15:29,414 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:15:29,415 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:15:29,415 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:15:29,415 - app - INFO - DEBUG User Details: ID=6, Name=Mahmoud Car, Email=mahmoud@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:15:29,416 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:15:29,416 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:15:29,416 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:15:29,416 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:15:29,416 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:15:29,421 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:29] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:15:29,435 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:29,436 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:29] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:29,456 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:29] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:15:29,695 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:29] "POST /toggle_user_status HTTP/1.1" 200 -
+2025-02-10 14:15:30,760 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:30] "POST /toggle_user_status HTTP/1.1" 200 -
+2025-02-10 14:15:33,195 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:33] "GET /get_agency_cars/6 HTTP/1.1" 200 -
+2025-02-10 14:15:36,465 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "GET / HTTP/1.1" 200 -
+2025-02-10 14:15:36,483 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,487 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,490 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,490 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,492 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,494 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,494 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:36,508 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:36] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,173 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "GET / HTTP/1.1" 200 -
+2025-02-10 14:15:39,194 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,205 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,205 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,205 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,205 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,206 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,206 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:39,210 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:39] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 14:15:46,686 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "GET /book/10 HTTP/1.1" 200 -
+2025-02-10 14:15:46,704 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,705 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,709 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,710 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,711 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,714 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,714 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,716 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,719 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,719 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:46,749 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:15:49,091 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:49] "GET /search_customer?query=492 HTTP/1.1" 200 -
+2025-02-10 14:15:55,580 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:55] "[32mPOST /book/10 HTTP/1.1[0m" 302 -
+2025-02-10 14:15:55,591 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:55] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:15:55,605 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:55] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:15:55,606 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:55,626 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:55] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,341 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "GET / HTTP/1.1" 200 -
+2025-02-10 14:15:58,363 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,374 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,374 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,374 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,375 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,375 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,375 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:15:58,380 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:15:58] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:16:02,387 - app - INFO - Attempting to delete booking 1
+2025-02-10 14:16:02,388 - app - INFO - Current user: 1, Name: Admin, Role: admin
+2025-02-10 14:16:02,389 - app - INFO - Booking details - ID: 1, Car ID: 10, Customer ID: 1, Employee ID: 1, Status: active
+2025-02-10 14:16:02,390 - app - INFO - Car details before deletion - ID: 10, License Plate: 028BY73, Current Availability: False
+2025-02-10 14:16:02,390 - app - WARNING - No agency found for user 1. Using booking employee's agency: None
+2025-02-10 14:16:02,395 - app - INFO - Comprehensively reset car 10 availability. Updated 1 agency car statuses.
+2025-02-10 14:16:02,398 - app - INFO - Successfully deleted booking 1. Car 10 is now available. 
+2025-02-10 14:16:02,399 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:02] "POST /delete_booking/1 HTTP/1.1" 200 -
+2025-02-10 14:16:02,414 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:02] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 14:16:02,428 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:16:02,428 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:16:02,446 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,183 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "GET / HTTP/1.1" 200 -
+2025-02-10 14:16:05,199 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,200 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,203 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,204 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,204 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,206 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,208 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,209 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,211 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:05,221 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:05] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,042 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "GET / HTTP/1.1" 200 -
+2025-02-10 14:16:08,063 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,073 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,073 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,073 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,074 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,074 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,074 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:08,079 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:16:27,809 - app - INFO - DEBUG: Total number of users: 6
+2025-02-10 14:16:27,810 - app - INFO - DEBUG User Details: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True, Is Active=True
+2025-02-10 14:16:27,810 - app - INFO - DEBUG User Details: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False, Is Active=True
+2025-02-10 14:16:27,810 - app - INFO - DEBUG User Details: ID=3, Name=Farha Car, Email=farha@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:16:27,810 - app - INFO - DEBUG User Details: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False, Is Active=True
+2025-02-10 14:16:27,810 - app - INFO - DEBUG User Details: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False, Is Active=True
+2025-02-10 14:16:27,810 - app - INFO - DEBUG User Details: ID=6, Name=Mahmoud Car, Email=mahmoud@carrent.com, Role=agency, Is Admin=False, Is Active=True
+2025-02-10 14:16:27,811 - app - INFO - DEBUG: Number of employees after filtering: 4
+2025-02-10 14:16:27,811 - app - INFO - DEBUG Filtered Employee: ID=1, Name=Admin, Email=admin@carrent.com, Role=admin, Is Admin=True
+2025-02-10 14:16:27,811 - app - INFO - DEBUG Filtered Employee: ID=2, Name=Manager, Email=manager@carrent.com, Role=manager, Is Admin=False
+2025-02-10 14:16:27,812 - app - INFO - DEBUG Filtered Employee: ID=4, Name=Secretary, Email=secretary@carrent.com, Role=secretary, Is Admin=False
+2025-02-10 14:16:27,812 - app - INFO - DEBUG Filtered Employee: ID=5, Name=Employee, Email=employee@carrent.com, Role=employee, Is Admin=False
+2025-02-10 14:16:27,815 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:27] "GET /manage_employees HTTP/1.1" 200 -
+2025-02-10 14:16:27,831 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:16:27,831 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:16:27,850 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:27] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 14:16:30,229 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:30] "GET /get_agency_cars/3 HTTP/1.1" 200 -
+2025-02-10 14:16:33,796 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:33] "GET /get_agency_cars/6 HTTP/1.1" 200 -
+2025-02-10 14:16:38,832 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "GET / HTTP/1.1" 200 -
+2025-02-10 14:16:38,850 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,852 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,856 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,858 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,858 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,859 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,861 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,862 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,864 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 14:16:38,884 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 14:16:38] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
