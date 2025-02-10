@@ -1431,12 +1431,39 @@ def financial_summary():
     # Car rental performance
     car_performance = {}
     for car in Car.query.all():
+        # Bookings for this car
         car_bookings = Booking.query.filter_by(car_id=car.id).all()
+        
+        # Maintenance records for this car
+        car_maintenance = Maintenance.query.filter_by(car_id=car.id).all()
+        
+        # Calculate total maintenance cost
+        total_maintenance_cost = sum(
+            maintenance.cost or 0 for maintenance in car_maintenance
+        )
+        
+        # Calculate total income
+        total_income = sum(booking.total_cost or 0 for booking in car_bookings)
+        
+        # Calculate net revenue
+        net_revenue = total_income - total_maintenance_cost
+        
         car_performance[car.id] = {
-            'model': car.model,
+            'model': car.model or 'Unknown',
+            'license_plate': car.license_plate or 'N/A',
             'total_rentals': len(car_bookings),
-            'total_income': sum(booking.total_cost for booking in car_bookings)
+            'total_income': total_income,
+            'total_maintenance_cost': total_maintenance_cost,
+            'net_revenue': net_revenue
         }
+
+    # Month name conversion
+    month_names = {
+        1: 'January', 2: 'February', 3: 'March', 
+        4: 'April', 5: 'May', 6: 'June', 
+        7: 'July', 8: 'August', 9: 'September', 
+        10: 'October', 11: 'November', 12: 'December'
+    }
 
     # Prepare context
     context = {
@@ -1446,6 +1473,7 @@ def financial_summary():
         'total_deposit': total_deposit,
         'selected_month': selected_month,
         'selected_year': selected_year,
+        'selected_month_name': month_names.get(selected_month, 'Unknown'),
         'months': range(1, 13),
         'today': today,
         
