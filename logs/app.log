@@ -15522,3 +15522,1164 @@ Current Working Directory: /Users/mohamedabdallah/Desktop/CarRent System
 2025-02-10 06:41:14,599 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:41:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2025-02-10 06:41:14,600 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:41:14] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
 2025-02-10 06:41:14,618 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:41:14] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:03,576 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:03] "POST /delete_expense/3 HTTP/1.1" 200 -
+2025-02-10 06:43:03,594 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:03] "GET /expense_management HTTP/1.1" 200 -
+2025-02-10 06:43:03,608 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:03,609 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:03,633 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:05,946 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:05] "POST /delete_expense/2 HTTP/1.1" 200 -
+2025-02-10 06:43:05,958 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:05] "GET /expense_management HTTP/1.1" 200 -
+2025-02-10 06:43:05,970 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:05,970 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:05] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:05,988 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:05] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:07,982 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:07] "POST /delete_expense/1 HTTP/1.1" 200 -
+2025-02-10 06:43:07,994 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:07] "GET /expense_management HTTP/1.1" 200 -
+2025-02-10 06:43:08,005 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:08,006 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:08,023 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:10,602 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:10] "GET /income_management HTTP/1.1" 200 -
+2025-02-10 06:43:10,620 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:10,620 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:10] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:10,638 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:10] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:12,366 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:12] "GET /manage_clients HTTP/1.1" 200 -
+2025-02-10 06:43:12,378 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:12,380 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:12,400 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:12] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:15,042 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:15] "GET /financial_summary HTTP/1.1" 200 -
+2025-02-10 06:43:15,056 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:15,057 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:15] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:15,122 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,377 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:43:17,394 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,395 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,396 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,399 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,400 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,402 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,407 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,407 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,408 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:43:17,424 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:19,912 - app - INFO - Maintenance page access attempt. User Details:
+  ID: 1
+  Name: Admin
+  Role: admin
+  Is Authenticated: True
+Python Version: 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)]
+Current Working Directory: /Users/mohamedabdallah/Desktop/CarRent System
+2025-02-10 06:43:19,913 - app - INFO - Database connection is active and responsive.
+2025-02-10 06:43:19,913 - app - INFO - Attempting to query maintenance records...
+2025-02-10 06:43:19,917 - app - INFO - Successfully retrieved 0 maintenance records.
+2025-02-10 06:43:19,917 - app - INFO - Attempting to query cars...
+2025-02-10 06:43:19,918 - app - INFO - Successfully retrieved 7 cars.
+2025-02-10 06:43:19,918 - app - INFO - Maintenance Page Query Results:
+  Maintenance Records: 0
+  Cars: 7
+  User: Admin (ID: 1)
+  Timestamp: 2025-02-10 06:43:19.918729
+2025-02-10 06:43:19,931 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:19] "GET /maintenance HTTP/1.1" 200 -
+2025-02-10 06:43:19,946 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:19,946 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:19,967 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:19] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:43:21,584 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:21] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 06:43:21,598 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:43:21,598 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:21] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:43:21,617 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:43:21] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:49:07,973 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:07] "GET /income_management HTTP/1.1" 200 -
+2025-02-10 06:49:07,989 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:49:07,990 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:49:08,016 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:08] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:49:09,660 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:09] "GET /expense_management HTTP/1.1" 200 -
+2025-02-10 06:49:09,673 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:49:09,675 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:49:09,690 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:49:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:54:25,506 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 06:54:25,506 - app - INFO - Database connection test successful
+2025-02-10 06:54:25,542 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5003
+ * Running on http://127.0.0.1:5003
+2025-02-10 06:54:25,542 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-10 06:54:25,543 - werkzeug - INFO -  * Restarting with stat
+2025-02-10 06:54:28,688 - app - INFO - Database created successfully at /Users/mohamedabdallah/Desktop/CarRent System/app/car_rental.db
+2025-02-10 06:54:28,688 - app - INFO - Database connection test successful
+2025-02-10 06:54:28,713 - werkzeug - WARNING -  * Debugger is active!
+2025-02-10 06:54:28,722 - werkzeug - INFO -  * Debugger PIN: 133-132-395
+2025-02-10 06:54:33,621 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:33] "[32mGET / HTTP/1.1[0m" 302 -
+2025-02-10 06:54:33,644 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:33] "GET /login?next=/ HTTP/1.1" 200 -
+2025-02-10 06:54:33,681 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:54:33,681 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:54:33,706 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:54:41,564 - app - INFO - Login attempt for email: admin@carrent.com
+2025-02-10 06:54:41,568 - app - INFO - User found: admin@carrent.com, ID: 1, Role: admin
+2025-02-10 06:54:41,568 - app - INFO - Stored password hash: scrypt:32768:8:1$VACXP6DrLMhaXxAW$b7294d2be1f246e1394399ef44c57364656ee94481ab7773a805214fb0d5cfff13a79ed7765ec79fc55810609efaae259421468b506da2bd2ccc2758170b3d35
+2025-02-10 06:54:41,670 - app - INFO - Password match result: True
+2025-02-10 06:54:41,671 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:41] "[32mPOST /login?next=/ HTTP/1.1[0m" 302 -
+2025-02-10 06:54:41,696 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:41] "GET /dashboard HTTP/1.1" 200 -
+2025-02-10 06:54:41,723 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:54:41,723 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:41] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:54:41,739 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,937 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:54:43,952 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,954 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,955 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,955 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,957 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,960 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,961 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,965 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,966 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:43,981 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:43] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,297 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:54:46,309 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,309 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,311 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,313 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,318 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,320 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:46,321 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:46] "[36mGET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:54:49,625 - app - INFO - Delete car image request received. Image ID: 84
+2025-02-10 06:54:49,625 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:54:49,634 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide1.jpeg
+2025-02-10 06:54:49,635 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide1.jpeg
+2025-02-10 06:54:49,642 - app - INFO - Image 84 deleted successfully
+2025-02-10 06:54:49,643 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:49] "DELETE /manage_cars/delete_image/84 HTTP/1.1" 200 -
+2025-02-10 06:54:49,650 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:49] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:54:51,244 - app - INFO - Delete car image request received. Image ID: 85
+2025-02-10 06:54:51,244 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:54:51,246 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide2.jpeg
+2025-02-10 06:54:51,247 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide2.jpeg
+2025-02-10 06:54:51,250 - app - INFO - Image 85 deleted successfully
+2025-02-10 06:54:51,252 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:51] "DELETE /manage_cars/delete_image/85 HTTP/1.1" 200 -
+2025-02-10 06:54:51,260 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:51] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:54:52,597 - app - INFO - Delete car image request received. Image ID: 86
+2025-02-10 06:54:52,597 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:54:52,599 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide3.jpeg
+2025-02-10 06:54:52,599 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide3.jpeg
+2025-02-10 06:54:52,601 - app - INFO - New main image set: uploads/cars/10/Slide4.jpeg
+2025-02-10 06:54:52,608 - app - INFO - Image 86 deleted successfully
+2025-02-10 06:54:52,610 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:52] "DELETE /manage_cars/delete_image/86 HTTP/1.1" 200 -
+2025-02-10 06:54:52,617 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:52] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:54:56,315 - app - INFO - Delete car image request received. Image ID: 87
+2025-02-10 06:54:56,315 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:54:56,317 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide4.jpeg
+2025-02-10 06:54:56,317 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide4.jpeg
+2025-02-10 06:54:56,318 - app - INFO - New main image set: uploads/cars/10/Slide5.jpeg
+2025-02-10 06:54:56,322 - app - INFO - Image 87 deleted successfully
+2025-02-10 06:54:56,323 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:56] "DELETE /manage_cars/delete_image/87 HTTP/1.1" 200 -
+2025-02-10 06:54:56,329 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:56] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:54:58,103 - app - INFO - Delete car image request received. Image ID: 88
+2025-02-10 06:54:58,104 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:54:58,104 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide5.jpeg
+2025-02-10 06:54:58,105 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide5.jpeg
+2025-02-10 06:54:58,106 - app - INFO - New main image set: uploads/cars/10/Slide6.jpeg
+2025-02-10 06:54:58,108 - app - INFO - Image 88 deleted successfully
+2025-02-10 06:54:58,108 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:58] "DELETE /manage_cars/delete_image/88 HTTP/1.1" 200 -
+2025-02-10 06:54:58,112 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:54:58] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:55:00,899 - app - INFO - Delete car image request received. Image ID: 89
+2025-02-10 06:55:00,900 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:00,902 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide6.jpeg
+2025-02-10 06:55:00,902 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide6.jpeg
+2025-02-10 06:55:00,903 - app - INFO - New main image set: uploads/cars/10/Slide7.jpeg
+2025-02-10 06:55:00,906 - app - INFO - Image 89 deleted successfully
+2025-02-10 06:55:00,908 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:00] "DELETE /manage_cars/delete_image/89 HTTP/1.1" 200 -
+2025-02-10 06:55:00,915 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:00] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:55:02,546 - app - INFO - Delete car image request received. Image ID: 90
+2025-02-10 06:55:02,546 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:02,547 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide7.jpeg
+2025-02-10 06:55:02,549 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide7.jpeg
+2025-02-10 06:55:02,550 - app - INFO - New main image set: uploads/cars/10/Slide8.jpeg
+2025-02-10 06:55:02,555 - app - INFO - Image 90 deleted successfully
+2025-02-10 06:55:02,556 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:02] "DELETE /manage_cars/delete_image/90 HTTP/1.1" 200 -
+2025-02-10 06:55:02,563 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:02] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:55:03,982 - app - INFO - Delete car image request received. Image ID: 91
+2025-02-10 06:55:03,983 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:03,984 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide8.jpeg
+2025-02-10 06:55:03,985 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/10/Slide8.jpeg
+2025-02-10 06:55:03,985 - app - INFO - No alternative main image found
+2025-02-10 06:55:03,988 - app - INFO - Image 91 deleted successfully
+2025-02-10 06:55:03,990 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:03] "DELETE /manage_cars/delete_image/91 HTTP/1.1" 200 -
+2025-02-10 06:55:03,996 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:03] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:55:07,930 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:55:07,946 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,948 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "GET /static/images/default-car.jpg HTTP/1.1" 200 -
+2025-02-10 06:55:07,949 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,951 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,953 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,954 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,957 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,958 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,959 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:07,978 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:07] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,074 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:10,084 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,084 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,085 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,091 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,094 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,097 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,099 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,101 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide9.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,103 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide11.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,103 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide10.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:10,105 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:10] "[36mGET /static/uploads/cars/2/Slide12.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:13,464 - app - INFO - Delete car image request received. Image ID: 12
+2025-02-10 06:55:13,465 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:13,466 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide1.jpeg
+2025-02-10 06:55:13,467 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide1.jpeg
+2025-02-10 06:55:13,468 - app - INFO - New main image set: uploads/cars/2/Slide2.jpeg
+2025-02-10 06:55:13,473 - app - INFO - Image 12 deleted successfully
+2025-02-10 06:55:13,475 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:13] "DELETE /manage_cars/delete_image/12 HTTP/1.1" 200 -
+2025-02-10 06:55:13,483 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:13] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:14,600 - app - INFO - Delete car image request received. Image ID: 13
+2025-02-10 06:55:14,601 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:14,602 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide2.jpeg
+2025-02-10 06:55:14,602 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide2.jpeg
+2025-02-10 06:55:14,603 - app - INFO - New main image set: uploads/cars/2/Slide3.jpeg
+2025-02-10 06:55:14,607 - app - INFO - Image 13 deleted successfully
+2025-02-10 06:55:14,609 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:14] "DELETE /manage_cars/delete_image/13 HTTP/1.1" 200 -
+2025-02-10 06:55:14,617 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:14] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:15,602 - app - INFO - Delete car image request received. Image ID: 14
+2025-02-10 06:55:15,602 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:15,605 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide3.jpeg
+2025-02-10 06:55:15,605 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide3.jpeg
+2025-02-10 06:55:15,606 - app - INFO - New main image set: uploads/cars/2/Slide4.jpeg
+2025-02-10 06:55:15,610 - app - INFO - Image 14 deleted successfully
+2025-02-10 06:55:15,611 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:15] "DELETE /manage_cars/delete_image/14 HTTP/1.1" 200 -
+2025-02-10 06:55:15,620 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:15] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:16,370 - app - INFO - Delete car image request received. Image ID: 15
+2025-02-10 06:55:16,370 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:16,372 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide4.jpeg
+2025-02-10 06:55:16,372 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide4.jpeg
+2025-02-10 06:55:16,373 - app - INFO - New main image set: uploads/cars/2/Slide5.jpeg
+2025-02-10 06:55:16,378 - app - INFO - Image 15 deleted successfully
+2025-02-10 06:55:16,380 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:16] "DELETE /manage_cars/delete_image/15 HTTP/1.1" 200 -
+2025-02-10 06:55:16,387 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:16] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:17,171 - app - INFO - Delete car image request received. Image ID: 16
+2025-02-10 06:55:17,171 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:17,173 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide5.jpeg
+2025-02-10 06:55:17,173 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide5.jpeg
+2025-02-10 06:55:17,174 - app - INFO - New main image set: uploads/cars/2/Slide6.jpeg
+2025-02-10 06:55:17,179 - app - INFO - Image 16 deleted successfully
+2025-02-10 06:55:17,180 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:17] "DELETE /manage_cars/delete_image/16 HTTP/1.1" 200 -
+2025-02-10 06:55:17,187 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:17] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:17,906 - app - INFO - Delete car image request received. Image ID: 17
+2025-02-10 06:55:17,907 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:17,909 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide6.jpeg
+2025-02-10 06:55:17,910 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide6.jpeg
+2025-02-10 06:55:17,910 - app - INFO - New main image set: uploads/cars/2/Slide7.jpeg
+2025-02-10 06:55:17,915 - app - INFO - Image 17 deleted successfully
+2025-02-10 06:55:17,917 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:17] "DELETE /manage_cars/delete_image/17 HTTP/1.1" 200 -
+2025-02-10 06:55:17,924 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:17] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:18,621 - app - INFO - Delete car image request received. Image ID: 18
+2025-02-10 06:55:18,621 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:18,623 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide7.jpeg
+2025-02-10 06:55:18,623 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide7.jpeg
+2025-02-10 06:55:18,624 - app - INFO - New main image set: uploads/cars/2/Slide8.jpeg
+2025-02-10 06:55:18,627 - app - INFO - Image 18 deleted successfully
+2025-02-10 06:55:18,629 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:18] "DELETE /manage_cars/delete_image/18 HTTP/1.1" 200 -
+2025-02-10 06:55:18,635 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:18] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:19,308 - app - INFO - Delete car image request received. Image ID: 19
+2025-02-10 06:55:19,309 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:19,310 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide8.jpeg
+2025-02-10 06:55:19,311 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide8.jpeg
+2025-02-10 06:55:19,312 - app - INFO - New main image set: uploads/cars/2/Slide9.jpeg
+2025-02-10 06:55:19,316 - app - INFO - Image 19 deleted successfully
+2025-02-10 06:55:19,318 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:19] "DELETE /manage_cars/delete_image/19 HTTP/1.1" 200 -
+2025-02-10 06:55:19,325 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:19] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:20,077 - app - INFO - Delete car image request received. Image ID: 20
+2025-02-10 06:55:20,078 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:20,080 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide9.jpeg
+2025-02-10 06:55:20,080 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide9.jpeg
+2025-02-10 06:55:20,081 - app - INFO - New main image set: uploads/cars/2/Slide10.jpeg
+2025-02-10 06:55:20,086 - app - INFO - Image 20 deleted successfully
+2025-02-10 06:55:20,088 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:20] "DELETE /manage_cars/delete_image/20 HTTP/1.1" 200 -
+2025-02-10 06:55:20,095 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:20] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:20,795 - app - INFO - Delete car image request received. Image ID: 21
+2025-02-10 06:55:20,795 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:20,796 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide10.jpeg
+2025-02-10 06:55:20,797 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide10.jpeg
+2025-02-10 06:55:20,798 - app - INFO - New main image set: uploads/cars/2/Slide11.jpeg
+2025-02-10 06:55:20,801 - app - INFO - Image 21 deleted successfully
+2025-02-10 06:55:20,803 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:20] "DELETE /manage_cars/delete_image/21 HTTP/1.1" 200 -
+2025-02-10 06:55:20,810 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:20] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:21,596 - app - INFO - Delete car image request received. Image ID: 22
+2025-02-10 06:55:21,597 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:21,598 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide11.jpeg
+2025-02-10 06:55:21,598 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide11.jpeg
+2025-02-10 06:55:21,599 - app - INFO - New main image set: uploads/cars/2/Slide12.jpeg
+2025-02-10 06:55:21,604 - app - INFO - Image 22 deleted successfully
+2025-02-10 06:55:21,605 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:21] "DELETE /manage_cars/delete_image/22 HTTP/1.1" 200 -
+2025-02-10 06:55:21,612 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:21] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:23,031 - app - INFO - Delete car image request received. Image ID: 23
+2025-02-10 06:55:23,031 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:23,033 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide12.jpeg
+2025-02-10 06:55:23,034 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/2/Slide12.jpeg
+2025-02-10 06:55:23,035 - app - INFO - No alternative main image found
+2025-02-10 06:55:23,040 - app - INFO - Image 23 deleted successfully
+2025-02-10 06:55:23,041 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:23] "DELETE /manage_cars/delete_image/23 HTTP/1.1" 200 -
+2025-02-10 06:55:23,049 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:23] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:55:26,223 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:26,234 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:26,234 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:26,238 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:26,239 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:26,240 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:26,243 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:26,271 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:26] "GET /static/uploads/cars/6/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:28,259 - app - INFO - Delete car image request received. Image ID: 46
+2025-02-10 06:55:28,259 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:28,260 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide1.jpeg
+2025-02-10 06:55:28,262 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide1.jpeg
+2025-02-10 06:55:28,262 - app - INFO - New main image set: uploads/cars/6/Slide2.jpeg
+2025-02-10 06:55:28,265 - app - INFO - Image 46 deleted successfully
+2025-02-10 06:55:28,266 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:28] "DELETE /manage_cars/delete_image/46 HTTP/1.1" 200 -
+2025-02-10 06:55:28,272 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:28] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:29,127 - app - INFO - Delete car image request received. Image ID: 47
+2025-02-10 06:55:29,127 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:29,129 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide2.jpeg
+2025-02-10 06:55:29,129 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide2.jpeg
+2025-02-10 06:55:29,130 - app - INFO - New main image set: uploads/cars/6/Slide3.jpeg
+2025-02-10 06:55:29,135 - app - INFO - Image 47 deleted successfully
+2025-02-10 06:55:29,137 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:29] "DELETE /manage_cars/delete_image/47 HTTP/1.1" 200 -
+2025-02-10 06:55:29,144 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:29] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:29,794 - app - INFO - Delete car image request received. Image ID: 48
+2025-02-10 06:55:29,794 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:29,796 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide3.jpeg
+2025-02-10 06:55:29,797 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide3.jpeg
+2025-02-10 06:55:29,799 - app - INFO - New main image set: uploads/cars/6/Slide4.jpeg
+2025-02-10 06:55:29,803 - app - INFO - Image 48 deleted successfully
+2025-02-10 06:55:29,804 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:29] "DELETE /manage_cars/delete_image/48 HTTP/1.1" 200 -
+2025-02-10 06:55:29,811 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:29] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:30,496 - app - INFO - Delete car image request received. Image ID: 49
+2025-02-10 06:55:30,496 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:30,497 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide4.jpeg
+2025-02-10 06:55:30,498 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide4.jpeg
+2025-02-10 06:55:30,499 - app - INFO - New main image set: uploads/cars/6/Slide5.jpeg
+2025-02-10 06:55:30,503 - app - INFO - Image 49 deleted successfully
+2025-02-10 06:55:30,505 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:30] "DELETE /manage_cars/delete_image/49 HTTP/1.1" 200 -
+2025-02-10 06:55:30,513 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:30] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:32,951 - app - INFO - Delete car image request received. Image ID: 50
+2025-02-10 06:55:32,951 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:32,953 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide5.jpeg
+2025-02-10 06:55:32,953 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide5.jpeg
+2025-02-10 06:55:32,954 - app - INFO - New main image set: uploads/cars/6/Slide6.jpeg
+2025-02-10 06:55:32,959 - app - INFO - Image 50 deleted successfully
+2025-02-10 06:55:32,961 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:32] "DELETE /manage_cars/delete_image/50 HTTP/1.1" 200 -
+2025-02-10 06:55:32,968 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:32] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:33,899 - app - INFO - Delete car image request received. Image ID: 51
+2025-02-10 06:55:33,900 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:33,902 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide6.jpeg
+2025-02-10 06:55:33,902 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide6.jpeg
+2025-02-10 06:55:33,903 - app - INFO - New main image set: uploads/cars/6/Slide7.jpeg
+2025-02-10 06:55:33,906 - app - INFO - Image 51 deleted successfully
+2025-02-10 06:55:33,907 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:33] "DELETE /manage_cars/delete_image/51 HTTP/1.1" 200 -
+2025-02-10 06:55:33,913 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:33] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:34,719 - app - INFO - Delete car image request received. Image ID: 52
+2025-02-10 06:55:34,719 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:34,721 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide7.jpeg
+2025-02-10 06:55:34,722 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide7.jpeg
+2025-02-10 06:55:34,723 - app - INFO - New main image set: uploads/cars/6/Slide8.jpeg
+2025-02-10 06:55:34,726 - app - INFO - Image 52 deleted successfully
+2025-02-10 06:55:34,728 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:34] "DELETE /manage_cars/delete_image/52 HTTP/1.1" 200 -
+2025-02-10 06:55:34,733 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:34] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:35,555 - app - INFO - Delete car image request received. Image ID: 53
+2025-02-10 06:55:35,555 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:35,557 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide8.jpeg
+2025-02-10 06:55:35,557 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/6/Slide8.jpeg
+2025-02-10 06:55:35,559 - app - INFO - No alternative main image found
+2025-02-10 06:55:35,563 - app - INFO - Image 53 deleted successfully
+2025-02-10 06:55:35,565 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:35] "DELETE /manage_cars/delete_image/53 HTTP/1.1" 200 -
+2025-02-10 06:55:35,572 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:35] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 06:55:39,065 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:55:39,081 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,083 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,085 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,085 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,089 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,089 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,090 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:39,110 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:55:41,586 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:41,595 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,597 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,598 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,603 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,609 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,610 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,640 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide9.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,640 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide10.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,641 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide12.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:41,642 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:41] "GET /static/uploads/cars/1/Slide11.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:44,071 - app - INFO - Delete car image request received. Image ID: 1
+2025-02-10 06:55:44,071 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:44,073 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide2.jpeg
+2025-02-10 06:55:44,074 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide2.jpeg
+2025-02-10 06:55:44,076 - app - INFO - New main image set: uploads/cars/1/Slide3.jpeg
+2025-02-10 06:55:44,080 - app - INFO - Image 1 deleted successfully
+2025-02-10 06:55:44,082 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:44] "DELETE /manage_cars/delete_image/1 HTTP/1.1" 200 -
+2025-02-10 06:55:44,089 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:44] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:44,923 - app - INFO - Delete car image request received. Image ID: 2
+2025-02-10 06:55:44,923 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:44,925 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide3.jpeg
+2025-02-10 06:55:44,926 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide3.jpeg
+2025-02-10 06:55:44,927 - app - INFO - New main image set: uploads/cars/1/Slide4.jpeg
+2025-02-10 06:55:44,931 - app - INFO - Image 2 deleted successfully
+2025-02-10 06:55:44,933 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:44] "DELETE /manage_cars/delete_image/2 HTTP/1.1" 200 -
+2025-02-10 06:55:44,940 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:44] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:45,707 - app - INFO - Delete car image request received. Image ID: 3
+2025-02-10 06:55:45,707 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:45,709 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide4.jpeg
+2025-02-10 06:55:45,710 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide4.jpeg
+2025-02-10 06:55:45,711 - app - INFO - New main image set: uploads/cars/1/Slide5.jpeg
+2025-02-10 06:55:45,716 - app - INFO - Image 3 deleted successfully
+2025-02-10 06:55:45,718 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:45] "DELETE /manage_cars/delete_image/3 HTTP/1.1" 200 -
+2025-02-10 06:55:45,725 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:45] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:46,510 - app - INFO - Delete car image request received. Image ID: 4
+2025-02-10 06:55:46,510 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:46,511 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide5.jpeg
+2025-02-10 06:55:46,512 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide5.jpeg
+2025-02-10 06:55:46,513 - app - INFO - New main image set: uploads/cars/1/Slide6.jpeg
+2025-02-10 06:55:46,518 - app - INFO - Image 4 deleted successfully
+2025-02-10 06:55:46,519 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:46] "DELETE /manage_cars/delete_image/4 HTTP/1.1" 200 -
+2025-02-10 06:55:46,527 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:46] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:47,261 - app - INFO - Delete car image request received. Image ID: 5
+2025-02-10 06:55:47,261 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:47,262 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide6.jpeg
+2025-02-10 06:55:47,263 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide6.jpeg
+2025-02-10 06:55:47,264 - app - INFO - New main image set: uploads/cars/1/Slide7.jpeg
+2025-02-10 06:55:47,267 - app - INFO - Image 5 deleted successfully
+2025-02-10 06:55:47,269 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:47] "DELETE /manage_cars/delete_image/5 HTTP/1.1" 200 -
+2025-02-10 06:55:47,276 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:47] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:48,012 - app - INFO - Delete car image request received. Image ID: 6
+2025-02-10 06:55:48,012 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:48,014 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide7.jpeg
+2025-02-10 06:55:48,015 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide7.jpeg
+2025-02-10 06:55:48,015 - app - INFO - New main image set: uploads/cars/1/Slide8.jpeg
+2025-02-10 06:55:48,019 - app - INFO - Image 6 deleted successfully
+2025-02-10 06:55:48,021 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:48] "DELETE /manage_cars/delete_image/6 HTTP/1.1" 200 -
+2025-02-10 06:55:48,028 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:48] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:48,695 - app - INFO - Delete car image request received. Image ID: 7
+2025-02-10 06:55:48,695 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:48,697 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide8.jpeg
+2025-02-10 06:55:48,697 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide8.jpeg
+2025-02-10 06:55:48,698 - app - INFO - New main image set: uploads/cars/1/Slide9.jpeg
+2025-02-10 06:55:48,701 - app - INFO - Image 7 deleted successfully
+2025-02-10 06:55:48,703 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:48] "DELETE /manage_cars/delete_image/7 HTTP/1.1" 200 -
+2025-02-10 06:55:48,710 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:48] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:49,598 - app - INFO - Delete car image request received. Image ID: 8
+2025-02-10 06:55:49,598 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:49,600 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide9.jpeg
+2025-02-10 06:55:49,600 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide9.jpeg
+2025-02-10 06:55:49,601 - app - INFO - New main image set: uploads/cars/1/Slide10.jpeg
+2025-02-10 06:55:49,606 - app - INFO - Image 8 deleted successfully
+2025-02-10 06:55:49,608 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:49] "DELETE /manage_cars/delete_image/8 HTTP/1.1" 200 -
+2025-02-10 06:55:49,615 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:49] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:50,451 - app - INFO - Delete car image request received. Image ID: 9
+2025-02-10 06:55:50,451 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:50,453 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide10.jpeg
+2025-02-10 06:55:50,453 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide10.jpeg
+2025-02-10 06:55:50,454 - app - INFO - New main image set: uploads/cars/1/Slide11.jpeg
+2025-02-10 06:55:50,459 - app - INFO - Image 9 deleted successfully
+2025-02-10 06:55:50,460 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:50] "DELETE /manage_cars/delete_image/9 HTTP/1.1" 200 -
+2025-02-10 06:55:50,467 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:50] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:51,184 - app - INFO - Delete car image request received. Image ID: 10
+2025-02-10 06:55:51,184 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:51,185 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide11.jpeg
+2025-02-10 06:55:51,186 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide11.jpeg
+2025-02-10 06:55:51,187 - app - INFO - New main image set: uploads/cars/1/Slide12.jpeg
+2025-02-10 06:55:51,191 - app - INFO - Image 10 deleted successfully
+2025-02-10 06:55:51,193 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:51] "DELETE /manage_cars/delete_image/10 HTTP/1.1" 200 -
+2025-02-10 06:55:51,200 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:51] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:51,970 - app - INFO - Delete car image request received. Image ID: 11
+2025-02-10 06:55:51,970 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:51,971 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide12.jpeg
+2025-02-10 06:55:51,972 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/1/Slide12.jpeg
+2025-02-10 06:55:51,973 - app - INFO - No alternative main image found
+2025-02-10 06:55:51,977 - app - INFO - Image 11 deleted successfully
+2025-02-10 06:55:51,979 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:51] "DELETE /manage_cars/delete_image/11 HTTP/1.1" 200 -
+2025-02-10 06:55:51,986 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:51] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 06:55:54,766 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:55:54,779 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:55:54,781 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:54,784 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:55:54,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:54,788 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:54,788 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:55:54,803 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:54] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:55:57,137 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:55:57,148 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:57,149 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:57,149 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:57,151 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:57,155 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:57,160 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:57,186 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:57] "GET /static/uploads/cars/8/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 06:55:59,617 - app - INFO - Delete car image request received. Image ID: 65
+2025-02-10 06:55:59,617 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:55:59,619 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide1.jpeg
+2025-02-10 06:55:59,619 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide1.jpeg
+2025-02-10 06:55:59,622 - app - INFO - Image 65 deleted successfully
+2025-02-10 06:55:59,624 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:59] "DELETE /manage_cars/delete_image/65 HTTP/1.1" 200 -
+2025-02-10 06:55:59,633 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:55:59] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:00,552 - app - INFO - Delete car image request received. Image ID: 66
+2025-02-10 06:56:00,552 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:00,553 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide2.jpeg
+2025-02-10 06:56:00,555 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide2.jpeg
+2025-02-10 06:56:00,558 - app - INFO - Image 66 deleted successfully
+2025-02-10 06:56:00,560 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:00] "DELETE /manage_cars/delete_image/66 HTTP/1.1" 200 -
+2025-02-10 06:56:00,568 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:00] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:01,353 - app - INFO - Delete car image request received. Image ID: 67
+2025-02-10 06:56:01,354 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:01,355 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide3.jpeg
+2025-02-10 06:56:01,356 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide3.jpeg
+2025-02-10 06:56:01,359 - app - INFO - Image 67 deleted successfully
+2025-02-10 06:56:01,361 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:01] "DELETE /manage_cars/delete_image/67 HTTP/1.1" 200 -
+2025-02-10 06:56:01,370 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:01] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:02,022 - app - INFO - Delete car image request received. Image ID: 68
+2025-02-10 06:56:02,022 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:02,025 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide4.jpeg
+2025-02-10 06:56:02,026 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide4.jpeg
+2025-02-10 06:56:02,029 - app - INFO - Image 68 deleted successfully
+2025-02-10 06:56:02,031 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:02] "DELETE /manage_cars/delete_image/68 HTTP/1.1" 200 -
+2025-02-10 06:56:02,038 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:02] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:02,915 - app - INFO - Delete car image request received. Image ID: 69
+2025-02-10 06:56:02,916 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:02,930 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide5.jpeg
+2025-02-10 06:56:02,930 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide5.jpeg
+2025-02-10 06:56:02,932 - app - INFO - Image 69 deleted successfully
+2025-02-10 06:56:02,936 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:02] "DELETE /manage_cars/delete_image/69 HTTP/1.1" 200 -
+2025-02-10 06:56:02,961 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:02] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:03,641 - app - INFO - Delete car image request received. Image ID: 70
+2025-02-10 06:56:03,641 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:03,642 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide6.jpeg
+2025-02-10 06:56:03,645 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide6.jpeg
+2025-02-10 06:56:03,650 - app - INFO - Image 70 deleted successfully
+2025-02-10 06:56:03,652 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:03] "DELETE /manage_cars/delete_image/70 HTTP/1.1" 200 -
+2025-02-10 06:56:03,660 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:03] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:04,392 - app - INFO - Delete car image request received. Image ID: 71
+2025-02-10 06:56:04,392 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:04,394 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide7.jpeg
+2025-02-10 06:56:04,394 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide7.jpeg
+2025-02-10 06:56:04,397 - app - INFO - Image 71 deleted successfully
+2025-02-10 06:56:04,400 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:04] "DELETE /manage_cars/delete_image/71 HTTP/1.1" 200 -
+2025-02-10 06:56:04,407 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:04] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:06,260 - app - INFO - Delete car image request received. Image ID: 72
+2025-02-10 06:56:06,261 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:06,263 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide8.jpeg
+2025-02-10 06:56:06,263 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/8/Slide8.jpeg
+2025-02-10 06:56:06,266 - app - INFO - Image 72 deleted successfully
+2025-02-10 06:56:06,268 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:06] "DELETE /manage_cars/delete_image/72 HTTP/1.1" 200 -
+2025-02-10 06:56:06,274 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:06] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:29,532 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:29] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 06:56:34,431 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:56:34,446 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:56:34,447 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:56:34,448 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:34,446 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:56:34,450 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:56:34,452 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:34,453 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:34,454 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:56:34,454 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:56:34,455 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 06:56:34,471 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:56:36,983 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:36] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:36,991 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:36] "GET /static/uploads/cars/4/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 06:56:36,992 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:36] "GET /static/uploads/cars/4/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 06:56:36,994 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:36] "GET /static/uploads/cars/4/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 06:56:36,995 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:36] "GET /static/uploads/cars/4/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 06:56:36,996 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:36] "GET /static/uploads/cars/4/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 06:56:39,297 - app - INFO - Delete car image request received. Image ID: 32
+2025-02-10 06:56:39,297 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:39,299 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide1.jpeg
+2025-02-10 06:56:39,299 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide1.jpeg
+2025-02-10 06:56:39,300 - app - INFO - New main image set: uploads/cars/4/Slide2.jpeg
+2025-02-10 06:56:39,304 - app - INFO - Image 32 deleted successfully
+2025-02-10 06:56:39,306 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:39] "DELETE /manage_cars/delete_image/32 HTTP/1.1" 200 -
+2025-02-10 06:56:39,313 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:39] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:40,281 - app - INFO - Delete car image request received. Image ID: 33
+2025-02-10 06:56:40,281 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:40,283 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide2.jpeg
+2025-02-10 06:56:40,283 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide2.jpeg
+2025-02-10 06:56:40,284 - app - INFO - New main image set: uploads/cars/4/Slide3.jpeg
+2025-02-10 06:56:40,289 - app - INFO - Image 33 deleted successfully
+2025-02-10 06:56:40,291 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:40] "DELETE /manage_cars/delete_image/33 HTTP/1.1" 200 -
+2025-02-10 06:56:40,297 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:40] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:41,218 - app - INFO - Delete car image request received. Image ID: 34
+2025-02-10 06:56:41,220 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:41,221 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide3.jpeg
+2025-02-10 06:56:41,222 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide3.jpeg
+2025-02-10 06:56:41,223 - app - INFO - New main image set: uploads/cars/4/Slide4.jpeg
+2025-02-10 06:56:41,227 - app - INFO - Image 34 deleted successfully
+2025-02-10 06:56:41,228 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:41] "DELETE /manage_cars/delete_image/34 HTTP/1.1" 200 -
+2025-02-10 06:56:41,235 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:41] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:42,100 - app - INFO - Delete car image request received. Image ID: 35
+2025-02-10 06:56:42,101 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:42,102 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide4.jpeg
+2025-02-10 06:56:42,103 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide4.jpeg
+2025-02-10 06:56:42,103 - app - INFO - New main image set: uploads/cars/4/Slide5.jpeg
+2025-02-10 06:56:42,106 - app - INFO - Image 35 deleted successfully
+2025-02-10 06:56:42,107 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:42] "DELETE /manage_cars/delete_image/35 HTTP/1.1" 200 -
+2025-02-10 06:56:42,113 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:42] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:42,889 - app - INFO - Delete car image request received. Image ID: 36
+2025-02-10 06:56:42,889 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:42,892 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide5.jpeg
+2025-02-10 06:56:42,893 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide5.jpeg
+2025-02-10 06:56:42,895 - app - INFO - New main image set: uploads/cars/4/Slide6.jpeg
+2025-02-10 06:56:42,899 - app - INFO - Image 36 deleted successfully
+2025-02-10 06:56:42,901 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:42] "DELETE /manage_cars/delete_image/36 HTTP/1.1" 200 -
+2025-02-10 06:56:42,908 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:42] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:43,807 - app - INFO - Delete car image request received. Image ID: 37
+2025-02-10 06:56:43,807 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:43,809 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide6.jpeg
+2025-02-10 06:56:43,809 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/4/Slide6.jpeg
+2025-02-10 06:56:43,810 - app - INFO - No alternative main image found
+2025-02-10 06:56:43,813 - app - INFO - Image 37 deleted successfully
+2025-02-10 06:56:43,816 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:43] "DELETE /manage_cars/delete_image/37 HTTP/1.1" 200 -
+2025-02-10 06:56:43,822 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:43] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 06:56:47,465 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:56:47,479 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:56:47,479 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:56:47,481 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:56:47,482 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:56:47,482 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:56:47,484 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 06:56:47,485 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:47,485 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:56:47,486 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:47,504 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,169 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:49,181 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide7.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,182 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,182 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide6.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,182 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide5.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,184 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,188 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide8.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,196 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide9.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,197 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide10.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,198 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide11.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:49,199 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:49] "[36mGET /static/uploads/cars/9/Slide12.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:56:51,253 - app - INFO - Delete car image request received. Image ID: 73
+2025-02-10 06:56:51,254 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:51,256 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide2.jpeg
+2025-02-10 06:56:51,257 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide2.jpeg
+2025-02-10 06:56:51,260 - app - INFO - Image 73 deleted successfully
+2025-02-10 06:56:51,262 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:51] "DELETE /manage_cars/delete_image/73 HTTP/1.1" 200 -
+2025-02-10 06:56:51,270 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:51] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:51,954 - app - INFO - Delete car image request received. Image ID: 74
+2025-02-10 06:56:51,954 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:51,956 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide3.jpeg
+2025-02-10 06:56:51,956 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide3.jpeg
+2025-02-10 06:56:51,959 - app - INFO - Image 74 deleted successfully
+2025-02-10 06:56:51,962 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:51] "DELETE /manage_cars/delete_image/74 HTTP/1.1" 200 -
+2025-02-10 06:56:51,969 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:51] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:52,689 - app - INFO - Delete car image request received. Image ID: 75
+2025-02-10 06:56:52,689 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:52,692 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide4.jpeg
+2025-02-10 06:56:52,692 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide4.jpeg
+2025-02-10 06:56:52,693 - app - INFO - New main image set: uploads/cars/9/Slide5.jpeg
+2025-02-10 06:56:52,698 - app - INFO - Image 75 deleted successfully
+2025-02-10 06:56:52,700 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:52] "DELETE /manage_cars/delete_image/75 HTTP/1.1" 200 -
+2025-02-10 06:56:52,707 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:52] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:53,555 - app - INFO - Delete car image request received. Image ID: 76
+2025-02-10 06:56:53,555 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:53,556 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide5.jpeg
+2025-02-10 06:56:53,557 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide5.jpeg
+2025-02-10 06:56:53,559 - app - INFO - New main image set: uploads/cars/9/Slide6.jpeg
+2025-02-10 06:56:53,562 - app - INFO - Image 76 deleted successfully
+2025-02-10 06:56:53,564 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:53] "DELETE /manage_cars/delete_image/76 HTTP/1.1" 200 -
+2025-02-10 06:56:53,572 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:53] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:54,408 - app - INFO - Delete car image request received. Image ID: 77
+2025-02-10 06:56:54,409 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:54,410 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide6.jpeg
+2025-02-10 06:56:54,411 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide6.jpeg
+2025-02-10 06:56:54,412 - app - INFO - New main image set: uploads/cars/9/Slide7.jpeg
+2025-02-10 06:56:54,417 - app - INFO - Image 77 deleted successfully
+2025-02-10 06:56:54,419 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:54] "DELETE /manage_cars/delete_image/77 HTTP/1.1" 200 -
+2025-02-10 06:56:54,426 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:54] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:55,209 - app - INFO - Delete car image request received. Image ID: 78
+2025-02-10 06:56:55,210 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:55,212 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide7.jpeg
+2025-02-10 06:56:55,212 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide7.jpeg
+2025-02-10 06:56:55,213 - app - INFO - New main image set: uploads/cars/9/Slide8.jpeg
+2025-02-10 06:56:55,218 - app - INFO - Image 78 deleted successfully
+2025-02-10 06:56:55,220 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:55] "DELETE /manage_cars/delete_image/78 HTTP/1.1" 200 -
+2025-02-10 06:56:55,227 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:55] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:56,558 - app - INFO - Delete car image request received. Image ID: 79
+2025-02-10 06:56:56,558 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:56,559 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide8.jpeg
+2025-02-10 06:56:56,559 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide8.jpeg
+2025-02-10 06:56:56,559 - app - INFO - New main image set: uploads/cars/9/Slide9.jpeg
+2025-02-10 06:56:56,561 - app - INFO - Image 79 deleted successfully
+2025-02-10 06:56:56,561 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:56] "DELETE /manage_cars/delete_image/79 HTTP/1.1" 200 -
+2025-02-10 06:56:56,565 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:56] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:57,296 - app - INFO - Delete car image request received. Image ID: 80
+2025-02-10 06:56:57,296 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:57,298 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide9.jpeg
+2025-02-10 06:56:57,299 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide9.jpeg
+2025-02-10 06:56:57,301 - app - INFO - New main image set: uploads/cars/9/Slide10.jpeg
+2025-02-10 06:56:57,304 - app - INFO - Image 80 deleted successfully
+2025-02-10 06:56:57,305 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:57] "DELETE /manage_cars/delete_image/80 HTTP/1.1" 200 -
+2025-02-10 06:56:57,312 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:57] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:58,231 - app - INFO - Delete car image request received. Image ID: 81
+2025-02-10 06:56:58,231 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:58,233 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide10.jpeg
+2025-02-10 06:56:58,234 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide10.jpeg
+2025-02-10 06:56:58,235 - app - INFO - New main image set: uploads/cars/9/Slide11.jpeg
+2025-02-10 06:56:58,239 - app - INFO - Image 81 deleted successfully
+2025-02-10 06:56:58,241 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:58] "DELETE /manage_cars/delete_image/81 HTTP/1.1" 200 -
+2025-02-10 06:56:58,248 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:58] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:56:59,065 - app - INFO - Delete car image request received. Image ID: 82
+2025-02-10 06:56:59,065 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:56:59,067 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide11.jpeg
+2025-02-10 06:56:59,067 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide11.jpeg
+2025-02-10 06:56:59,068 - app - INFO - New main image set: uploads/cars/9/Slide12.jpeg
+2025-02-10 06:56:59,072 - app - INFO - Image 82 deleted successfully
+2025-02-10 06:56:59,074 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:59] "DELETE /manage_cars/delete_image/82 HTTP/1.1" 200 -
+2025-02-10 06:56:59,082 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:56:59] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:57:00,051 - app - INFO - Delete car image request received. Image ID: 83
+2025-02-10 06:57:00,051 - app - INFO - Current User: admin@carrent.com, Is Admin: True, Role: admin
+2025-02-10 06:57:00,052 - app - INFO - Attempting to delete file: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide12.jpeg
+2025-02-10 06:57:00,053 - app - INFO - File deleted successfully: /Users/mohamedabdallah/Desktop/CarRent System/app/static/uploads/cars/9/Slide12.jpeg
+2025-02-10 06:57:00,054 - app - INFO - No alternative main image found
+2025-02-10 06:57:00,058 - app - INFO - Image 83 deleted successfully
+2025-02-10 06:57:00,059 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:00] "DELETE /manage_cars/delete_image/83 HTTP/1.1" 200 -
+2025-02-10 06:57:00,066 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:00] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 06:57:03,716 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:03] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:57:03,729 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:57:03,730 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:57:03,729 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:57:03,731 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:03] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:57:03,734 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:57:03,734 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:57:03,735 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:03] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:57:03,736 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:03] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 06:57:03,754 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:57:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:58:13,632 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:13] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:58:13,646 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:58:13,646 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:58:13,649 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:58:13,649 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:58:13,649 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:58:13,650 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:13] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:58:13,651 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:13] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 06:58:13,651 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:58:13,674 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:13] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:58:19,002 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:19] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:58:28,089 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "POST /manage_cars/upload_images/10 HTTP/1.1" 200 -
+2025-02-10 06:58:28,095 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:58:28,101 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,101 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,102 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,103 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,105 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,105 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,123 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:28,123 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:28] "GET /static/uploads/cars/10/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 06:58:30,607 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:30] "POST /manage_cars/set_main_image/3 HTTP/1.1" 200 -
+2025-02-10 06:58:30,613 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:30] "GET /manage_cars/get_images/10 HTTP/1.1" 200 -
+2025-02-10 06:58:33,927 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:58:33,940 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:58:33,940 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:58:33,942 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:58:33,942 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:58:33,943 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:58:33,944 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 06:58:33,944 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:58:33,945 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:58:33,947 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:58:33,965 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:58:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:59:03,001 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:03] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:59:18,318 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:18] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:59:27,653 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "POST /manage_cars/upload_images/2 HTTP/1.1" 200 -
+2025-02-10 06:59:27,659 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:59:27,665 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,666 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,667 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,668 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,669 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,670 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,699 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,700 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,700 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide9.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,703 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide10.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,709 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide11.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:27,737 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:27] "GET /static/uploads/cars/2/Slide12.jpeg HTTP/1.1" 200 -
+2025-02-10 06:59:30,524 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:30] "POST /manage_cars/set_main_image/9 HTTP/1.1" 200 -
+2025-02-10 06:59:30,531 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:30] "GET /manage_cars/get_images/2 HTTP/1.1" 200 -
+2025-02-10 06:59:35,765 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 06:59:35,779 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:59:35,782 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 06:59:35,782 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:59:35,782 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 06:59:35,785 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 06:59:35,787 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 06:59:35,787 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:59:35,787 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 06:59:35,788 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 06:59:35,788 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 06:59:35,805 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:35] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 06:59:54,354 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 06:59:54] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 07:00:04,405 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "POST /manage_cars/upload_images/6 HTTP/1.1" 200 -
+2025-02-10 07:00:04,410 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 07:00:04,416 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,418 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,420 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,422 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,427 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,429 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,456 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:04,458 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:04] "GET /static/uploads/cars/6/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:05,625 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:05] "POST /manage_cars/set_main_image/21 HTTP/1.1" 200 -
+2025-02-10 07:00:05,660 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:05] "GET /manage_cars/get_images/6 HTTP/1.1" 200 -
+2025-02-10 07:00:22,548 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 07:00:22,562 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 07:00:22,563 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:22,566 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 07:00:22,567 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:22,566 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 07:00:22,570 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 07:00:22,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:22,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:22,570 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 07:00:22,573 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 07:00:22,573 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 07:00:22,589 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:22] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 07:00:25,401 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:25] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 07:00:38,962 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "POST /manage_cars/upload_images/1 HTTP/1.1" 200 -
+2025-02-10 07:00:38,967 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 07:00:38,973 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /static/uploads/cars/1/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:38,974 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:38,976 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /static/uploads/cars/1/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:38,977 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /static/uploads/cars/1/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:38,978 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /static/uploads/cars/1/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:38,981 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:38] "GET /static/uploads/cars/1/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:39,006 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:39] "GET /static/uploads/cars/1/Slide10.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:39,008 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:39] "GET /static/uploads/cars/1/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:39,008 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:39] "GET /static/uploads/cars/1/Slide9.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:39,013 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:39] "GET /static/uploads/cars/1/Slide11.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:39,016 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:39] "GET /static/uploads/cars/1/Slide12.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:40,439 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:40] "POST /manage_cars/set_main_image/29 HTTP/1.1" 200 -
+2025-02-10 07:00:40,447 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:40] "GET /manage_cars/get_images/1 HTTP/1.1" 200 -
+2025-02-10 07:00:44,545 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 07:00:44,559 - app - ERROR - __init__.py:88 - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 07:00:44,559 - app - ERROR - Unhandled Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-02-10 07:00:44,562 - app - ERROR - __init__.py:89 - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 07:00:44,562 - app - ERROR - Traceback (most recent call last):
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 257, in <lambda>
+    view_func=lambda **kw: self_ref().send_static_file(**kw),  # type: ignore # noqa: B950
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/app.py", line 305, in send_static_file
+    return send_from_directory(
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/flask/helpers.py", line 554, in send_from_directory
+    return werkzeug.utils.send_from_directory(  # type: ignore[return-value]
+  File "/Users/mohamedabdallah/Desktop/CarRent System/venv/lib/python3.10/site-packages/werkzeug/utils.py", line 574, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+2025-02-10 07:00:44,563 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,564 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,564 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[35m[1mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 500 -
+2025-02-10 07:00:44,566 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,568 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,569 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,571 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,573 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 07:00:44,593 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:44] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 07:00:49,318 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:49] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 07:00:59,702 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "POST /manage_cars/upload_images/8 HTTP/1.1" 200 -
+2025-02-10 07:00:59,708 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 07:00:59,713 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,715 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,719 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,721 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,722 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,722 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,744 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 07:00:59,745 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:00:59] "GET /static/uploads/cars/8/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:00,853 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:00] "POST /manage_cars/set_main_image/40 HTTP/1.1" 200 -
+2025-02-10 07:01:00,860 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:00] "GET /manage_cars/get_images/8 HTTP/1.1" 200 -
+2025-02-10 07:01:04,130 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 07:01:04,147 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,148 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,149 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,151 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,155 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,155 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,156 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,158 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:04,175 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 07:01:06,851 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:06] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 07:01:15,832 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "POST /manage_cars/upload_images/4 HTTP/1.1" 200 -
+2025-02-10 07:01:15,837 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 07:01:15,842 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:15,843 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /static/uploads/cars/4/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:15,845 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /static/uploads/cars/4/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:15,846 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /static/uploads/cars/4/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:15,850 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /static/uploads/cars/4/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:15,851 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:15] "GET /static/uploads/cars/4/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:17,307 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:17] "POST /manage_cars/set_main_image/48 HTTP/1.1" 200 -
+2025-02-10 07:01:17,315 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:17] "GET /manage_cars/get_images/4 HTTP/1.1" 200 -
+2025-02-10 07:01:23,563 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 07:01:23,578 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,580 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,581 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,582 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,586 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,587 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,588 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,590 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,591 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /static/images/default-car.jpg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:23,605 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 07:01:28,346 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:28] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 07:01:42,863 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "POST /manage_cars/upload_images/9 HTTP/1.1" 200 -
+2025-02-10 07:01:42,869 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 07:01:42,876 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,877 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide2.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,877 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide3.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,878 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide5.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,880 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide6.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,886 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide7.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,912 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide9.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,920 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide10.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,920 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide8.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,921 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide11.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:42,924 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:42] "GET /static/uploads/cars/9/Slide12.jpeg HTTP/1.1" 200 -
+2025-02-10 07:01:45,424 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:45] "POST /manage_cars/set_main_image/56 HTTP/1.1" 200 -
+2025-02-10 07:01:45,432 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:45] "GET /manage_cars/get_images/9 HTTP/1.1" 200 -
+2025-02-10 07:01:49,098 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "GET /manage_cars HTTP/1.1" 200 -
+2025-02-10 07:01:49,112 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,114 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,115 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,119 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,120 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,122 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,124 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,124 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,125 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:49,135 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,070 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "GET / HTTP/1.1" 200 -
+2025-02-10 07:01:50,084 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,085 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/10/Slide3.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,087 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/2/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,088 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/6/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,089 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/1/Slide2.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,091 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/8/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,092 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,093 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/4/Slide1.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,094 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /static/uploads/cars/9/Slide4.jpeg HTTP/1.1[0m" 304 -
+2025-02-10 07:01:50,110 - werkzeug - INFO - 127.0.0.1 - - [10/Feb/2025 07:01:50] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
