@@ -2695,6 +2695,13 @@ def get_agency_cars(agency_id):
             'message': 'An unexpected error occurred while fetching cars.'
         }), 500
 
+@main.route('/get_agencies', methods=['GET'])
+@login_required
+def get_agencies():
+    agencies = User.query.filter_by(role='agency', is_active=True).all()
+    agency_list = [{'id': agency.id, 'name': agency.name} for agency in agencies]
+    return jsonify(agency_list)
+
 @main.route('/favicon.ico')
 def favicon():
     try:
@@ -2706,3 +2713,29 @@ def favicon():
     except Exception as e:
         current_app.logger.error(f"Favicon error: {str(e)}", exc_info=True)
         return '', 404
+
+@main.route('/bank_statement')
+@login_required
+@manager_or_admin_required
+def bank_statement():
+    # Fetch expenses categorized as 'Bank'
+    expenses = Expense.query.filter_by(category='Bank').all()
+    total_debits = sum(expense.amount for expense in expenses)
+
+    # Fetch incomes categorized as 'Withdrawal from Bank'
+    incomes = Income.query.filter_by(category='Withdrawal from Bank').all()
+    total_credits = sum(income.amount for income in incomes)
+
+    # Calculate remaining amount
+    remaining_amount = total_debits - total_credits
+
+    # Prepare context for the bank statement
+    bank_statement_context = {
+        'total_debits': total_debits,
+        'total_credits': total_credits,
+        'remaining_amount': remaining_amount,
+        'expenses': expenses,
+        'incomes': incomes
+    }
+
+    return render_template('bank_statement.html', **bank_statement_context)

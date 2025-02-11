@@ -130,6 +130,7 @@
                             <option value="Airport Transport">Airport Transport</option>
                             <option value="Partnership">Partnership</option>
                             <option value="Car Sell">Car Sell</option>
+                            <option value="Withdrawal from Bank">Withdrawal from Bank</option>
                             <option value="Other">Other</option>
                         </select>
                     </div>
@@ -306,6 +307,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 option.textContent = subcat;
                 subcategorySelect.appendChild(option);
             });
+        } else if (category === 'Withdrawal from Bank') {
+            const withdrawalSubcategories = [
+                'Cash Withdrawal',
+                'Transfer',
+                'Other'
+            ];
+            
+            withdrawalSubcategories.forEach(subcat => {
+                const option = document.createElement('option');
+                option.value = subcat;
+                option.textContent = subcat;
+                subcategorySelect.appendChild(option);
+            });
         }
         
         // Ensure at least one option is selected
@@ -321,6 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'Airport Transport': ['Departure', 'Arriving'],
         'Partnership': ['Rent', 'Car Rental', 'Maintenance', 'Other'],
         'Car Sell': ['Used Car', 'New Car', 'Auction', 'Other'],
+        'Withdrawal from Bank': ['Cash Withdrawal', 'Transfer', 'Other'],
         'Other': ['Miscellaneous', 'Additional Income', 'Bonus', 'Compensation']
     };
 

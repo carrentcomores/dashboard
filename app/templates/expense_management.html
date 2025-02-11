@@ -138,6 +138,7 @@
                                 <option value="Bank">Put Money in Bank</option>
                                 <option value="Salaries">Pay Employees</option>
                                 <option value="Bills">Pay Bills</option>
+                                <option value="Owner Payment">Pay the Owner of Cars</option>
                                 <option value="Other">Other Expenses</option>
                             </optgroup>
                         </select>
@@ -278,6 +279,29 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reset description label and placeholder
             descriptionLabel.textContent = 'Description';
             descriptionInput.placeholder = 'Enter description';
+        } else if (category === 'Owner Payment') {
+            // Create a placeholder option
+            const option = document.createElement('option');
+            option.value = ''; // No value for the placeholder
+            option.textContent = 'Select an Agency'; // Placeholder text
+            option.disabled = true; // Disable the placeholder option
+            option.selected = true; // Make it selected
+            subcategorySelect.appendChild(option);
+
+            // Fetch agencies for subcategories
+            fetch('/get_agencies')
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(agency => {
+                        const option = document.createElement('option');
+                        option.value = agency.name; // Use agency name as value
+                        option.textContent = agency.name; // Display agency name
+                        subcategorySelect.appendChild(option);
+                    });
+                });
+
+            // Change description label and placeholder for Owner Payment
+            descriptionInput.placeholder = 'Enter description (Agency Name)';
         } else {
             // Re-enable subcategory selection
             subcategorySelect.disabled = false;
@@ -306,6 +330,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (subcategorySelect.options.length > 0) {
             subcategorySelect.selectedIndex = 0;
         }
+    });
+
+    // Auto-fill description based on selected agency
+    document.getElementById('subcategory').addEventListener('change', function() {
+        document.getElementById('description').value = this.value; // Set description to selected agency name
     });
 
     // Trigger initial population of subcategories on modal open

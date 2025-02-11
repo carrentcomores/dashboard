@@ -134,6 +134,11 @@
                                             </div>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {% if request.endpoint == 'main.bank_statement' %}active{% endif %}" href="{{ url_for('main.bank_statement') }}">
+                                            <i class="fas fa-money-check-alt"></i> Bank Statement
+                                        </a>
+                                    </li>
                                 {% endif %}
                                 
                                 {% if current_user.is_admin %}
