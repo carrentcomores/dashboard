@@ -145,18 +145,24 @@
                     </div>
                     <div class="mb-3">
                         <label for="subcategory" class="form-label">Subcategory</label>
-                        <select class="form-select" id="subcategory" name="subcategory" required>
-                            <!-- Subcategories will be dynamically populated -->
-                            <option value="Office Supplies">Office Supplies</option>
-                            <option value="Maintenance Supplies">Maintenance Supplies</option>
-                            <option value="Electricity">Electricity</option>
-                            <option value="Water">Water</option>
-                            <option value="Rent">Rent</option>
-                            <option value="Internet">Internet</option>
-                            <option value="Salaries">Salaries</option>
-                            <option value="Bonuses">Bonuses</option>
-                            <option value="Other">Other</option>
-                        </select>
+                        {% if category == 'Bank' %}
+                            <select class="form-control" id="subcategory" name="subcategory" required>
+                                <option value="Account Number 113418">Account Number 113418</option>
+                            </select>
+                        {% else %}
+                            <select class="form-select" id="subcategory" name="subcategory" required>
+                                <!-- Subcategories will be dynamically populated -->
+                                <option value="Office Supplies">Office Supplies</option>
+                                <option value="Maintenance Supplies">Maintenance Supplies</option>
+                                <option value="Electricity">Electricity</option>
+                                <option value="Water">Water</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Internet">Internet</option>
+                                <option value="Salaries">Salaries</option>
+                                <option value="Bonuses">Bonuses</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        {% endif %}
                     </div>
                     <div class="mb-3">
                         <label for="amount" class="form-label">Amount (KMF)</label>
@@ -220,8 +226,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (category === 'Bank') {
             // Set fixed subcategory for Bank
             const option = document.createElement('option');
-            option.value = '0011049933';
-            option.textContent = 'Account Number 0011049933';
+            option.value = 'Account Number 113418';
+            option.textContent = 'Account Number 113418';
             subcategorySelect.appendChild(option);
             
             // Change description label and placeholder
